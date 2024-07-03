@@ -1,5 +1,5 @@
 import React from "react";
-import avatar from "../../assets/IdidThat.png";
+import avatar from "../../assets/Robot.gif";
 import Tilt from "react-parallax-tilt";
 import { FiDownloadCloud } from "react-icons/fi";
 import { Button } from "@mui/material";
@@ -46,7 +46,7 @@ const HomeBottomPage = () => {
         <div className="intro-image" style={{ marginTop: '80px' }}>
           <Tilt>
             <img
-              className="rounded w-100 h-100"
+              className="rounded w-90 h-80"
               src={avatar}
               alt="Extra large avatar"
             ></img>
