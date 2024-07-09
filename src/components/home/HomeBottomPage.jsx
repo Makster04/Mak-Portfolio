@@ -35,7 +35,7 @@ const HomeBottomPage = () => {
   return (
     <div className="homeBottom">
       <h1 style={{ fontSize: "3.5rem", marginBottom: "3.5rem" }}>
-        Some Things <span style={{ color: "#000080" }}>About Me</span>
+        Some Things <span style={{ color: "#000080", textShadow: "0 0 10px white", animation: "pulse 2s infinite",}}>About Me</span>
       </h1>
 
       <div className="introduction">
@@ -91,7 +91,7 @@ const HomeBottomPage = () => {
 
       <div className="timeline-section" style={{ marginTop: "50px" }}>
         <h2 style={{ fontSize: "2.5rem", marginBottom: "2rem", textAlign: "center" }}>
-          My <span style={{ color: "Orange", fontWeight: "bold" }}>Journey</span>
+          My <span style={{ color: "Orange", fontWeight: "bold", textShadow: "0 0 10px black", animation: "pulse 2s infinite",}}>Journey</span>
         </h2>
         <VerticalTimeline>
           <VerticalTimelineElement
@@ -111,9 +111,9 @@ const HomeBottomPage = () => {
                 <li
                   onMouseEnter={() => handleHoverCertificate(certificate401)}
                   onMouseLeave={handleLeaveCertificate}
-                  style={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}
+                  style={{ cursor: 'pointer', alignItems: 'center' }}
                 >
-                  <span style={{ color: "Red", fontWeight: "bold", marginRight: '10px' }}>Certificate of Completion in Code 401:</span> Advanced Software Development
+                  <span style={{ color: "Red", fontWeight: "bold", marginRight: '10px' }}>Certificate of Completion in Code 401:</span>Advanced Software Development
                   {hoveredCertificate === certificate401 && (
                     <img src={certificate401} alt="Certificate" style={{ marginLeft: '10px', width: '200px', height: 'auto' }} />
                   )}
@@ -121,9 +121,9 @@ const HomeBottomPage = () => {
                 <li
                   onMouseEnter={() => handleHoverCertificate(certificate301)}
                   onMouseLeave={handleLeaveCertificate}
-                  style={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}
+                  style={{ cursor: 'pointer', alignItems: 'center' }}
                 >
-                  <span style={{ color: "Red", fontWeight: "bold", marginRight: '10px' }}>Certificate of Completion in Code 301:</span> Intermediate Software Development
+                  <span style={{ color: "Red", fontWeight: "bold", marginRight: '10px' }}>Certificate of Completion in Code 301:</span>Intermediate Software Development
                   {hoveredCertificate === certificate301 && (
                     <img src={certificate301} alt="Certificate" style={{ marginLeft: '10px', width: '200px', height: 'auto' }} />
                   )}
@@ -131,9 +131,9 @@ const HomeBottomPage = () => {
                 <li
                   onMouseEnter={() => handleHoverCertificate(certificate201)}
                   onMouseLeave={handleLeaveCertificate}
-                  style={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}
+                  style={{ cursor: 'pointer', alignItems: 'center' }}
                 >
-                  <span style={{ color: "Red", fontWeight: "bold", marginRight: '10px' }}>Certificate of Completion in Code 201:</span> Foundations of Software Development
+                  <span style={{ color: "Red", fontWeight: "bold", marginRight: '10px' }}>Certificate of Completion in Code 201:</span>Foundations of Software Development
                   {hoveredCertificate === certificate201 && (
                     <img src={certificate201} alt="Certificate" style={{ marginLeft: '10px', width: '200px', height: 'auto' }} />
                   )}
@@ -141,9 +141,9 @@ const HomeBottomPage = () => {
                 <li
                   onMouseEnter={() => handleHoverCertificate(certificate102)}
                   onMouseLeave={handleLeaveCertificate}
-                  style={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}
+                  style={{ cursor: 'pointer', alignItems: 'center' }}
                 >
-                  <span style={{ color: "Red", fontWeight: "bold", marginRight: '10px' }}>Certificate of Completion in Code 102:</span> Intro to Software Development
+                  <span style={{ color: "Red", fontWeight: "bold", marginRight: '10px' }}>Certificate of Completion in Code 102:</span>Intro to Software Development
                   {hoveredCertificate === certificate102 && (
                     <img src={certificate102} alt="Certificate" style={{ marginLeft: '10px', width: '200px', height: 'auto' }} />
                   )}

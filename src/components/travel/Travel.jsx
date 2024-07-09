@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Card } from "semantic-ui-react";
 import SingleTravelCard from "./SingleTravelCard";
 import GlobeComponent from "./GlobeComponent"; // Import the GlobeComponent
+import AccordionComponent from "./AccordionComponent"; // Import the new AccordionComponent
 import travelData from "./TravelData";
 import "./Travel.css"; // Assuming you have defined styles for .travels
 
@@ -31,19 +32,25 @@ const Travel = () => {
           }}
         >
           <span style={{ position: "relative", zIndex: 2 }}>My Recent</span>{" "}
-          <span style={{ color: "yellow", position: "relative", zIndex: 2 }}>
+          <span style={{ color: "yellow", position: "relative", zIndex: 2, textShadow: "0 0 10px white", animation: "pulse 2s infinite" }}>
             Trips
           </span>
         </h1>
         <p>
           <span style={{ position: "relative", zIndex: 2 }}>
             A page showing all the nations and places I went on the globe, along with an album of pics from certain spots I began photography in! 
-            </span>
+          </span>
         </p>
       </div>
       
-      {/* Render the GlobeComponent with width passed as prop */}
-      <GlobeComponent width={width} />
+      <div className="content-container">
+        <div className="globe-container">
+          <GlobeComponent width={width} />
+        </div>
+        <div className="accordion-container">
+          <AccordionComponent />
+        </div>
+      </div>
 
       <div className="travel-cards-container">
         <Card.Group itemsPerRow={width > 786 ? 3 : 1}>

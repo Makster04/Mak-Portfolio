@@ -17,7 +17,7 @@ body {
   color: white !important;
 }
 .particle {
-  z-index: -1 !important;
+  z-index: -4 !important;
 }
 .App {
   position: relative;

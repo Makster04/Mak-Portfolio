@@ -42,31 +42,32 @@ const GlobeComponent = () => {
   }, [rotationSpeed]);
 
   return (
-    <div style={{ height: '100vh', width: '100%', position: 'relative' }}>
-      <Globe
-        ref={globeRef}
-        globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
-        backgroundColor="rgba(0,0,0,0)" // Set background to transparent
-        lineHoverPrecision={0}
-        polygonsData={countries.features.filter(d => d.properties.ISO_A2 !== 'AQ')}
-        
-        polygonCapColor={d => (d === hoverD ? 'steelblue' : colorScale(getVal(d)))}
-        polygonSideColor={() => 'rgba(0, 100, 0, 0.15)'}
-        polygonStrokeColor={() => '#111'}
-        polygonLabel={({ properties: d }) => `
-          <b>${d.ADMIN} (${d.ISO_A2})</b> <br />
-  
-        `}
-        onPolygonHover={setHoverD}
-        polygonsTransitionDuration={300}
-        pointsData={pinpoints}
-        pointAltitude={d => d.size * 0.2} // Adjust altitude based on size
-        pointColor={d => d.color} // Use color property from pinpoints
-        pointLabel={d => d.label} // Use label property from pinpoints
-        pointRadius={0.3} // Increase the size of the pinpoints
-        pointResolution={30} // Increase roundness of the pinpoints
-        pointGlowColor="black" // Example of glow color
-      />
+    <div style={{ height: '100vh' }}>
+      {/* Globe Container */}
+      <div style={{ flex: 1, position: 'relative', display: 'flex'}}>
+        <Globe
+          ref={globeRef}
+          globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
+          backgroundColor="rgba(0,0,0,0)" // Set background to transparent
+          lineHoverPrecision={0}
+          polygonsData={countries.features.filter(d => d.properties.ISO_A2 !== 'AQ')}
+          polygonCapColor={d => (d === hoverD ? 'steelblue' : colorScale(getVal(d)))}
+          polygonSideColor={() => 'rgba(0, 100, 0, 0.15)'}
+          polygonStrokeColor={() => '#111'}
+          polygonLabel={({ properties: d }) => `
+            <b>${d.ADMIN} (${d.ISO_A2})</b> <br />
+          `}
+          onPolygonHover={setHoverD}
+          polygonsTransitionDuration={300}
+          pointsData={pinpoints}
+          pointAltitude={d => d.size * 0.2} // Adjust altitude based on size
+          pointColor={d => d.color} // Use color property from pinpoints
+          pointLabel={d => d.label} // Use label property from pinpoints
+          pointRadius={0.3} // Increase the size of the pinpoints
+          pointResolution={30} // Increase roundness of the pinpoints
+          pointGlowColor="black" // Example of glow color
+        />
+      </div>
     </div>
   );
 };

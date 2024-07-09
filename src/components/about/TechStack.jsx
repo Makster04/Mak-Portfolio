@@ -28,16 +28,17 @@ const TechStack = () => {
     <div className="techstack">
 
       <h1>
-        My{" "}
+        
         <span
           style={{
             color: "#32CD30",
             marginTop: "3rem",
             fontFamily: "Fira Code",
             fontWeight: "bold",
+            fontSize: "3rem",
           }}
         >
-          Set of Tech Skills
+         <span style={{ boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)" }}> Tech Skills </span>
         </span>
       </h1>
 

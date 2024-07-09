@@ -16,12 +16,12 @@ import { IconContext } from "react-icons";
 const Contact = () => {
   // Component JSX
   return (
-    <IconContext.Provider value={{ color: "#32CD30", size: "50px" }}>
+    <IconContext.Provider value={{ color: "#32CD30", size: "90px" }}>
       <Box
         sx={{
           flexGrow: 1,
           backgroundColor: "#f5f5f5",
-          padding: "3rem",
+          padding: "10rem",
           textAlign: "center",
         }}
       >
@@ -31,14 +31,24 @@ const Contact = () => {
           sx={{
             marginBottom: "2rem",
             fontFamily: "Fira Code",
-            color: "#333",
+            color: "white",
+            zIndex: 2, // Adjusted z-index
+            position: "relative", // Ensure z-index works
           }}
         >
           Have a <span style={{ color: "#32CD30" }}>Question</span> on your
           mind??
         </Typography>
-        <Typography variant="body1" sx={{ marginBottom: "2rem", color: "#666" }}>
-          Or just want to discuss a project? Contact me using any of the links below!
+        <Typography
+          variant="body1"
+          sx={{
+            marginBottom: "2rem",
+            color: "white",
+            zIndex: 2, // Adjusted z-index
+            position: "relative", // Ensure z-index works
+          }}
+        >
+          Or just want to discuss a project or hire me? Contact me using any of the links below!
         </Typography>
         <Grid container justifyContent="center">
           <Grid item xs={12} md={6}>
@@ -68,7 +78,7 @@ const Contact = () => {
                 </ListItem>
                 <ListItem disablePadding className="contact-list-item">
                   <ListItemButton
-                    href="https://twitter.com/yourprofile"
+                    href="https://twitter.com/MT_B0sniak"
                     target="_blank"
                   >
                     <ListItemIcon>
@@ -87,7 +97,7 @@ const Contact = () => {
                       <HiMailOpen className="contact-icon" />
                     </ListItemIcon>
                     <ListItemText
-                      primary="Mail (maktrnka@gmail.com)"
+                      primary="Mail"
                       className="contact-text"
                     />
                   </ListItemButton>
