@@ -47,9 +47,9 @@ const Travel = () => {
         <div className="globe-container">
           <GlobeComponent width={width} />
         </div>
-        <div className="accordion-container">
+        {/* <div className="accordion-container">
           <AccordionComponent />
-        </div>
+        </div> */}
       </div>
 
       <div className="travel-cards-container">
