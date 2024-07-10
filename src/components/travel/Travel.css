@@ -83,34 +83,52 @@
     padding-bottom: 60px; /* Add padding at the bottom to prevent overlap with footer */
 }
   
-/* Styling for globe and accordion layout */
-
-
+/* Styling for content layout */
 .content-container {
   display: flex;
   justify-content: center; /* Center horizontally */
-  align-items: center; /* Align items at the top */
-  gap: 50px; /* Adjust the gap between components */
+  align-items: flex-start; /* Align items at the top */
+  gap: 10px; /* Adjust the gap between components */
   flex-wrap: wrap;
+  z-index: 2; /* Ensure this is above background z-index */
 }
 
 .globe-container {
   flex: 1; /* Let the globe container take remaining space */
   min-width: 300px; /* Minimum width for the globe container */
+  z-index: 2; /* Ensure this is above background z-index */
+  justify-content: center;
 }
 
 .accordion-container {
-  width: 350px; /* Adjusted width for accordion */
+  width: 10%; /* Full width for the accordion */
+  max-width: 600px; /* Limit maximum width for larger screens */
+  z-index: 2; /* Ensure this is above background z-index */
+  margin-top: 20px; /* Margin top for spacing */
+  margin-left: 0px; /* Move the accordion more to the left */
+}
+
+@media (min-width: 768px) {
+  .content-container {
+    justify-content: space-between; /* Add space between components */
+    align-items: flex-start; /* Align items at the top */
+  }
+
+  .accordion-container {
+    width: 450px; /* Adjusted width for accordion on larger screens */
+    margin-left: 0px; /* Move the accordion more to the left */
+  }
 }
 
 @media (max-width: 768px) {
   .content-container {
-      flex-direction: column; /* Stack components vertically on smaller screens */
-      align-items: center; /* Center items vertically */
+    flex-direction: column; /* Stack components vertically on smaller screens */
+    align-items: center; /* Center items vertically */
   }
 
   .accordion-container {
-      width: 100%; /* Full width on smaller screens */
-      margin-top: 10px; /* Margin top for spacing */
+    width: 100%; /* Full width on smaller screens */
+    margin-top: 10px; /* Margin top for spacing */
+    margin-left: 0; /* Reset margin-left on smaller screens */
   }
 }

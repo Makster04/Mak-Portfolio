@@ -166,7 +166,7 @@ const HomeBottomPage = () => {
               <ul>
                 <li><span style={{ color: "BLACK", fontWeight: "bold" }}>Academy for Precision Learning (2022):</span> </li>
               </ul>
-              <li><span style={{ fontWeight: "bold" }}>Role (Behavior Technician):</span>I aided neurodiverse students in behavioral development. Additionally, I utilized innovative technologies to personalize learning approaches.</li> 
+              <li><span style={{ fontWeight: "bold" }}>Role (Behavior Technician):</span> I aided neurodiverse students in behavioral development. Additionally, I utilized innovative technologies to personalize learning approaches.</li> 
               <ul>
                 <li><span style={{ color: "BLACK", fontWeight: "bold" }}>HeyTutor (2023):</span> </li>
               </ul>

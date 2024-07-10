@@ -44,7 +44,7 @@ const GlobeComponent = () => {
   return (
     <div style={{ height: '100vh' }}>
       {/* Globe Container */}
-      <div style={{ flex: 1, position: 'relative', display: 'flex'}}>
+      <div style={{ flex: 1, position: 'relative', display: 'flex', justifyContent: 'center'}}>
         <Globe
           ref={globeRef}
           globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
