@@ -40,7 +40,7 @@ const HomeBottomPage = () => {
 
       <div className="introduction">
         <div className="intro-text">
-          <p>
+        <span style={{ color: "white", textShadow: "0 4px 8px rgba(0, 0, 0, 10)"}}> <p>
             I'm Mak Trnka, I have recently completed <span style={{ color: "red" }}>CODE FELLOWS</span> learning Software Development for the first time. My enthusiasm lies at the intersection of technology and creativity. Currently, I'm adept in JavaScript, CSS, React, and the MERN stack, with a newfound interest in mastering AWS and TypeScript. Beyond that, I aspire to delve into the realm of Data Science.
           </p>
           <br />
@@ -58,7 +58,7 @@ const HomeBottomPage = () => {
           <br />
           <p>
             So stick around, take a look, and feel free to reach out if you ever want to meet up or begin a new journey in life! For a comprehensive overview, feel free to peruse my <span style={{ color: "#89dc88" }}>RESUME</span>. 
-          </p>
+          </p> </span>
         </div>
 
         <div className="intro-image" style={{ marginTop: '80px' }}>

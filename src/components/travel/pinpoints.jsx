@@ -1,15 +1,22 @@
 // pinpoints.js
+
+// KEY: 
+// White: 1
+// pink: 2
+// Red: 3
+// Purple: 4
+// Black: 5+
 const pinpoints = [
     // Europe
-    { lat: 50.8503, lng: 4.3517, size: 1, color: 'orange', label: 'Brussels, BiH' },
-    { lat: 43.8791, lng: 18.4306, size: 1, color: 'orange', label: 'Bjelasnica, BiH'},
-    { lat: 43.1961, lng: 17.6106, size: 1, color: 'orange', label: 'Ljubuski, BiH'},
-    { lat: 43.9320, lng: 17.6758, size: 1, color: 'orange', label: 'Medojevici, BiH' },
-    { lat: 43.3438, lng: 17.8081, size: 1, color: 'orange', label: 'Mostar, BiH' },
-    { lat: 43.8486, lng: 18.3564, size: 1, color: 'orange', label: 'Sarajevo, BiH' },
-    { lat: 44.3427, lng: 17.2640, size: 1, color: 'orange', label: 'Jajce, BiH' },
-    { lat: 44.2267, lng: 17.6692, size: 1, color: 'orange', label: 'Travnik, BiH' },
-    { lat: 43.6561, lng: 17.9590, size: 1, color: 'orange', label: 'Konjic, BiH' },
+    { lat: 50.8503, lng: 4.3517, size: 1, color: 'white', label: 'Brussels, BEL'},
+    { lat: 43.8791, lng: 18.4306, size: 1, color: 'white', label: 'Bjelasnica, BiH'},
+    { lat: 43.1961, lng: 17.6106, size: 1, color: 'white', label: 'Ljubuski, BiH'},
+    { lat: 43.9320, lng: 17.6758, size: 1, color: 'pink', label: 'Medojevici, BiH'},
+    { lat: 43.3438, lng: 17.8081, size: 1, color: 'red', label: 'Mostar, BiH'},
+    { lat: 43.8486, lng: 18.3564, size: 1, color: 'black', label: 'Sarajevo, BiH' },
+    { lat: 44.3427, lng: 17.2640, size: 1, color: 'orange', label: 'Jajce, BiH'},
+    { lat: 44.2267, lng: 17.6692, size: 1, color: 'orange', label: 'Travnik, BiH'},
+    { lat: 43.6561, lng: 17.9590, size: 1, color: 'orange', label: 'Konjic, BiH'},
     { lat: 42.9204, lng: 17.6297, size: 1, color: 'orange', label: 'Neum, BiH'},
     { lat: 43.8223, lng: 18.2945, size: 1, color: 'orange', label: 'Vrelo Bosne, BiH' },
     { lat: 44.1419, lng: 17.4305, size: 1, color: 'orange', label: 'Donji Vakuf, BiH' },
@@ -160,6 +167,7 @@ const pinpoints = [
     { lat: 37.3229, lng: -113.0453, size: 1, color: 'cyan', label: 'Zion, UT' }
 
 ];
-  
-  export default pinpoints;
+
+
+export default pinpoints;
   
