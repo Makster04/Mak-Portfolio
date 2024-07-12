@@ -9,7 +9,7 @@ import Contact from './components/contact/Contact';
 import Project from './components/Project/Project';
 import About from './components/about/AboutInfo.jsx';
 import Footer from './components/footer/Footer';
-import Travel from './components/Travel/Travel';
+import Travel from './components/travel/Travel.jsx';
 import ParticleBackground from './components/background/ParticleBackground';
 
 const App = () => {
