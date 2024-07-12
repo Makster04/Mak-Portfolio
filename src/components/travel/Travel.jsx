@@ -25,19 +25,18 @@ const Travel = () => {
           style={{
             marginTop: "3rem",
             fontFamily: "Fira Code",
-            fontWeight: "bold",
             color: "white",
             position: "relative", // Ensure content is above background
             zIndex: 1, // Ensure content is above background
           }}
         >
-          <span style={{ position: "relative", zIndex: 2 }}>My Recent</span>{" "}
-          <span style={{ color: "yellow", position: "relative", zIndex: 2, textShadow: "0 0 10px white", animation: "pulse 2s infinite" }}>
-            Trips
+          <span style={{ position: "relative", zIndex: 2, textShadow: "0 0 5px black"}}>My Recent</span>{" "}
+          <span style={{ fontWeight: 'bold', color: "yellow", position: "relative", zIndex: 2, textShadow: "0 0 10px white", animation: "pulse 2s infinite" }}>
+            TRIPS
           </span>
         </h1>
         <p>
-          <span style={{ position: "relative", zIndex: 2 }}>
+          <span style={{ position: "relative", zIndex: 2, textShadow: "0 0 5px black" }}>
             A page showing all the nations and places I went on the globe, along with an album of pics from certain spots I began photography in! 
           </span>
         </p>

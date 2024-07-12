@@ -35,7 +35,7 @@ const HomeBottomPage = () => {
   return (
     <div className="homeBottom">
       <h1 style={{ fontSize: "3.5rem", marginBottom: "3.5rem" }}>
-        Some Things <span style={{ color: "#000080", textShadow: "0 0 10px white", animation: "pulse 2s infinite",}}>About Me</span>
+      <span style={{ textShadow: "0 0 5px black"}}> Some Things </span> <span style={{ color: "blue", textShadow: "0 0 10px white", animation: "pulse 2s infinite",}}>ABOUT ME</span>
       </h1>
 
       <div className="introduction">
@@ -91,7 +91,7 @@ const HomeBottomPage = () => {
 
       <div className="timeline-section" style={{ marginTop: "50px" }}>
         <h2 style={{ fontSize: "2.5rem", marginBottom: "2rem", textAlign: "center" }}>
-          My <span style={{ color: "Orange", fontWeight: "bold", textShadow: "0 0 10px black", animation: "pulse 2s infinite",}}>Journey</span>
+        <span style={{ textShadow: "0 0 5px black"}}> My </span> <span style={{ color: "Orange", fontWeight: "bold", textShadow: "0 0 10px black", animation: "pulse 2s infinite",}}>JOURNEY</span>
         </h2>
         <VerticalTimeline>
           <VerticalTimelineElement

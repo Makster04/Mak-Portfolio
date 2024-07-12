@@ -36,8 +36,8 @@ const Contact = () => {
             position: "relative", // Ensure z-index works
           }}
         >
-          Have a <span style={{ color: "#32CD30" }}>Question</span> on your
-          mind??
+         <span style={{  textShadow: "0 0 10px black"}}> Have a <span style={{ fontWeight: 'bold', color: "#32CD30", textShadow: "0 0 10px black", animation: "pulse 2s infinite" }}>QUESTION</span> on your
+          mind??</span>
         </Typography>
         <Typography
           variant="body1"
