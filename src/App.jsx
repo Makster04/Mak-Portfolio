@@ -7,7 +7,7 @@ import Header from './components/header/Header';
 import HomePage from './components/home/HomePage';
 import Contact from './components/contact/Contact';
 import Project from './components/Project/Project';
-import About from './components/about/AboutInfo';
+import About from './components/about/AboutInfo.jsx';
 import Footer from './components/footer/Footer';
 import Travel from './components/Travel/Travel';
 import ParticleBackground from './components/background/ParticleBackground';

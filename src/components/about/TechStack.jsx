@@ -38,7 +38,7 @@ const TechStack = () => {
             fontSize: "3rem",
           }}
         >
-         <span style={{textShadow: "0 0 10px black", color: "white", }}>My</span> <span style={{textShadow: "0 0 10px black", animation: "pulse 2s infinite", }}> Tech Skills </span>
+         <span style={{textShadow: "0 0 10px white", color: "white", }}>My</span> <span style={{textShadow: "0 0 10px black", animation: "pulse 2s infinite", }}> Tech Skills </span>
         </span>
       </h1>
 
