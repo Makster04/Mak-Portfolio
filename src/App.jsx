@@ -1,4 +1,3 @@
-// src/App.jsx
 import React from 'react';
 import './App.css';
 import './index.css';
@@ -7,10 +6,11 @@ import Header from './components/header/Header';
 import HomePage from './components/home/HomePage';
 import Contact from './components/contact/Contact';
 import Project from './components/Project/Project';
-import About from './components/about/AboutInfo.jsx';
+import About from './components/about/AboutInfo';
 import Footer from './components/footer/Footer';
-import Travel from './components/travel/Travel.jsx';
+import Travel from './components/travel/Travel';
 import ParticleBackground from './components/background/ParticleBackground';
+import ScrollToTop from './components/ScrollToTop'; // Import the ScrollToTop component
 
 const App = () => {
   return (
@@ -18,6 +18,7 @@ const App = () => {
       <ParticleBackground className="particle"></ParticleBackground>
       <div className="AppContent">
         <Router>
+          <ScrollToTop /> {/* Include ScrollToTop here */}
           <Header />
           <Routes>
             <Route exact path="/" element={<HomePage />}></Route>
@@ -34,3 +35,4 @@ const App = () => {
 };
 
 export default App;
+
