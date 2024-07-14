@@ -19,46 +19,48 @@ import certificate102 from "../../assets/certificate102.png";
 const resumeURL = "https://docs.google.com/document/d/1OSOmxwTUWjMi2UnEW5FbrT1sjR5b9W6oIp3RXEr4Xws/edit#heading=h.biu39wkykbpm";
 
 const HomeBottomPage = () => {
-  // State to manage hovered certificate image
   const [hoveredCertificate, setHoveredCertificate] = useState(null);
 
-  // Function to handle hovering over certificate text
   const handleHoverCertificate = (certificate) => {
     setHoveredCertificate(certificate);
   };
 
-  // Function to handle mouse leaving the certificate text
   const handleLeaveCertificate = () => {
     setHoveredCertificate(null);
   };
 
   return (
     <div className="homeBottom">
+      {/* Title Section */}
       <h1 style={{ fontSize: "3.5rem", marginBottom: "3.5rem" }}>
-      <span style={{ textShadow: "0 0 5px black"}}> Some Things </span> <span style={{ color: "blue", textShadow: "0 0 10px white", animation: "pulse 2s infinite",}}>ABOUT ME</span>
+        <span style={{ textShadow: "0 0 5px black"}}>Some Things </span>
+        <span style={{ color: "yellow", textShadow: "0 0 10px white", animation: "pulse 2s infinite",}}>ABOUT ME</span>
       </h1>
 
+      {/* Introduction Section */}
       <div className="introduction">
         <div className="intro-text">
-        <span style={{ color: "white", textShadow: "0 4px 8px rgba(0, 0, 0, 10)"}}> <p>
-            I'm Mak Trnka, I have recently completed <span style={{ color: "red" }}>CODE FELLOWS</span> learning Software Development for the first time. My enthusiasm lies at the intersection of technology and creativity. Currently, I'm adept in JavaScript, CSS, React, and the MERN stack, with a newfound interest in mastering AWS and TypeScript. Beyond that, I aspire to delve into the realm of Data Science.
-          </p>
-          <br />
-          <p>
-            Outside the realm of technology, I'm an <span style={{ color: "Plum" }}>AVID TRAVELER</span>, having explored 25 countries to date. My interests span across the world data, history, (geo)politics, diverse cultures, and societal dynamics. Therefore, Traveling will always be one of my major talents and hobbies.
-          </p>
-          <br />
-          <p>
-            I've been described by many as <span style={{ color: "Pink" }}>OMNILEGENT</span>. In addition to the other topics mentioned, my interest also span across other topics such as Movies, Pop Culture, Personal Life, Basketball, Wildlife, Food, Breaking News, other Data, and such. I harbor aspirations of starting a podcast to discuss these eclectic topics or even start a youtube channel.
-          </p>
-          <br />
-          <p>
-            I'm also a <span style={{ color: "Orange" }}>SERIAL CREATOR</span>. I possess a knack for ideation and enjoy crafting visually engaging presentations and data-driven reports in tools like Word, Excel, and PowerPoint. What also makes me a serial creator is the fact I have many Business ideas, App ideas, Legislative ideas, and creating content for several different topics (Positive effects come from having ADHD and being on the Spectrum as well as you can see).
-          </p>
-          <br />
-          <p>
-            So stick around, take a look, and feel free to reach out if you ever want to meet up or begin a new journey in life! For a comprehensive overview, feel free to peruse my <span style={{ color: "#89dc88" }}>RESUME</span>. 
-          </p> </span>
+          <span style={{ color: "white", textShadow: "0 4px 8px rgba(0, 0, 0, 10)"}}>
+            <p>
+              I'm Mak Trnka, I have recently completed <span style={{ color: "red" }}>CODE FELLOWS</span> learning Software Development for the first time. My enthusiasm lies at the intersection of technology and creativity. Currently, I'm adept in JavaScript, CSS, React, and the MERN stack, with a newfound interest in mastering AWS and TypeScript. Beyond that, I aspire to delve into the realm of Data Science.
+            </p>
+            <br />
+            <p>
+              Outside the realm of technology, I'm an <span style={{ color: "Plum" }}>AVID TRAVELER</span>, having explored 25 countries to date. My interests span across the world data, history, (geo)politics, diverse cultures, and societal dynamics. Therefore, Traveling will always be one of my major talents and hobbies.
+            </p>
+            <br />
+            <p>
+              I've been described by many as <span style={{ color: "Pink" }}>OPEN-MINDED</span>. In addition to the other topics mentioned, my interest also spans across other topics such as Movies, Pop Culture, Personal Life, Basketball, Wildlife, Food, Breaking News, other Data, and such. I harbor aspirations of starting a podcast to discuss these eclectic topics or even start a YouTube channel.
+            </p>
+            <br />
+            <p>
+              I'm also a <span style={{ color: "Orange" }}>SERIAL CREATOR</span>. Through my extensive coding skills, I have the ability to design and craft a number of websites. Outside of tech, I possess a knack for ideation and enjoy crafting visually engaging presentations and data-driven reports in tools like Word, Excel, and PowerPoint. What also makes me a serial creator is the fact I have many Business ideas, App ideas, Legislative ideas, and creating content for several different topics (Positive effects come from having ADHD and being on the Spectrum as well as you can see).
+            </p>
+            <br />
+            <p>
+              So stick around, take a look, and feel free to reach out if you ever want to meet up or begin a new journey in life! For a comprehensive overview, feel free to peruse my <span style={{ color: "#89dc88" }}>RESUME</span>. 
+            </p>
+          </span>
         </div>
 
         <div className="intro-image" style={{ marginTop: '80px' }}>
@@ -72,6 +74,7 @@ const HomeBottomPage = () => {
         </div>
       </div>
 
+      {/* Download PDF Section */}
       <div className="downloadPdf">
         <a
           href={resumeURL}
@@ -89,9 +92,11 @@ const HomeBottomPage = () => {
         </a>
       </div>
 
+      {/* Timeline Section */}
       <div className="timeline-section" style={{ marginTop: "50px" }}>
-        <h2 style={{ fontSize: "2.5rem", marginBottom: "2rem", textAlign: "center" }}>
-        <span style={{ textShadow: "0 0 5px black"}}> My </span> <span style={{ color: "Orange", fontWeight: "bold", textShadow: "0 0 10px black", animation: "pulse 2s infinite",}}>JOURNEY</span>
+        <h2 style={{ fontSize: "3.5rem", marginBottom: "2rem", textAlign: "center" }}>
+          <span style={{ textShadow: "0 0 5px black"}}> My </span> 
+          <span style={{ color: "Orange", fontWeight: "bold", textShadow: "0 0 10px black", animation: "pulse 2s infinite",}}>TIMELINE</span>
         </h2>
         <VerticalTimeline>
           <VerticalTimelineElement
@@ -151,6 +156,7 @@ const HomeBottomPage = () => {
               </ul>
             </p>
           </VerticalTimelineElement>
+
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             date="August 2022 - June 2023"
@@ -173,6 +179,7 @@ const HomeBottomPage = () => {
               <li><span style={{ fontWeight: "bold" }}>Role (Paraprofessional):</span> I provided dedicated support to learners with disabilities, demonstrating flexibility and empathy. Furthermore, I adapted quickly to diverse educational environments, ensuring inclusive learning experiences.</li>
             </p>
           </VerticalTimelineElement>
+
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
             date="September 2019 - March 2022"
@@ -199,6 +206,7 @@ const HomeBottomPage = () => {
               <li><span style={{ fontWeight: "bold" }}>Unite UW:</span> Served as Facilitator for a social group to connect people of different cultures.</li>
             </p>
           </VerticalTimelineElement>
+
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
             date="January 2016 - March 2019"

@@ -23,26 +23,27 @@ const Travel = () => {
         {/* Content inside the background */}
         <h1
           style={{
-            marginTop: "3rem",
+            marginTop: "2rem", // Adjusted marginTop to move title up
             fontFamily: "Fira Code",
+            fontSize: "2.5rem", // Adjust font size
             color: "white",
             position: "relative", // Ensure content is above background
             zIndex: 1, // Ensure content is above background
           }}
         >
-          <span style={{ position: "relative", zIndex: 2, textShadow: "0 0 5px black"}}>My Recent</span>{" "}
+          <span style={{ position: "relative", zIndex: 2, textShadow: "0 0 5px black" }}>My Recent</span>{" "}
           <span style={{ fontWeight: 'bold', color: "yellow", position: "relative", zIndex: 2, textShadow: "0 0 10px white", animation: "pulse 2s infinite" }}>
             TRIPS
           </span>
         </h1>
         <p>
           <span style={{ position: "relative", zIndex: 2, textShadow: "0 0 5px black" }}>
-            A page showing all the nations and places I went on the globe, along with an album of pics from certain spots I began photography in! 
+            A Globe with the Pin Points of every destination I went to around the world! 
           </span>
         </p>
       </div>
       
-      <div className="content-container">
+      <div className="content-container" style={{ marginTop: "-7rem" }}> {/* Adjusted marginTop for content-container */}
         <div className="globe-container">
           <GlobeComponent width={width} />
         </div>
@@ -50,6 +51,29 @@ const Travel = () => {
           <AccordionComponent />
         </div> */}
       </div>
+
+      <h2
+        style={{
+          marginTop: "2rem",
+          fontFamily: "Fira Code",
+          fontSize: "2.5rem", // Match the font size
+          color: "white",
+          position: "relative",
+          zIndex: 1,
+          textAlign: "center", // Center the title
+        }}
+      >
+        <span style={{ position: "relative", zIndex: 2, textShadow: "0 0 5px black" }}>My</span>{" "}
+        <span style={{ fontWeight: 'bold', color: "orange", position: "relative", zIndex: 2, textShadow: "0 0 10px white", animation: "pulse 2s infinite" }}>
+          PHOTO ALBUMS
+        </span>
+      </h2>
+      
+      <p style={{ textAlign: "center", color: "white", textShadow: "0 0 5px black" }}>
+        <span style={{ position: "relative", zIndex: 2 }}>
+          Explore the Photos I took across my Journey around certain places on the globe I visited!
+        </span>
+      </p>
 
       <div className="travel-cards-container">
         <Card.Group itemsPerRow={width > 786 ? 3 : 1}>
@@ -63,3 +87,5 @@ const Travel = () => {
 };
 
 export default Travel;
+
+

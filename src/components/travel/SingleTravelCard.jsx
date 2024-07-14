@@ -6,7 +6,7 @@ const SingleTravelCard = ({ spot }) => {
         return null;
     }
 
-    const { name, image, place, description } = spot;
+    const { name, image, place, description, photoAlbumLink } = spot;
 
     return (
         <div className="single-travel-card">
@@ -15,12 +15,15 @@ const SingleTravelCard = ({ spot }) => {
                 <h2>{name}</h2>
                 <p><strong>Places:</strong> {place}</p>
                 <p><strong>Description:</strong> {description}</p>
+                {photoAlbumLink && (
+                    <a href={photoAlbumLink} target="_blank" rel="noopener noreferrer" className="album-link">
+                        View Photo Album
+                    </a>
+                )}
             </div>
         </div>
     );
 };
 
 export default SingleTravelCard;
-
-
 

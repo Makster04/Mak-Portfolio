@@ -16,7 +16,7 @@ const HomePage = () => {
                 zIndex: 2, // Ensure text appears in front
               }}
             >
-              Greetings, it's
+              <span style={{ textShadow: "0 0 10px black"}}>Greetings, it's</span>
             </h1>
             <h1
               style={{
@@ -29,7 +29,7 @@ const HomePage = () => {
             >
               <span
                 style={{
-                  color: "#000080",
+                  color: "black",
                   fontFamily: "monospace",
                   position: "relative",
                   fontSize: "7rem", // Corrected typo

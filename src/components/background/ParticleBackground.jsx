@@ -17,7 +17,7 @@ const ParticlesComponent = () => {
           color: {
             value: "#808080", // Gray color
           },
-          image: "linear-gradient(135deg, grey 20%, blue 100%)",
+          image: "linear-gradient(135deg, blue 20%, black 100%)",
           position: "absolute",
           repeat: "no-repeat",
           size: "cover",
