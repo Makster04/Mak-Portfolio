@@ -60,7 +60,7 @@ const ParticlesComponent = () => {
             distance: 150, // Increased distance for links
             enable: true,
             opacity: 0.5, // Reduced opacity for better visual appeal
-            width: 1,
+            width: 1.5,
           },
           collisions: {
             enable: true,

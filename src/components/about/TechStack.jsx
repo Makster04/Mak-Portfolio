@@ -1,4 +1,3 @@
-// Import Statements
 import React, { useState, useEffect } from "react";
 import { Card } from "semantic-ui-react";
 import {
@@ -14,8 +13,6 @@ import {
   SiGit,
 } from "react-icons/si";
 
-// Component Definition
-
 const TechStack = () => {
   const [width, setWidth] = useState(1200);
 
@@ -23,11 +20,19 @@ const TechStack = () => {
     setWidth(window.innerWidth);
   }, []);
 
+  const introText = (
+    <p style={{ textAlign: "center", marginBottom: "3rem" }}>
+      <span style={{ color: "white", textShadow: "0 4px 8px rgba(0, 0, 0, 10)" }}>
+        A list of the software languages I have gained my knowledge and talent in. {" "}
+  
+      </span>
+    </p>
+  );
+
   return (
-    <div className="techstack">
+    <div className="techstack" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '50vh' }}>
 
       <h1>
-        
         <span
           style={{
             color: "#32CD30",
@@ -37,88 +42,47 @@ const TechStack = () => {
             fontSize: "3rem",
           }}
         >
-         <span style={{textShadow: "0 0 10px white", color: "white", }}>My</span> <span style={{textShadow: "0 0 10px black", animation: "pulse 2s infinite", }}> Tech Skills </span>
+          <span style={{ textShadow: "0 0 10px black", color: "white" }}>My</span>{" "}
+          <span style={{ textShadow: "0 0 10px black", animation: "pulse 2s infinite" }}>SOFTWARE SKILLS</span>
         </span>
       </h1>
 
-      <div className="techstack-row">
-        <Card.Group itemsPerRow={width > 768 ? 5 : 2}>
+      {introText}
 
-          <Card raised className="item">
-            {" "}
-            <SiJavascript
-              style={{ width: "100%", height: "auto", color: "#FFC300" }}
-            />{" "}
-          </Card>
-
-          <Card raised className="item">
-            {" "}
-            <SiCss3
-              style={{ width: "100%", height: "auto", color: "#1572B6" }}
-            />{" "}
-          </Card>
-               
-          <Card raised className="item">
-            {" "}
-            <SiHtml5
-              style={{ width: "100%", height: "auto", color: "#E34F26" }}
-            />{" "}
-          </Card>        
-       
-          <Card raised className="item">
-            {" "}
-            <SiMongodb
-              style={{ width: "100%", height: "auto", color: "#4DB33D"}}
-            />{" "}
-          </Card>
-          
-          <Card raised className="item">
-            {" "}
-            <SiExpress
-              style={{ width: "100%", height: "auto", color: "#000000" }}
-            />{" "}
-          </Card>
-          
-          <Card raised className="item">
-            {" "}
-            <SiReact
-              style={{ width: "100%", height: "auto", color: "#61DBFB" }}
-            />{" "}
-          </Card>
-          
-          <Card raised className="item">
-            {" "}
-            <SiNodedotjs
-            style={{ width: "100%", height: "auto", color: "#68A063" }}
-            />{" "}
-          </Card>
-          
-          <Card raised className="item">
-            {" "}
-            <SiTypescript
-              style={{ width: "100%", height: "auto", color: "#007ACC" }}
-            />{" "}
-          </Card>
-          
-          <Card raised className="item">
-            {" "}
-            <SiMysql
-              style={{ width: "100%", height: "auto", color: "#00758f" }}
-            />{" "}
-          </Card>
-          
-          <Card raised className="item">
-            {" "}
-            <SiGit
-              style={{ width: "100%", height: "auto", color: "#F05032" }}
-            />{" "}
-          </Card>
+      <div className="techstack-row" style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+        <Card.Group itemsPerRow={width > 768 ? 4 : 2} style={{ justifyContent: 'center' }}>
+          {[
+            { icon: <SiJavascript />, color: "#FFC300" },
+            { icon: <SiCss3 />, color: "#1572B6" },
+            { icon: <SiHtml5 />, color: "#E34F26" },
+            { icon: <SiMongodb />, color: "#4DB33D" },
+            { icon: <SiExpress />, color: "#000000" },
+            { icon: <SiReact />, color: "#61DBFB" },
+            { icon: <SiNodedotjs />, color: "#68A063" },
+            { icon: <SiTypescript />, color: "#007ACC" },
+            { icon: <SiMysql />, color: "#00758f" },
+            { icon: <SiGit />, color: "#F05032" },
+          ].map((item, index) => (
+            <Card
+              raised
+              className="item"
+              key={index}
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                width: '160px',
+                height: '160px',
+                margin: '10px',
+              }}
+            >
+              {React.cloneElement(item.icon, { style: { width: "70px", height: "70px", color: item.color } })}
+            </Card>
+          ))}
         </Card.Group>
       </div>
     </div>
   );
 };
-
-// Export Component
 
 export default TechStack;
