@@ -1,3 +1,4 @@
+// src/components/home/HomeBottomPage.jsx
 import React, { useState } from "react";
 import avatar from "../../assets/Robot.gif";
 import Tilt from "react-parallax-tilt";

@@ -1,134 +1,134 @@
 /* Basic styling for the travel card container */
 .travel-cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px; /* Further increased space between cards */
-    position: relative;
-    z-index: 2; /* Ensure this is higher than background z-index */
-    margin: 0 auto; /* Center the container horizontally */
-    max-width: 1300px; /* Increase the max-width for a wider container */
-    justify-content: center;
-    padding-bottom: 60px; /* Add padding at the bottom to prevent overlap with footer */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px; /* Further increased space between cards */
+  position: relative;
+  z-index: 2; /* Ensure this is higher than background z-index */
+  margin: 0 auto; /* Center the container horizontally */
+  max-width: 1300px; /* Increase the max-width for a wider container */
+  justify-content: center;
+  padding-bottom: 60px; /* Add padding at the bottom to prevent overlap with footer */
 }
-  
+
 /* Individual travel card styles */
 .travel-cards-container .single-travel-card {
-    width: 400px; /* Increased width for larger card size */
-    height: auto;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-    background-color: #fff;
-    margin: 20px; /* Additional margin around each card for extra spacing */
+  width: 400px; /* Increased width for larger card size */
+  height: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  background-color: #fff;
+  margin: 20px; /* Additional margin around each card for extra spacing */
 }
-  
+
 .travel-cards-container .single-travel-card:hover {
-    transform: translateY(-8px); /* Slightly larger lift on hover */
+  transform: translateY(-8px); /* Slightly larger lift on hover */
 }
-  
+
 .travel-cards-container .single-travel-card .travel-card-content {
-    padding: 20px;
+  padding: 20px;
 }
-  
+
 .travel-cards-container .single-travel-card .travel-card-content h2 {
-    margin: 0 0 12px; /* Slightly increased margin */
-    font-size: 1.9rem; /* Larger font size for title */
-    color: #333;
+  margin: 0 0 12px; /* Slightly increased margin */
+  font-size: 1.9rem; /* Larger font size for title */
+  color: #333;
 }
-  
+
 .travel-cards-container .single-travel-card .travel-card-content p {
-    margin: 0;
-    font-size: 1.3rem; /* Larger font size for description */
-    color: #666;
-    line-height: 1.5; /* Improved line height for readability */
+  margin: 0;
+  font-size: 1.3rem; /* Larger font size for description */
+  color: #666;
+  line-height: 1.5; /* Improved line height for readability */
 }
-  
+
 .travel-cards-container .single-travel-card img {
-    width: 100%;
-    height: 250px; /* Increased height for card image */
-    object-fit: cover;
-    border-radius: 12px 12px 0 0; /* Rounded corners on top */
-    border-bottom: 1px solid #ddd;
+  width: 100%;
+  height: 250px; /* Increased height for card image */
+  object-fit: cover;
+  border-radius: 12px 12px 0 0; /* Rounded corners on top */
+  border-bottom: 1px solid #ddd;
 }
-  
+
 /* Background styling for the entire travel section */
 .travels {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    z-index: 1; /* Ensure content is above background */
-    padding-bottom: 60px; /* Add padding at the bottom to prevent overlap with footer */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1; /* Ensure content is above background */
+  padding-bottom: 60px; /* Add padding at the bottom to prevent overlap with footer */
 }
-  
+
 .background-image {
-    width: 100%;
-    background-image: url('path/to/your/background-image.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 2rem; /* Add padding to center content */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  background-image: url('path/to/your/background-image.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 2rem; /* Add padding to center content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-  
+
 .background-color {
-    background-color: #f0f0f0;
-    min-height: 100vh;
-    padding: 1rem; /* Add padding to center content */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 60px; /* Add padding at the bottom to prevent overlap with footer */
+  background-color: #f0f0f0;
+  min-height: 100vh;
+  padding: 1rem; /* Add padding to center content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 60px; /* Add padding at the bottom to prevent overlap with footer */
 }
-  
+
 /* Styling for content layout */
 .content-container {
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: flex-start; /* Align items at the top */
-  gap: 10px; /* Adjust the gap between components */
-  flex-wrap: wrap;
-  z-index: 2; /* Ensure this is above background z-index */
+display: flex;
+justify-content: center; /* Center horizontally */
+align-items: flex-start; /* Align items at the top */
+gap: 10px; /* Adjust the gap between components */
+flex-wrap: wrap;
+z-index: 2; /* Ensure this is above background z-index */
 }
 
 .globe-container {
-  flex: 1; /* Let the globe container take remaining space */
-  min-width: 300px; /* Minimum width for the globe container */
-  z-index: 2; /* Ensure this is above background z-index */
-  justify-content: center;
+flex: 1; /* Let the globe container take remaining space */
+min-width: 300px; /* Minimum width for the globe container */
+z-index: 2; /* Ensure this is above background z-index */
+justify-content: center;
 }
 
 .accordion-container {
-  width: 10%; /* Full width for the accordion */
-  max-width: 600px; /* Limit maximum width for larger screens */
-  z-index: 2; /* Ensure this is above background z-index */
-  margin-top: 20px; /* Margin top for spacing */
-  margin-left: 0px; /* Move the accordion more to the left */
+width: 10%; /* Full width for the accordion */
+max-width: 600px; /* Limit maximum width for larger screens */
+z-index: 2; /* Ensure this is above background z-index */
+margin-top: 20px; /* Margin top for spacing */
+margin-left: 0px; /* Move the accordion more to the left */
 }
 
 @media (min-width: 768px) {
-  .content-container {
-    justify-content: space-between; /* Add space between components */
-    align-items: flex-start; /* Align items at the top */
-  }
+.content-container {
+  justify-content: space-between; /* Add space between components */
+  align-items: flex-start; /* Align items at the top */
+}
 
-  .accordion-container {
-    width: 450px; /* Adjusted width for accordion on larger screens */
-    margin-left: 0px; /* Move the accordion more to the left */
-  }
+.accordion-container {
+  width: 450px; /* Adjusted width for accordion on larger screens */
+  margin-left: 0px; /* Move the accordion more to the left */
+}
 }
 
 @media (max-width: 768px) {
-  .content-container {
-    flex-direction: column; /* Stack components vertically on smaller screens */
-    align-items: center; /* Center items vertically */
-  }
+.content-container {
+  flex-direction: column; /* Stack components vertically on smaller screens */
+  align-items: center; /* Center items vertically */
+}
 
-  .accordion-container {
-    width: 100%; /* Full width on smaller screens */
-    margin-top: 10px; /* Margin top for spacing */
-    margin-left: 0; /* Reset margin-left on smaller screens */
-  }
+.accordion-container {
+  width: 100%; /* Full width on smaller screens */
+  margin-top: 10px; /* Margin top for spacing */
+  margin-left: 0; /* Reset margin-left on smaller screens */
+}
 }

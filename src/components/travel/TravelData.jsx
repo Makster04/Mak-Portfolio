@@ -168,4 +168,3 @@ const travelData = [
 ];
 
 export default travelData;
-
