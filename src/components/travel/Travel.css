@@ -1,134 +1,284 @@
-/* Basic styling for the travel card container */
-.travel-cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 50px; /* Further increased space between cards */
-  position: relative;
-  z-index: 2; /* Ensure this is higher than background z-index */
-  margin: 0 auto; /* Center the container horizontally */
-  max-width: 1300px; /* Increase the max-width for a wider container */
-  justify-content: center;
-  padding-bottom: 60px; /* Add padding at the bottom to prevent overlap with footer */
+@import url('https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap');
+
+:root {
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+  --font-sans: 'Rubik', sans-serif;
+  --font-serif: 'Cardo', serif;
 }
 
-/* Individual travel card styles */
-.travel-cards-container .single-travel-card {
-  width: 400px; /* Increased width for larger card size */
-  height: auto;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-  background-color: #fff;
-  margin: 20px; /* Additional margin around each card for extra spacing */
+* {
+  box-sizing: border-box;
 }
 
-.travel-cards-container .single-travel-card:hover {
-  transform: translateY(-8px); /* Slightly larger lift on hover */
+html, body {
+  height: 100%;
 }
 
-.travel-cards-container .single-travel-card .travel-card-content {
-  padding: 20px;
-}
-
-.travel-cards-container .single-travel-card .travel-card-content h2 {
-  margin: 0 0 12px; /* Slightly increased margin */
-  font-size: 1.9rem; /* Larger font size for title */
-  color: #333;
-}
-
-.travel-cards-container .single-travel-card .travel-card-content p {
+body {
+  display: grid;
+  place-items: center;
   margin: 0;
-  font-size: 1.3rem; /* Larger font size for description */
-  color: #666;
-  line-height: 1.5; /* Improved line height for readability */
+  padding: 0;
 }
 
-.travel-cards-container .single-travel-card img {
+.page-content {
+  display: grid;
+  grid-gap: 1rem;
+  padding: 1rem;
+  max-width: 1024px;
   width: 100%;
-  height: 250px; /* Increased height for card image */
-  object-fit: cover;
-  border-radius: 12px 12px 0 0; /* Rounded corners on top */
-  border-bottom: 1px solid #ddd;
+  margin: 0 auto;
+  font-family: var(--font-sans);
 }
 
-/* Background styling for the entire travel section */
-.travels {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.card {
   position: relative;
-  z-index: 1; /* Ensure content is above background */
-  padding-bottom: 60px; /* Add padding at the bottom to prevent overlap with footer */
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 1.5rem;
+  margin: 0.5rem;
+  width: calc(100% - 9rem);
+  max-width: 220px;
+  height: 310px;
+  text-align: center;
+  color: whitesmoke;
+  background-color: whitesmoke;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1), 
+    0 2px 2px rgba(0,0,0,0.1), 
+    0 4px 4px rgba(0,0,0,0.1), 
+    0 8px 8px rgba(0,0,0,0.1),
+    0 16px 16px rgba(0,0,0,0.1);
+  transition: transform var(--d) var(--e);
+  z-index: 10;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
-.background-image {
+.travel-cards-container {
+  padding-bottom: 8rem;
+  position: relative;
+  z-index: 1;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  background-image: url('path/to/your/background-image.jpg');
+  height: 110%;
   background-size: cover;
-  background-position: center;
-  padding: 2rem; /* Add padding to center content */
+  background-position: 0 0;
+  transition: transform calc(var(--d) * 1.5) var(--e);
+  pointer-events: none;
+}
+
+.card:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  pointer-events: none;
+  background-image: linear-gradient(
+    to bottom,
+    hsla(0, 0%, 0%, 0) 0%,
+    hsla(0, 0%, 0%, 0.009) 11.7%,
+    hsla(0, 0%, 0%, 0.034) 22.1%,
+    hsla(0, 0%, 0%, 0.072) 31.2%,
+    hsla(0, 0%, 0%, 0.123) 39.4%,
+    hsla(0, 0%, 0%, 0.182) 46.6%,
+    hsla(0, 0%, 0%, 0.249) 53.1%,
+    hsla(0, 0%, 0%, 0.320) 58.9%,
+    hsla(0, 0%, 0%, 0.394) 64.3%,
+    hsla(0, 0%, 0%, 0.468) 69.3%,
+    hsla(0, 0%, 0%, 0.540) 74.1%,
+    hsla(0, 0%, 0%, 0.607) 78.8%,
+    hsla(0, 0%, 0%, 0.668) 83.6%,
+    hsla(0, 0%, 0%, 0.721) 88.7%,
+    hsla(0, 0%, 0%, 0.762) 94.1%,
+    hsla(0, 0%, 0%, 0.790) 100%
+  );
+  transform: translateY(-50%);
+  transition: transform calc(var(--d) * 2) var(--e);
+}
+
+.card:nth-child(1):before {
+  background-image: url('src/assets/TravelUSA3.png');
+}
+
+.card:nth-child(2):before {
+  background-image: url('src/assets/TravelUSA2.png');
+}
+
+.card:nth-child(3):before {
+  background-image: url('src/assets/TravelCroatia2.png');
+}
+
+.card:nth-child(4):before {
+  background-image: url('src/assets/TravelGeorgia.png');
+}
+
+.card:nth-child(5):before {
+  background-image: url('src/assets/TravelArmenia.png');
+}
+
+.card:nth-child(6):before {
+  background-image: url('src/assets/TravelSerbia.png');
+}
+
+.card:nth-child(7):before {
+  background-image: url('src/assets/TravelMontenegro.png');
+}
+
+.card:nth-child(8):before {
+  background-image: url('src/assets/TravelCroatia.png');
+}
+
+.card:nth-child(9):before {
+  background-image: url('src/assets/TravelBosnia2.png');
+}
+
+.card:nth-child(10):before {
+  background-image: url('src/assets/TravelMorocco.png');
+}
+
+.card:nth-child(11):before {
+  background-image: url('src/assets/TravelUSA1.png');
+}
+
+.card:nth-child(12):before {
+  background-image: url('src/assets/TravelBritain.png');
+}
+
+.card:nth-child(13):before {
+  background-image: url('src/assets/TravelFrance.png');
+}
+
+.card:nth-child(14):before {
+  background-image: url('src/assets/TravelSwitzerland.png');
+}
+
+.card:nth-child(15):before {
+  background-image: url('src/assets/TravelItaly.png');
+}
+
+.card:nth-child(16):before {
+  background-image: url('src/assets/TravelBosnia1.png');
+}
+
+.card:nth-child(17):before {
+  background-image: url('src/assets/TravelTurkey.png');
+}
+
+.card:nth-child(18):before {
+  background-image: url('src/assets/TravelHungary.png');
+}
+
+.card:nth-child(19):before {
+  background-image: url('src/assets/TravelCzechia.png');
+}
+
+.card:nth-child(20):before {
+  background-image: url('src/assets/TravelGermany.png');
+}
+
+.card:nth-child(21):before {
+  background-image: url('src/assets/TravelNetherlands.png');
+}
+
+.card:nth-child(22):before {
+  background-image: url('src/assets/TravelBelgium.png');
+}
+
+.card:nth-child(23):before {
+  background-image: url('src/assets/TravelPortugal.png');
+}
+
+
+
+.content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  transition: transform var(--d) var(--e);
+  z-index: 1;
+  transform: translateY(calc(100% - 4rem));
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
-.background-color {
-  background-color: #f0f0f0;
-  min-height: 100vh;
-  padding: 1rem; /* Add padding to center content */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 60px; /* Add padding at the bottom to prevent overlap with footer */
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.2;
+  font-family: var(--font-serif);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adjust the shadow's offset and blur radius as needed */
+
 }
 
-/* Styling for content layout */
-.content-container {
-display: flex;
-justify-content: center; /* Center horizontally */
-align-items: flex-start; /* Align items at the top */
-gap: 10px; /* Adjust the gap between components */
-flex-wrap: wrap;
-z-index: 2; /* Ensure this is above background z-index */
+.copy {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.35;
 }
 
-.globe-container {
-flex: 1; /* Let the globe container take remaining space */
-min-width: 300px; /* Minimum width for the globe container */
-z-index: 2; /* Ensure this is above background z-index */
-justify-content: center;
+.btn {
+  cursor: pointer;
+  margin-top: 1rem;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+  color: white;
+  background-color: black;
+  border: none;
 }
 
-.accordion-container {
-width: 10%; /* Full width for the accordion */
-max-width: 600px; /* Limit maximum width for larger screens */
-z-index: 2; /* Ensure this is above background z-index */
-margin-top: 20px; /* Margin top for spacing */
-margin-left: 0px; /* Move the accordion more to the left */
+.btn:hover {
+  background-color: lighten(black, 5%);
 }
 
-@media (min-width: 768px) {
-.content-container {
-  justify-content: space-between; /* Add space between components */
-  align-items: flex-start; /* Align items at the top */
+.btn:focus {
+  outline: 1px dashed yellow;
+  outline-offset: 3px;
 }
 
-.accordion-container {
-  width: 450px; /* Adjusted width for accordion on larger screens */
-  margin-left: 0px; /* Move the accordion more to the left */
-}
-}
+@media (hover: hover) and (min-width: 600px) {
+  .card:after {
+    transform: translateY(0);
+  }
 
-@media (max-width: 768px) {
-.content-container {
-  flex-direction: column; /* Stack components vertically on smaller screens */
-  align-items: center; /* Center items vertically */
-}
+  .card:hover,
+  .card:focus-within {
+    align-items: center;
 
-.accordion-container {
-  width: 100%; /* Full width on smaller screens */
-  margin-top: 10px; /* Margin top for spacing */
-  margin-left: 0; /* Reset margin-left on smaller screens */
-}
+    &:before { transform: translateY(-4%); }
+    &:after { transform: translateY(-50%); }
+
+    .content {
+      transform: translateY(0);
+    }
+  }
+
+  .card:focus-within {
+    &:before,
+    &:after,
+    .content,
+    .content > *:not(.title) {
+      transition-duration: 0s;
+    }
+  }
 }
