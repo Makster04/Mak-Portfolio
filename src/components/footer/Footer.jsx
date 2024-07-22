@@ -1,5 +1,3 @@
-// Import Statements
-
 import React from "react";
 import { BsGithub, BsLinkedin, BsInstagram } from "react-icons/bs";
 import { SiLeetcode } from "react-icons/si";
@@ -47,3 +45,4 @@ const Footer = () => {
 // Export Component
 
 export default Footer;
+

@@ -16,6 +16,8 @@ import certificate201 from "../../assets/certificate201.png";
 import certificate301 from "../../assets/certificate301.png";
 import certificate401 from "../../assets/certificate401.png";
 import certificate102 from "../../assets/certificate102.png";
+import certificateVisualizeData from "../../assets/certificateVisualizeData.png";
+import { Computer } from "@mui/icons-material";
 
 const resumeURL = "https://docs.google.com/document/d/1OSOmxwTUWjMi2UnEW5FbrT1sjR5b9W6oIp3RXEr4Xws/edit#heading=h.biu39wkykbpm";
 
@@ -119,7 +121,7 @@ const HomeBottomPage = () => {
                   onMouseLeave={handleLeaveCertificate}
                   style={{ cursor: 'pointer', alignItems: 'center' }}
                 >
-                  <span style={{ color: "Red", fontWeight: "bold", marginRight: '10px' }}>Certificate of Completion in Code 401:</span>Advanced Software Development
+                  <span style={{ color: "Red", fontWeight: "bold", marginRight: '10px' }}>- Certificate of Completion in Code 401:</span>Advanced Software Development
                   {hoveredCertificate === certificate401 && (
                     <img src={certificate401} alt="Certificate" style={{ marginLeft: '10px', width: '200px', height: 'auto' }} />
                   )}
@@ -129,7 +131,7 @@ const HomeBottomPage = () => {
                   onMouseLeave={handleLeaveCertificate}
                   style={{ cursor: 'pointer', alignItems: 'center' }}
                 >
-                  <span style={{ color: "Red", fontWeight: "bold", marginRight: '10px' }}>Certificate of Completion in Code 301:</span>Intermediate Software Development
+                  <span style={{ color: "Red", fontWeight: "bold", marginRight: '10px' }}>- Certificate of Completion in Code 301:</span>Intermediate Software Development
                   {hoveredCertificate === certificate301 && (
                     <img src={certificate301} alt="Certificate" style={{ marginLeft: '10px', width: '200px', height: 'auto' }} />
                   )}
@@ -139,7 +141,7 @@ const HomeBottomPage = () => {
                   onMouseLeave={handleLeaveCertificate}
                   style={{ cursor: 'pointer', alignItems: 'center' }}
                 >
-                  <span style={{ color: "Red", fontWeight: "bold", marginRight: '10px' }}>Certificate of Completion in Code 201:</span>Foundations of Software Development
+                  <span style={{ color: "Red", fontWeight: "bold", marginRight: '10px' }}>- Certificate of Completion in Code 201:</span>Foundations of Software Development
                   {hoveredCertificate === certificate201 && (
                     <img src={certificate201} alt="Certificate" style={{ marginLeft: '10px', width: '200px', height: 'auto' }} />
                   )}
@@ -149,9 +151,40 @@ const HomeBottomPage = () => {
                   onMouseLeave={handleLeaveCertificate}
                   style={{ cursor: 'pointer', alignItems: 'center' }}
                 >
-                  <span style={{ color: "Red", fontWeight: "bold", marginRight: '10px' }}>Certificate of Completion in Code 102:</span>Intro to Software Development
+                  <span style={{ color: "Red", fontWeight: "bold", marginRight: '10px' }}>- Certificate of Completion in Code 102:</span>Intro to Software Development
                   {hoveredCertificate === certificate102 && (
                     <img src={certificate102} alt="Certificate" style={{ marginLeft: '10px', width: '200px', height: 'auto' }} />
+                  )}
+                </li>
+              </ul>
+            </p>
+          </VerticalTimelineElement>
+          </VerticalTimeline>
+
+
+          <VerticalTimeline>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--education"
+            date="September 2023 - Present"
+            iconStyle={{ background: '#bfb313', color: '#fff' }}
+            icon={<Computer />}
+            contentStyle={{ background: '#e0f7fa', color: '#00796b', textAlign: 'left' }}
+            contentArrowStyle={{ borderRight: '7px solid  #f0f0f0' }}
+            dateClassName="custom-date"
+          >
+            <h3 className="vertical-timeline-element-title" style={{ color: '#bfb313' }}>Code Fellows</h3>
+            <h4 className="vertical-timeline-element-subtitle" style={{ color: '#00796b' }}>Remote</h4>
+            <p style={{ color: '#555' }}>
+              Been taking lessons on Software, especially Data Science and continuing my journey:
+              <ul>
+                <li
+                  onMouseEnter={() => handleHoverCertificate(certificateVisualizeData)}
+                  onMouseLeave={handleLeaveCertificate}
+                  style={{ cursor: 'pointer', alignItems: 'center' }}
+                >
+                  <span style={{ color: "#bfb313", fontWeight: "bold", marginRight: '10px' }}>- Certificate of Completion in Codecademy:</span>Visualize Data with Python Skill Path
+                  {hoveredCertificate === certificateVisualizeData && (
+                    <img src={certificateVisualizeData} alt="Certificate" style={{ marginLeft: '10px', width: '200px', height: 'auto' }} />
                   )}
                 </li>
               </ul>

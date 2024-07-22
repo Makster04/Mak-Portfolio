@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import SingleProjectCard from "./SingleProjectCard";
 import projectData from "./ProjectData";
 import { Card } from "semantic-ui-react";
+
+
+
 const Project = () => {
   const [width,setWidth] = useState(1200);
 

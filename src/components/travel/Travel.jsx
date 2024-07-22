@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Card } from "semantic-ui-react";
-import SingleTravelCard from "./SingleTravelCard";
-import GlobeComponent from "./GlobeComponent"; // Import the GlobeComponent
-import AccordionComponent from "./AccordionComponent"; // Import the new AccordionComponent
+import Timeline from "./Timeline";
+import GlobeComponent from "./GlobeComponent";
 import travelData from "./TravelData";
-import "./Travel.css"; // Assuming you have defined styles for .travels
+import './Timeline.css'; // Ensure you import the styles
 
 const Travel = () => {
   const [width, setWidth] = useState(window.innerWidth);
@@ -19,16 +18,15 @@ const Travel = () => {
 
   return (
     <div className="travels">
-      <div className="background-image"> {/* or use className="background-color" */}
-        {/* Content inside the background */}
+      <div className="background-image">
         <h1
           style={{
-            marginTop: "2rem", // Adjusted marginTop to move title up
+            marginTop: "2rem",
             fontFamily: "Fira Code",
-            fontSize: "2.5rem", // Adjust font size
+            fontSize: "2.5rem",
             color: "white",
-            position: "relative", // Ensure content is above background
-            zIndex: 1, // Ensure content is above background
+            position: "relative",
+            zIndex: 1,
           }}
         >
           <span style={{ position: "relative", zIndex: 2, textShadow: "0 0 5px black" }}>My Recent</span>{" "}
@@ -43,24 +41,21 @@ const Travel = () => {
         </p>
       </div>
       
-      <div className="content-container" style={{ marginTop: "-7rem" }}> {/* Adjusted marginTop for content-container */}
+      <div className="content-container" style={{ marginTop: "-2rem" }}>
         <div className="globe-container">
           <GlobeComponent width={width} />
         </div>
-        {/* <div className="accordion-container">
-          <AccordionComponent />
-        </div> */}
       </div>
 
       <h2
         style={{
           marginTop: "2rem",
           fontFamily: "Fira Code",
-          fontSize: "2.5rem", // Match the font size
+          fontSize: "2.5rem",
           color: "white",
           position: "relative",
           zIndex: 1,
-          textAlign: "center", // Center the title
+          textAlign: "center",
         }}
       >
         <span style={{ position: "relative", zIndex: 2, textShadow: "0 0 5px black" }}>My</span>{" "}
@@ -75,13 +70,8 @@ const Travel = () => {
         </span>
       </p>
 
-      <div className="travel-cards-container">
-        <Card.Group itemsPerRow={width > 786 ? 3 : 1}>
-          {travelData.map((spot, index) => (
-            <SingleTravelCard className="card" key={index} spot={spot} />
-          ))}
-        </Card.Group>
-      </div>
+      {/* Render the Timeline component with travelData */}
+      <Timeline data={travelData} />
     </div>
   );
 };
