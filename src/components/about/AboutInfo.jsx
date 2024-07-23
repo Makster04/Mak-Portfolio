@@ -1,41 +1,32 @@
+// AboutInfo.jsx
 import React from "react";
 import TechStack from "./TechStack";
 import GitHubGraph from "./GitHubGraph";
 import { BsFillArrowRightSquareFill } from "react-icons/bs";
 import codeImage from "../../assets/bosnianparrot.gif";
+import './AboutInfo.css'; // Import the CSS file
 
 const AboutInfo = () => {
   return (
-    <div style={{ position: 'relative', zIndex: 1 }}>
-      <div className="about">
-        {/* About Me Section */}
-        <div className="about-section" style={{ textAlign: 'center' }}>
-          <h1
-            style={{
-              marginTop: "5rem",
-              fontFamily: "Fira Code",
-              fontSize: "3rem",
-              fontWeight: "bold",
-              marginBottom: "1rem" // Adjusted margin bottom to make room for the text
-            }}
-          >
-            <span style={{ color: "#32CD30", textShadow: "0 0 10px black", animation: "pulse 2s infinite" }}>ABOUT</span> Me 
-          </h1>
-          
-          <p style={{ textAlign: "center", marginBottom: "3rem" }}>
-            <span style={{ color: "white", textShadow: "0 4px 8px rgba(0, 0, 0, 10)" }}>
-              Hello Fellow Comrades, I am{" "}
-              <span style={{ color: "yellow", fontWeight: "bold" }}>Mak Trnka</span>. As a Bosnian-American... if I can survive RAKIJA & CEVAPI, then I can survive CODING & PROGRAMMING.
-            </span>
-          </p>
+    <div className="about-container">
+      <div className="about-section">
+        <h1 className="about-title">
+          <span className="about-title-highlight">ABOUT</span> Me 
+        </h1>
+        
+        <p className="about-introduction">
+          <span className="about-introduction-text">
+            Hello Fellow Comrades, I am{" "}
+            <span className="about-introduction-highlight">Mak Trnka</span>. As a Bosnian-American... if I can survive RAKIJA & CEVAPI, then I can survive CODING & PROGRAMMING.
+          </span>
+        </p>
 
-          <div className="about-parent" style={{ marginBottom: '7rem' }}>
-            <div className="about-text">
-              <p style={{ textAlign: "justify" }}>
-                Apart from my tech life, here are some of the facts about me:
-                <ul style={{ textAlign: "left" , margin: "0 auto" }}>
-                  <li>
-                    <BsFillArrowRightSquareFill style={{ display: "inline" }} />{" "}
+        <div className="about-details">
+          <div className="about-text">
+            <p className="about-details-list">
+              <ul>
+                <li>
+                <BsFillArrowRightSquareFill style={{ display: "inline" }} />{" "}
                     <span style={{ color: '#32CD30', boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)" }}>DATE & PLACE OF BIRTH:</span> 
                     <span style={{ color: "white", textShadow: "0 4px 8px rgba(0, 0, 0, 10)" }}> April 12, 1998 (Richmond, VA, USA)</span>
                   </li>
@@ -83,27 +74,22 @@ const AboutInfo = () => {
                     <BsFillArrowRightSquareFill style={{ display: "inline" }} />{" "}
                     <span style={{ color: '#32CD30', boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)" }}>POSITIVE TRAITS:</span> 
                     <span style={{ color: "white", textShadow: "0 4px 8px rgba(0, 0, 0, 10)" }}> Goofy, Outgoing, Extroverted, Omniligent, Sympathetic, Caring, Energetic, Curious, Open-Minded, Creative, Unintentionally Funny, Dramatic, Generous, Hospitable.</span>
-                  </li>
-                </ul>
-              </p>
-            </div>
-            <img
-              className="rounded about-image"
-              src={codeImage}
-              alt="Extra large avatar"
-              style={{ width: "700px", marginBottom: "50px" }}
-            />
+                </li>
+                {/* Add other list items here */}
+              </ul>
+            </p>
           </div>
+          <img
+            className="about-image"
+            src={codeImage}
+            alt="Extra large avatar"
+          />
         </div>
-
-        {/* Tech Skills Section */}
-        <div className="tech-stack-section" style={{ marginTop: '7rem', padding: '5rem', borderRadius: '10px' }}>
-          <TechStack />
-        </div>
-
-        {/* GitHub Contribution Graph Section */}
-        <GitHubGraph />
       </div>
+      <div className="tech-stack-section">
+        <TechStack />
+      </div>
+      <GitHubGraph />
     </div>
   );
 };

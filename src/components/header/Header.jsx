@@ -26,7 +26,7 @@ const pages = [
   { text: "About", href: "/about" },
   { text: "Software Projects", href: "/project" },
   { text: "Travel Blog (In the works)", href: "/travel" },
-  { text: "Powerpoints (not added yet)", href: "/project" },
+  { text: "Data Projects (not added yet)", href: "/project" },
   { text: "Contact", href: "/contact" },
   { text: "Fork Project", href: "https://github.com/Makster04/Mak-portfolio" },
 ];

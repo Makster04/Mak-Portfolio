@@ -172,7 +172,7 @@ const HomeBottomPage = () => {
             contentArrowStyle={{ borderRight: '7px solid  #f0f0f0' }}
             dateClassName="custom-date"
           >
-            <h3 className="vertical-timeline-element-title" style={{ color: '#bfb313' }}>Code Fellows</h3>
+            <h3 className="vertical-timeline-element-title" style={{ color: '#bfb313' }}>Codecademy</h3>
             <h4 className="vertical-timeline-element-subtitle" style={{ color: '#00796b' }}>Remote</h4>
             <p style={{ color: '#555' }}>
               Been taking lessons on Software, especially Data Science and continuing my journey:
