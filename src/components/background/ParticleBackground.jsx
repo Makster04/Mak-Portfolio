@@ -1,6 +1,7 @@
 import React, { useCallback } from 'react';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
+import "./ParticlesBackground.css";
 
 const ParticlesComponent = () => {
   const particlesInit = useCallback(async (engine) => {
@@ -31,11 +32,17 @@ const ParticlesComponent = () => {
             },
             onHover: {
               enable: true,
-              mode: ["bubble", "repulse"], // Added 'repulse' mode for hover
+              mode: ["connect", "bubble"], // 'connect' mode for hover effect
             },
             resize: true,
           },
           modes: {
+            connect: {
+              distance: 100, // Distance for connecting particles
+              links: {
+                opacity: 0.5, // Opacity of the connecting lines
+              },
+            },
             push: {
               quantity: 5, // Increased quantity for more particles
             },
@@ -45,10 +52,6 @@ const ParticlesComponent = () => {
               size: 10,
               opacity: 0.8,
             },
-            repulse: {
-              distance: 100, // Distance for repulse effect on hover
-              duration: 0.4,
-            },
           },
         },
         particles: {
@@ -56,10 +59,10 @@ const ParticlesComponent = () => {
             value: ["#1CE5E5"],
           },
           links: {
-            color: "#000000", // Changed the color of the links to black
-            distance: 150, // Increased distance for links
+            color: "#000000", // Color of the links
+            distance: 150, // Distance for linking particles
             enable: true,
-            opacity: 0.5, // Reduced opacity for better visual appeal
+            opacity: 0.5, // Opacity of the links
             width: 1.5,
           },
           collisions: {
@@ -69,24 +72,24 @@ const ParticlesComponent = () => {
             direction: "none",
             enable: true,
             outModes: {
-              default: "out", // Changed to 'out' for smoother exit
+              default: "out", // Smooth exit
             },
-            random: true, // Enabled random movement
-            speed: 2, // Increased speed for more dynamic motion
+            random: true, // Random movement
+            speed: 2, // Increased speed for dynamic motion
             straight: false,
           },
           number: {
             density: {
               enable: true,
-              area: 800, // Adjusted for better performance
+              area: 800, // Adjusted for performance
             },
-            value: 100, // Reduced number of particles for performance
+            value: 100, // Number of particles
           },
           opacity: {
-            value: { min: 0.3, max: 0.7 }, // Variable opacity for a subtle effect
+            value: { min: 0.3, max: 0.7 }, // Variable opacity
           },
           shape: {
-            type: ["circle", "triangle", "polygon", "hexegon"], // Added more shapes
+            type: ["circle", "triangle", "polygon", "hexagon"], // More shapes
             options: {
               star: {
                 sides: 5,
@@ -98,7 +101,7 @@ const ParticlesComponent = () => {
           },
           size: {
             random: { enable: true, minimumValue: 5 },
-            value: { min: 5, max: 15 }, // Variable size for more dynamic visuals
+            value: { min: 5, max: 15 }, // Variable size
           },
         },
         detectRetina: true,

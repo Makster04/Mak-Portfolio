@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Card } from "semantic-ui-react";
 import {
   SiJavascript,
+  SiPython,
   SiCss3,
   SiHtml5,
   SiMongodb,
@@ -53,6 +54,7 @@ const TechStack = () => {
         <Card.Group itemsPerRow={width > 768 ? 4 : 2} style={{ justifyContent: 'center' }}>
           {[
             { icon: <SiJavascript />, color: "#FFC300" },
+            { icon: <SiPython />, color: "#007ACC" },
             { icon: <SiCss3 />, color: "#1572B6" },
             { icon: <SiHtml5 />, color: "#E34F26" },
             { icon: <SiMongodb />, color: "#4DB33D" },
