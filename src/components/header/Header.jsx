@@ -1,6 +1,6 @@
 // Import Statements
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -44,6 +44,7 @@ const pageIcons = [
 
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
+  const [bgColor, setBgColor] = useState("#000050");
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -52,17 +53,24 @@ const Header = () => {
     setAnchorElNav(null);
   };
 
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setBgColor("#000033"); // Darker color when scrolled
+    } else {
+      setBgColor("#000050"); // Original color
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <AppBar position="sticky" sx={{ backgroundColor: "#000050" }}>
+    <AppBar position="sticky" sx={{ backgroundColor: bgColor, transition: "background-color 0.3s" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          
-          
-
           <BoltIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
-          
-
-
           <Typography
             variant="h6"
             noWrap
@@ -80,9 +88,6 @@ const Header = () => {
           >
             Mak Trnka
           </Typography>
-
-
-
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -121,13 +126,7 @@ const Header = () => {
               ))}
             </Menu>
           </Box>
-          
-
-
           <BoltIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
-          
-
-
           <Typography
             variant="h5"
             noWrap
@@ -146,9 +145,6 @@ const Header = () => {
           >
             Mak Trnka
           </Typography>
-          
-
-
           <Box
             justifyContent="flex-end"
             sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}

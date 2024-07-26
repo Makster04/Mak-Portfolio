@@ -26,6 +26,7 @@ const AboutInfo = () => {
             <p className="about-details-list">
               <ul>
                 <li>
+                  <p>MY BACKGROUND:</p>
                 <BsFillArrowRightSquareFill style={{ display: "inline" }} />{" "}
                     <span style={{ color: '#32CD30', boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)" }}>DATE & PLACE OF BIRTH:</span> 
                     <span style={{ color: "white", textShadow: "0 4px 8px rgba(0, 0, 0, 10)" }}> April 12, 1998 (Richmond, VA, USA)</span>

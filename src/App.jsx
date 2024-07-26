@@ -10,7 +10,7 @@ import About from './components/about/AboutInfo';
 import Footer from './components/footer/Footer';
 import Travel from './components/travel/Travel';
 import ParticleBackground from './components/background/ParticleBackground';
-import ScrollToTop from './components/ScrollToTop'; // Import the ScrollToTop component
+import ScrollToTop from './components/ScrollToTop';
 
 const App = () => {
   return (
@@ -24,7 +24,7 @@ const App = () => {
             <Route exact path="/" element={<HomePage />}></Route>
             <Route exact path="/Project" element={<Project />}></Route>
             <Route exact path="/contact" element={<Contact />}></Route>
-            <Route exact path="/about" element={<About />}></Route>
+            <Route exact path="/About" element={<About />}></Route>
             <Route exact path="/Travel" element={<Travel />}></Route>
           </Routes>
         </Router>
@@ -35,4 +35,3 @@ const App = () => {
 };
 
 export default App;
-

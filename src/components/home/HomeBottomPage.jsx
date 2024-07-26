@@ -96,10 +96,10 @@ const HomeBottomPage = () => {
       </div>
 
       {/* Timeline Section */}
-      <div className="timeline-section" style={{ marginTop: "50px" }}>
-        <h2 style={{ fontSize: "3.5rem", marginBottom: "2rem", textAlign: "center" }}>
-          <span style={{ textShadow: "0 0 5px black"}}> My </span> 
-          <span style={{ color: "Orange", fontWeight: "bold", textShadow: "0 0 10px black", animation: "pulse 2s infinite",}}>TIMELINE</span>
+      <div className="timeline-section">
+        <h2 className="timeline-title">
+          <span className="title-shadow"> My </span> 
+          <span className="timeline-highlight">TIMELINE</span>
         </h2>
         <VerticalTimeline>
           <VerticalTimelineElement
@@ -123,7 +123,7 @@ const HomeBottomPage = () => {
                 >
                   <span style={{ color: "Red", fontWeight: "bold", marginRight: '10px' }}>- Certificate of Completion in Code 401:</span>Advanced Software Development
                   {hoveredCertificate === certificate401 && (
-                    <img src={certificate401} alt="Certificate" style={{ marginLeft: '10px', width: '200px', height: 'auto' }} />
+                    <img src={certificate401} alt="Certificate" className="certificate-image" />
                   )}
                 </li>
                 <li
@@ -133,7 +133,7 @@ const HomeBottomPage = () => {
                 >
                   <span style={{ color: "Red", fontWeight: "bold", marginRight: '10px' }}>- Certificate of Completion in Code 301:</span>Intermediate Software Development
                   {hoveredCertificate === certificate301 && (
-                    <img src={certificate301} alt="Certificate" style={{ marginLeft: '10px', width: '200px', height: 'auto' }} />
+                    <img src={certificate301} alt="Certificate" className="certificate-image" />
                   )}
                 </li>
                 <li
@@ -143,7 +143,7 @@ const HomeBottomPage = () => {
                 >
                   <span style={{ color: "Red", fontWeight: "bold", marginRight: '10px' }}>- Certificate of Completion in Code 201:</span>Foundations of Software Development
                   {hoveredCertificate === certificate201 && (
-                    <img src={certificate201} alt="Certificate" style={{ marginLeft: '10px', width: '200px', height: 'auto' }} />
+                    <img src={certificate201} alt="Certificate" className="certificate-image" />
                   )}
                 </li>
                 <li
@@ -153,16 +153,13 @@ const HomeBottomPage = () => {
                 >
                   <span style={{ color: "Red", fontWeight: "bold", marginRight: '10px' }}>- Certificate of Completion in Code 102:</span>Intro to Software Development
                   {hoveredCertificate === certificate102 && (
-                    <img src={certificate102} alt="Certificate" style={{ marginLeft: '10px', width: '200px', height: 'auto' }} />
+                    <img src={certificate102} alt="Certificate" className="certificate-image" />
                   )}
                 </li>
               </ul>
             </p>
           </VerticalTimelineElement>
-          </VerticalTimeline>
 
-
-          <VerticalTimeline>
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
             date="September 2023 - Present"
@@ -175,21 +172,22 @@ const HomeBottomPage = () => {
             <h3 className="vertical-timeline-element-title" style={{ color: '#bfb313' }}>Codecademy</h3>
             <h4 className="vertical-timeline-element-subtitle" style={{ color: '#00796b' }}>Remote</h4>
             <p style={{ color: '#555' }}>
-              Been taking lessons on Software, especially Data Science and continuing my journey:
+              Been taking lessons on Visualizing Data. Here are some of my current certificates:
               <ul>
                 <li
                   onMouseEnter={() => handleHoverCertificate(certificateVisualizeData)}
                   onMouseLeave={handleLeaveCertificate}
                   style={{ cursor: 'pointer', alignItems: 'center' }}
                 >
-                  <span style={{ color: "#bfb313", fontWeight: "bold", marginRight: '10px' }}>- Certificate of Completion in Codecademy:</span>Visualize Data with Python Skill Path
+                  <span style={{ color: "#bfb313", fontWeight: "bold", marginRight: '10px' }}>- Certificate of Completion in Visualize Data:</span>Matplotlib and Seaborn
                   {hoveredCertificate === certificateVisualizeData && (
-                    <img src={certificateVisualizeData} alt="Certificate" style={{ marginLeft: '10px', width: '200px', height: 'auto' }} />
+                    <img src={certificateVisualizeData} alt="Certificate" className="certificate-image" />
                   )}
                 </li>
               </ul>
             </p>
           </VerticalTimelineElement>
+
 
           <VerticalTimelineElement
             className="vertical-timeline-element--work"

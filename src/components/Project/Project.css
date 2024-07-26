@@ -1,33 +1,33 @@
 .projects-container {
-  background-color: #222; /* Set your background color here */
-  padding: 20px;
-}
-
-.projects {
-  max-width: 1500px;
-  margin: 0 auto;
-  color: white;
-}
-
-.title {
-  margin-top: 3rem;
-  font-family: "Fira Code", monospace;
-  font-weight: bold;
-}
-
-.highlight {
-  color: yellow;
-}
-
-.description {
-  margin-bottom: 30px;
-}
-
-.project-cards {
-  display: flex;
-  justify-content: center;
-}
-
-.card {
-  margin: 10px;
-}
+    background-color: #222; /* Set your background color here */
+    padding: 20px;
+  }
+  
+  .projects {
+    max-width: 1500px;
+    margin: 0 auto;
+    color: white;
+  }
+  
+  .title {
+    margin-top: 3rem;
+    font-family: "Fira Code", monospace;
+    font-weight: bold;
+  }
+  
+  .highlight {
+    color: yellow;
+  }
+  
+  .description {
+    margin-bottom: 30px;
+  }
+  
+  .project-cards {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card {
+    margin: 10px;
+  }

@@ -32,7 +32,7 @@ const ParticlesComponent = () => {
             },
             onHover: {
               enable: true,
-              mode: ["connect", "bubble"], // 'connect' mode for hover effect
+              mode: ["connect", "bubble", "Attract"], // 'connect' mode for hover effect
             },
             resize: true,
           },
