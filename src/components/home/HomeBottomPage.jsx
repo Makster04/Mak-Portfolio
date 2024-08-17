@@ -101,7 +101,23 @@ const HomeBottomPage = () => {
           <span className="title-shadow"> My </span> 
           <span className="timeline-highlight">TIMELINE</span>
         </h2>
+        
         <VerticalTimeline>
+        <VerticalTimelineElement
+            className="vertical-timeline-element--education"
+            date="August 2024 - Present"
+            iconStyle={{ background: 'blue', color: '#fff' }}
+            icon={<Computer />}
+            contentStyle={{ background: '#e0f7fa', color: '#00796b', textAlign: 'left' }}
+            contentArrowStyle={{ borderRight: '7px solid  #f0f0f0' }}
+            dateClassName="custom-date"
+          >
+            <h3 className="vertical-timeline-element-title" style={{ color: 'Blue' }}>Coursera (Data Science)</h3>
+            <h4 className="vertical-timeline-element-subtitle" style={{ color: '#00796b' }}>Remote</h4>
+            <p style={{ color: '#555' }}>
+              Began taking remote courses relating to Data Science where I'm on the path to earn another certificate (Learning the tools, significance, and process)
+            </p>
+          </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
             date="January 2024 - June 2024"
@@ -111,7 +127,7 @@ const HomeBottomPage = () => {
             contentArrowStyle={{ borderRight: '7px solid  #f0f0f0' }}
             dateClassName="custom-date"
           >
-            <h3 className="vertical-timeline-element-title" style={{ color: 'Red' }}>Code Fellows</h3>
+            <h3 className="vertical-timeline-element-title" style={{ color: 'Red' }}>Code Fellows (Web Development)</h3>
             <h4 className="vertical-timeline-element-subtitle" style={{ color: '#00796b' }}>Seattle, WA</h4>
             <p style={{ color: '#555' }}>
               Learned Software Development with a focus on JavaScript & other features. Here are my current certificates:
@@ -169,7 +185,7 @@ const HomeBottomPage = () => {
             contentArrowStyle={{ borderRight: '7px solid  #f0f0f0' }}
             dateClassName="custom-date"
           >
-            <h3 className="vertical-timeline-element-title" style={{ color: '#bfb313' }}>Codecademy</h3>
+            <h3 className="vertical-timeline-element-title" style={{ color: '#bfb313' }}>Codecademy (Data Visualization)</h3>
             <h4 className="vertical-timeline-element-subtitle" style={{ color: '#00796b' }}>Remote</h4>
             <p style={{ color: '#555' }}>
               Been taking lessons on Visualizing Data. Here are some of my current certificates:
@@ -221,7 +237,7 @@ const HomeBottomPage = () => {
             contentArrowStyle={{ borderRight: '7px solid  #e0f7fa' }}
             dateClassName="custom-date"
           >
-            <h3 className="vertical-timeline-element-title" style={{ color: 'Purple' }}>University of Washington</h3>
+            <h3 className="vertical-timeline-element-title" style={{ color: 'Purple' }}>University of Washington (Bachelors)</h3>
             <h4 className="vertical-timeline-element-subtitle" style={{ color: '#00796b' }}>Seattle, WA</h4>
             <p style={{ color: '#004d40' }}>
               <ul>
@@ -248,7 +264,7 @@ const HomeBottomPage = () => {
             contentArrowStyle={{ borderRight: '30px solid  #e0f7fa' }}
             dateClassName="custom-date"
           >
-            <h3 className="vertical-timeline-element-title" style={{ color: 'Blue' }}>Bellevue College</h3>
+            <h3 className="vertical-timeline-element-title" style={{ color: 'Blue' }}>Bellevue College (Associates)</h3>
             <h4 className="vertical-timeline-element-subtitle" style={{ color: '#00796b' }}>Bellevue, WA</h4>
             <p style={{ color: '#004d40' }}>
               <ul>
