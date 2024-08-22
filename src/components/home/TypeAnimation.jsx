@@ -1,3 +1,4 @@
+import { index } from "d3";
 import React from "react";
 import Typewriter from "typewriter-effect";
 
