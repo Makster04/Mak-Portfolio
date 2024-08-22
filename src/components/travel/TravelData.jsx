@@ -1,8 +1,18 @@
 const travelData = [
   {
     id: 1,
-    name: "USA #3",
-    place: "Palm Springs, CA",
+    name: "Maui, HW (USA)",
+    place: "USA #4",
+    date: "AUG 7 - 17, 2024",
+    imageurl: 'src/assets/TravelUSA4.png', // USA flag
+    description: 'From the jungles to the beaches, an American tropical paradise.',
+    photoAlbumLink: 'https://photos.google.com/album/AF1QipMJ-169Z6Opuxg3dpGq2NMFRriEs2ftRFfFaewS', // Replace with actual album link
+  },
+
+  {
+    id: 1,
+    name: "Palm Springs, CA (USA)",
+    place: "USA #3",
     date: "May 20 - 30, 2024",
     imageurl: 'src/assets/TravelUSA3.png', // USA flag
     description: 'Desert retreat with mid-century modern allure and natural beauty.',
@@ -11,8 +21,8 @@ const travelData = [
 
   {
     id: 2,
-    name: "USA #2",
-    place: "NYC, DC, Baltimore",
+    name: "NYC, DC, Baltimore (USA)",
+    place: "USA #2",
     date: "Dec 20, 2023 - Jan 4, 2024",
     imageurl: 'src/assets/TravelUSA2.png', // USA flag
     description: 'American landmarks, political powerhouses, and East Coast charm.',
@@ -21,8 +31,8 @@ const travelData = [
 
   {
     id: 3,
-    name: "CROATIA #2",
-    place: "Loviste, Orebic, Korcula",
+    name: "Loviste, Orebic, Korcula (HRV)",
+    place: "CROATIA #2",
     date: "Sep 5 - 17, 2023",
     imageurl: 'src/assets/TravelCroatia2.png', // Croatia flag
     description: 'Sun-drenched islands and coastal towns steeped in history.',
@@ -31,8 +41,8 @@ const travelData = [
 
   {
     id: 4,
-    name: "GEORGIA",
-    place: "Tbilisi, Kaspi",
+    name: "Tbilisi, Shida Kartli (GEO)",
+    place: "GEORGIA",
     date: "Aug 27 - Sep 3, 2023",
     imageurl: 'src/assets/TravelGeorgia.png', // Georgia flag
     description: 'Cultural crossroads of Caucasus charm and ancient traditions.',
@@ -41,8 +51,8 @@ const travelData = [
 
   {
     id: 5,
-    name: "ARMENIA",
-    place: "Yerevan, Noravank",
+    name: "Yerevan, Lusarat, Yeghegnadzor (ARM)",
+    place: "ARMENIA",
     date: "Aug 22 - 27, 2023",
     imageurl: 'src/assets/TravelArmenia.png', // Armenia flag
     description: 'Rich history and stunning landscapes await in this Eurasian gem.',
@@ -51,8 +61,8 @@ const travelData = [
 
   {
     id: 6,
-    name: "SERBIA",
-    place: "Belgrade",
+    name: "Belgrade (SRB)",
+    place: "SERBIA",
     date: "Aug 19 - 22, 2023",
     imageurl: 'src/assets/TravelSerbia.png', // Serbia flag
     description: 'A dynamic blend of Slavic tradition and modern vibrancy.',
@@ -61,8 +71,8 @@ const travelData = [
 
   {
     id: 7,
-    name: "MONTENEGRO",
-    place: "Kotor, Budva",
+    name: "Kotor, Budva (MNE)",
+    place: "MONTENEGRO",
     date: "Aug 1 - 10, 2023",
     imageurl: 'src/assets/TravelMontenegro.png', // Montenegro flag
     description: 'Montenegro’s coast: where Adriatic beauty meets medieval charm.',
@@ -71,8 +81,8 @@ const travelData = [
 
   {
     id: 8,
-    name: "CROATIA #1",
-    place: "Dubrovnik",
+    name: "Dubrovnik (HRV)",
+    place: "CROATIA #1",
     date: "Jul 27 - Aug 1, 2023",
     imageurl: 'src/assets/TravelCroatia1.png', // Croatia flag
     description: 'Adriatic jewel with medieval walls, azure waters, and Mediterranean allure.',
@@ -81,8 +91,8 @@ const travelData = [
 
   {
     id: 9,
-    name: "BOSNIA & HERZ. #2",
-    place: "Sarajevo, Travnik, Jajice, Konjic, Donje Vakuv, etc.",
+    name: "Sarajevo, Travnik, Jajice, Konjic, Donje Vakuv, etc. (BIH)",
+    place: "BOSNIA & HERZEGOVINA #2",
     date: "Jun 29 - Sep 18, 2023",
     imageurl: 'src/assets/TravelBosnia2.png', // Bosnia and Herzegovina flag
     description: 'Hidden treasures of natural beauty and historical intrigue.',
@@ -91,8 +101,8 @@ const travelData = [
 
   {
     id: 10,
-    name: "MOROCCO",
-    place: "Casablanca, Rabat, Tangier, Chefchaoen, Ouazzane, Meknes, Fez, Midelt, Erfoud, Ouarzazate, Ait Ben Haddou, Marrakesh",
+    name: "Casablanca, Rabat, Tangier, Chefchaoen, Ouazzane, Meknes, Fez, Midelt, Erfoud, Ouarzazate, Ait Ben Haddou, Marrakesh (MAR)",
+    place: "MOROCCO",
     date: "Feb 20 - 28, 2023",
     imageurl: 'src/assets/TravelMorocco.png', // Morocco flag
     description: 'Exotic souks, desert dunes, and a tapestry of Berber culture.',
@@ -101,8 +111,8 @@ const travelData = [
 
   {
     id: 11,
-    name: "USA #1",
-    place: "New York City, NY",
+    name: "New York City, NY (USA)",
+    place: "USA #1",
     date: "Sep 29 - Dec 31, 2022",
     imageurl: 'src/assets/TravelUSA1.png', // USA flag
     description: 'The city that never sleeps: skyscrapers, culture, and culinary diversity.',
@@ -111,8 +121,8 @@ const travelData = [
 
   {
     id: 12,
-    name: "UNITED KINGDOM",
-    place: "Oxford, London",
+    name: "Oxford, London (UK)",
+    place: "UNITED KINGDOM",
     date: "Apr 11 - May 19, 2022",
     imageurl: 'src/assets/TravelBritain.png', // United Kingdom flag
     description: 'Iconic landmarks, literary history, and royal splendor.',
@@ -121,9 +131,9 @@ const travelData = [
 
   {
     id: 13,
-    name: "FRANCE",
-    place: "Paris",
-    date: "Apr 12 - 15, 2022",
+    name: "Paris (FRA)",
+    place: "FRANCE",
+    date: "May 12 - 15, 2022",
     imageurl: 'src/assets/TravelFrance.png', // France flag
     description: 'The epitome of romance, art, and culinary excellence.',
     photoAlbumLink: 'https://photos.google.com/share/AF1QipNxqUUtz56E1iJTy15gYD8sLEnogBAO7m6ZrgIoyfp4tU34SF1kyXKeh71exPPByw', // Replace with actual album link
@@ -131,8 +141,8 @@ const travelData = [
 
   {
     id: 14,
-    name: "SWITZERLAND",
-    place: "Zurich, Bern",
+    name: "Zurich, Bern (CHE)",
+    place: "SWITZERLAND",
     date: "May 10 - 12, 2022",
     imageurl: 'src/assets/TravelSwitzerland.png', // Switzerland flag
     description: 'Alpine landscapes, precision watches, and cultural richness.',
@@ -141,8 +151,8 @@ const travelData = [
 
   {
     id: 15,
-    name: "ITALY",
-    place: "Venice",
+    name: "Venice (ITA)",
+    place: "ITALY",
     date: "May 8 - 11, 2022",
     imageurl: 'src/assets/TravelItaly.png', // Italy flag
     description: 'Canals, gondolas, and Renaissance grandeur in the City of Water.',
@@ -151,8 +161,8 @@ const travelData = [
 
   {
     id: 16,
-    name: "BOSNIA & HERZ. #1",
-    place: "Sarajevo, Mostar",
+    name: "Sarajevo, Mostar (BIH)",
+    place: "BOSNIA & HERZEGOVIA #1",
     date: "May 22 - 27, 2023",
     imageurl: 'src/assets/TravelBosnia1.png', // Bosnia and Herzegovina flag
     description: 'A blend of Ottoman and European cultures set against breathtaking vistas.',
@@ -161,8 +171,8 @@ const travelData = [
   
   {
     id: 17,
-    name: "TURKEY",
-    place: "Istanbul",
+    name: "Istanbul (TUR)",
+    place: "TURKEY",
     date: "Apr 27 - May 1, 2022",
     imageurl: 'src/assets/TravelTurkey.png', // Turkey flag
     description: 'East meets West in Istanbul: a city of minarets and markets.',
@@ -171,8 +181,8 @@ const travelData = [
 
   {
     id: 18,
-    name: "HUNGARY",
-    place: "Budapest",
+    name: "Budapest (HUN)",
+    place: "HUNGARY",
     date: "Apr 24 - 27, 2022",
     imageurl: 'src/assets/TravelHungary.png', // Hungary flag
     description: 'Danube charm, thermal baths, and architectural splendor.',
@@ -181,8 +191,8 @@ const travelData = [
 
   {
     id: 19,
-    name: "CZECH REPUBLIC",
-    place: "Prague",
+    name: "Prague (CZE)",
+    place: "CZECH REPUBLIC",
     date: "Apr 21 - 23, 2022",
     imageurl: 'src/assets/TravelCzechia.png', // Czech Republic flag
     description: 'Bohemian charm meets Gothic architecture in the heart of Europe.',
@@ -191,8 +201,8 @@ const travelData = [
 
   {
     id: 20,
-    name: "GERMANY",
-    place: "Berlin",
+    name: "Berlin (DEU)",
+    place: "GERMANY",
     date: "Apr 18 - 20, 2022",
     imageurl: 'src/assets/TravelGermany.png', // Germany flag
     description: 'A vibrant cityscape of history, art, and modern innovation.',
@@ -200,8 +210,8 @@ const travelData = [
   },
   {
     id: 21,
-    name: "NETHERLANDS",
-    place: "Amsterdam, Rotterdam",
+    name: "Amsterdam, Rotterdam (NLD)",
+    place: "NETHERLANDS",
     date: "Apr 14 - 18, 2023",
     imageurl: 'src/assets/TravelNetherlands.png', // Netherlands flag
     description: 'Canals, tulips, and a progressive spirit in the land of windmills.',
@@ -209,8 +219,8 @@ const travelData = [
   },
   {
     id: 22,
-    name: "BELGIUM",
-    place: "Brussels",
+    name: "Brussels (BEL)",
+    place: "BELGIUM",
     date: "Apr 13 - 14, 2022",
     imageurl: 'src/assets/TravelBelgium.png', // Belgium flag
     description: 'Home to medieval towns, chocolate delights, and artistic legacies.',
@@ -219,8 +229,8 @@ const travelData = [
 
   {
     id: 23,
-    name: "PORTUGAL",
-    place: "Lisbon, Porto, Braga, Cascais, Sintra",
+    name: "Lisbon, Porto, Braga, Cascais, Sintra (PRT)",
+    place: "PORTUGAL",
     date: "Dec 15 - 28, 2018",
     imageurl: 'src/assets/TravelPortugal.png', // Portugal flag
     description: 'Portugal’s coast: from vibrant cities to historic fortresses.',

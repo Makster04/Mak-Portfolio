@@ -20,7 +20,7 @@ const Contact = () => {
       <Box
         sx={{
           flexGrow: 1,
-          backgroundColor: "#f5f5f5",
+          backgroundColor: "transparent", // Set to transparent
           padding: "10rem",
           textAlign: "center",
         }}
@@ -32,20 +32,21 @@ const Contact = () => {
             marginBottom: "2rem",
             fontFamily: "Fira Code",
             color: "white",
-            zIndex: 2, // Adjusted z-index
-            position: "relative", // Ensure z-index works
+            zIndex: 2,
+            position: "relative",
           }}
         >
-         <span style={{  textShadow: "0 0 10px black"}}> Have a <span style={{ fontWeight: 'bold', color: "#32CD30", textShadow: "0 0 10px black", animation: "pulse 2s infinite" }}>QUESTION</span> on your
-          mind??</span>
+          <span style={{ textShadow: "0 0 10px black" }}>
+            Have a <span style={{ fontWeight: 'bold', color: "#32CD30", textShadow: "0 0 10px black", animation: "pulse 2s infinite" }}>QUESTION</span> on your mind??
+          </span>
         </Typography>
         <Typography
           variant="body1"
           sx={{
             marginBottom: "2rem",
             color: "white",
-            zIndex: 2, // Adjusted z-index
-            position: "relative", // Ensure z-index works
+            zIndex: 2,
+            position: "relative",
           }}
         >
           Or just want to discuss a project or hire me? Contact me using any of the links below!
@@ -96,10 +97,7 @@ const Contact = () => {
                     <ListItemIcon>
                       <HiMailOpen className="contact-icon" />
                     </ListItemIcon>
-                    <ListItemText
-                      primary="Mail"
-                      className="contact-text"
-                    />
+                    <ListItemText primary="Mail" className="contact-text" />
                   </ListItemButton>
                 </ListItem>
               </List>

@@ -1,15 +1,13 @@
-// src/components/home/HomeBottomPage.jsx
 import React, { useState } from "react";
-import avatar from "../../assets/Robot.gif";
+import avatar from "../../assets/ComputerGif.gif";
 import Tilt from "react-parallax-tilt";
-import { FiDownloadCloud } from "react-icons/fi";
-import { Button } from "@mui/material";
 import {
   VerticalTimeline,
   VerticalTimelineElement
 } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { FaGraduationCap, FaBriefcase } from 'react-icons/fa';
+import { Computer } from "@mui/icons-material";
 
 // Import your certificate images
 import certificate201 from "../../assets/certificate201.png";
@@ -17,7 +15,6 @@ import certificate301 from "../../assets/certificate301.png";
 import certificate401 from "../../assets/certificate401.png";
 import certificate102 from "../../assets/certificate102.png";
 import certificateVisualizeData from "../../assets/certificateVisualizeData.png";
-import { Computer } from "@mui/icons-material";
 
 const resumeURL = "https://docs.google.com/document/d/1OSOmxwTUWjMi2UnEW5FbrT1sjR5b9W6oIp3RXEr4Xws/edit#heading=h.biu39wkykbpm";
 
@@ -43,7 +40,7 @@ const HomeBottomPage = () => {
       {/* Introduction Section */}
       <div className="introduction">
         <div className="intro-text">
-          <span style={{ color: "white", textShadow: "0 4px 8px rgba(0, 0, 0, 10)"}}>
+          <span style={{ color: "white", textShadow: "0 4px 8px rgba(0, 0, 0, 10)",}}>
             <p>
               I'm Mak Trnka, I have recently completed <span style={{ color: "red" }}>CODE FELLOWS</span> learning Software Development for the first time. My enthusiasm lies at the intersection of technology and creativity. Currently, I'm adept in JavaScript, CSS, React, and the MERN stack, with a newfound interest in mastering AWS and TypeScript. Beyond that, I aspire to delve into the realm of Data Science.
             </p>
@@ -61,7 +58,11 @@ const HomeBottomPage = () => {
             </p>
             <br />
             <p>
-              So stick around, take a look, and feel free to reach out if you ever want to meet up or begin a new journey in life! For a comprehensive overview, feel free to peruse my <span style={{ color: "#89dc88" }}>RESUME</span>. 
+              So stick around, take a look, and feel free to reach out if you ever want to meet up or begin a new journey in life! For a comprehensive overview, feel free to peruse my <a href={resumeURL} target="_blank" rel="noreferrer" style={{ color: "#89dc88" }}>RESUME</a>. 
+            </p>
+            <br />
+            <p>
+               
             </p>
           </span>
         </div>
@@ -69,7 +70,7 @@ const HomeBottomPage = () => {
         <div className="intro-image" style={{ marginTop: '80px' }}>
           <Tilt>
             <img
-              className="rounded w-90 h-80"
+              className="rounded w-50 h-50"
               src={avatar}
               alt="Extra large avatar"
             ></img>
@@ -77,32 +78,14 @@ const HomeBottomPage = () => {
         </div>
       </div>
 
-      {/* Download PDF Section */}
-      <div className="downloadPdf">
-        <a
-          href={resumeURL}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Button
-            variant="contained"
-            color="success"
-            endIcon={<FiDownloadCloud />}
-            style={{ marginBottom: "75px" }}
-          >
-            Resume
-          </Button>
-        </a>
-      </div>
-
       {/* Timeline Section */}
       <div className="timeline-section">
-        <h2 className="timeline-title">
-          <span className="title-shadow"> My </span> 
-          <span className="timeline-highlight">TIMELINE</span>
-        </h2>
+      <h2 style={{ fontSize: "2.5rem", marginBottom: "2rem" }}>
+        <span style={{ textShadow: "0 0 5px black"}}>My </span>
+        <span style={{ color: "yellow", textShadow: "0 0 10px white", animation: "pulse 2s infinite",}}>TIMELINE</span>
+      </h2>
         
-        <VerticalTimeline>
+      <VerticalTimeline>
         <VerticalTimelineElement
             className="vertical-timeline-element--education"
             date="August 2024 - Present"

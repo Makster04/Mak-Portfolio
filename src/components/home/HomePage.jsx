@@ -1,12 +1,14 @@
-// src/components/home/HomePage.jsx
-
 import React from "react";
 import TypeAnimation from "./TypeAnimation";
 import HomeBottomPage from "./HomeBottomPage";
+import Clock from "./Clock"; // Ensure the path is correct
+import ThreeDObject from "./ThreeDObject"; // Import the new component
 
 const HomePage = () => {
   return (
     <div className="home" style={{ position: 'relative', zIndex: 1 }}>
+      <Clock /> {/* Add the Clock component here */}
+      <ThreeDObject /> {/* Add the 3D object component here */}
       <div className="home-parent">
         <div className="home-content">
           <div className="heading-text">
