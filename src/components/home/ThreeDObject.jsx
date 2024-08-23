@@ -16,88 +16,59 @@ const ThreeDObject = () => {
     const ambientLight = new THREE.AmbientLight(0x404040, 1.5); // soft white light
     scene.add(ambientLight);
 
-    // Create glowing digital coin object
-    const coinGeometry = new THREE.Group();
+    // Robot head group
+    const robotHead = new THREE.Group();
 
-    // Coin body (circular shape)
-    const coinDiskGeometry = new THREE.CylinderGeometry(1.5, 1.5, 0.1, 64);
-    const coinBodyMaterial = new THREE.MeshStandardMaterial({
-      color: 0x00bfff, // Light blue color
-      emissive: 0x00bfff, // Light blue glow
-      emissiveIntensity: 0.8,
-      roughness: 0.3,
-      metalness: 0.1
+    // Head (a sphere)
+    const headGeometry = new THREE.SphereGeometry(1.5, 32, 32);
+    const headMaterial = new THREE.MeshStandardMaterial({
+      color: 0x666666,
+      emissive: 0x333333,
+      metalness: 0.6,
+      roughness: 0.4
     });
-    const coinBody = new THREE.Mesh(coinDiskGeometry, coinBodyMaterial);
-    coinBody.rotation.x = Math.PI / 2; // Rotate disk to horizontal
-    coinGeometry.add(coinBody);
+    const head = new THREE.Mesh(headGeometry, headMaterial);
+    robotHead.add(head);
 
-    // Coin edge (side view)
-    const edgeGeometry = new THREE.CylinderGeometry(1.55, 1.55, 0.1, 64);
-    const edgeMaterial = new THREE.MeshStandardMaterial({
-      color: 0x00bfff, // Light blue color
-      emissive: 0x00bfff, // Light blue glow
-      emissiveIntensity: 0.5,
-      roughness: 0.5,
-      metalness: 0.5
+    // Eyes (small spheres)
+    const eyeGeometry = new THREE.SphereGeometry(0.3, 32, 32);
+    const eyeMaterial = new THREE.MeshStandardMaterial({
+      color: 0xffffff,
+      emissive: 0x222222,
+      metalness: 0.7,
+      roughness: 0.2
     });
-    const edge = new THREE.Mesh(edgeGeometry, edgeMaterial);
-    edge.rotation.x = Math.PI / 2;
-    edge.position.z = 0.05; // Offset edge slightly
-    coinGeometry.add(edge);
+    const leftEye = new THREE.Mesh(eyeGeometry, eyeMaterial);
+    const rightEye = new THREE.Mesh(eyeGeometry, eyeMaterial);
+    leftEye.position.set(-0.6, 0.5, 1.2);
+    rightEye.position.set(0.6, 0.5, 1.2);
+    robotHead.add(leftEye);
+    robotHead.add(rightEye);
 
-    // Add lines around the coin
-    const lineMaterial = new THREE.LineBasicMaterial({ color: 0x00bfff, linewidth: 2 });
-    const lineGeometry = new THREE.BufferGeometry();
-    const numLines = 25;
-    const radius = 2;
-    const positions = new Float32Array((numLines + 1) * 3); // +1 for closing the loop
+    // Antenna (a cylinder)
+    const antennaGeometry = new THREE.CylinderGeometry(0.1, 0.1, 1, 32);
+    const antennaMaterial = new THREE.MeshStandardMaterial({
+      color: 0xff0000,
+      emissive: 0x880000,
+      metalness: 0.8,
+      roughness: 0.2
+    });
+    const antenna = new THREE.Mesh(antennaGeometry, antennaMaterial);
+    antenna.position.set(0, 1.6, 0);
+    robotHead.add(antenna);
 
-    for (let i = 0; i <= numLines; i++) {
-      const angle = (i / numLines) * Math.PI * 2;
-      positions[i * 3] = Math.cos(angle) * radius;
-      positions[i * 3 + 1] = Math.sin(angle) * radius;
-      positions[i * 3 + 2] = 0.1;
-    }
-
-    lineGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-
-    const lines = new THREE.LineSegments(lineGeometry, lineMaterial);
-    coinGeometry.add(lines);
-
-    scene.add(coinGeometry);
-
-    // Set initial position and velocity
-    const velocity = new THREE.Vector3(
-      (Math.random() - 0.5) * 0.05,
-      (Math.random() - 0.5) * 0.05,
-      (Math.random() - 0.5) * 0.05
-    );
-    coinGeometry.position.set(
-      (Math.random() - 0.5) * 10,
-      (Math.random() - 0.5) * 10,
-      (Math.random() - 0.5) * 10
-    );
+    scene.add(robotHead);
 
     // Camera position
     camera.position.z = 10;
 
-    // Animation function for coin spinning effect
+    // Animation function
     const animate = () => {
       requestAnimationFrame(animate);
 
-      // Update position based on velocity
-      coinGeometry.position.add(velocity);
+      // Rotate the robot head
+      robotHead.rotation.y += 0.01;
 
-      // Bounce off the walls
-      if (coinGeometry.position.x > 5 || coinGeometry.position.x < -5) velocity.x *= -1;
-      if (coinGeometry.position.y > 5 || coinGeometry.position.y < -5) velocity.y *= -1;
-      if (coinGeometry.position.z > 5 || coinGeometry.position.z < -5) velocity.z *= -1;
-
-      // Rotate coin (slowed down)
-      coinGeometry.rotation.y += 0.01; // Slow down rotation speed
-      coinGeometry.rotation.x += 0.01; // Slow down rotation speed
-      
       renderer.render(scene, camera);
     };
 
@@ -124,7 +95,7 @@ const ThreeDObject = () => {
       style={{
         position: 'absolute',
         top: '0',
-        left: '0',
+        right: '0',  // Position at top right
         width: '100%',
         height: '100%',
         overflow: 'hidden',
