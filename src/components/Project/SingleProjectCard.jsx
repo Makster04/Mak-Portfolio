@@ -1,6 +1,6 @@
-import { Button, Card, Image, List } from "semantic-ui-react";
+import { Button, Card, Image } from "semantic-ui-react";
 import { BsGithub } from "react-icons/bs";
-import "./Project.css"
+import "./Project.css";
 
 const SingleProjectCard = ({ projectDetails }) => {
   const { title, about, role, languages, image, projectLink } = projectDetails;
@@ -9,8 +9,8 @@ const SingleProjectCard = ({ projectDetails }) => {
     <Card className="single-card">
       <Image className="projectCard-image" src={image} wrapped ui={false} />
       <Card.Content className="single-card-content">
-        <Card.Header style={{ fontSize: "2rem" }}>{title}</Card.Header>
-        <Card.Description style={{ fontSize: "1.2rem", textAlign: "left" }}>
+        <Card.Header as="h2">{title}</Card.Header>
+        <Card.Description>
           <p><strong>About:</strong> {about}</p>
           <p><strong>Role:</strong> {role}</p>
           {languages && (

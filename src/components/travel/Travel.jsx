@@ -5,6 +5,7 @@ import GlobeComponent from "./GlobeComponent";
 import travelData from "./TravelData";
 import './Timeline.css'; // Ensure you import the styles
 
+
 const Travel = () => {
   const [width, setWidth] = useState(window.innerWidth);
 
@@ -18,6 +19,7 @@ const Travel = () => {
 
   return (
     <div className="travels">
+
       <div className="background-image">
         <h1
           style={{

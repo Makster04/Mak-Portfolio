@@ -1,7 +1,7 @@
 import React from "react";
 import TypeAnimation from "./TypeAnimation";
 import HomeBottomPage from "./HomeBottomPage";
-import Clock from "./Clock"; // Ensure the path is correct
+import Clock from "../../Clock"; // Ensure the path is correct
 // import ThreeDObject from "./ThreeDObject"; // Import the new component
 
 const HomePage = () => {

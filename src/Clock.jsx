@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Clock.css"; // Assuming you have this CSS file for styles
+import "./Clock.css";
 
 const Clock = () => {
   const [time, setTime] = useState("");
@@ -37,11 +37,14 @@ const Clock = () => {
   }, []);
 
   return (
-    <div id="clock">
-      <p className="time">{time}</p>
-      <p className="date">{date}</p>
-      <p className="day">{day}</p> {/* Day added here */}
-      
+    <div className="clock-container">
+      <div className="spinning-circle outer-circle"></div>
+      <div className="spinning-circle inner-circle"></div>
+      <div id="clock">
+        <p className="time">{time}</p>
+        <p className="date">{date}</p>
+        <p className="day">{day}</p>
+      </div>
     </div>
   );
 };
