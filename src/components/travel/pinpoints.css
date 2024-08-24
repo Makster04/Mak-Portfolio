@@ -1,0 +1,79 @@
+/* General styles for the pinpoint */
+.pinpoint {
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translate(-50%, -50%);
+}
+
+/* Size variations for different pinpoints */
+.pinpoint.small {
+    width: 8px;
+    height: 8px;
+}
+
+.pinpoint.medium {
+    width: 12px;
+    height: 12px;
+}
+
+.pinpoint.large {
+    width: 16px;
+    height: 16px;
+}
+
+/* Color variations using gradients */
+.pinpoint.red {
+    background: linear-gradient(135deg, #ff6a6a, #ff4040);
+}
+
+.pinpoint.blue {
+    background: linear-gradient(135deg, #6aa6ff, #4074ff);
+}
+
+.pinpoint.green {
+    background: linear-gradient(135deg, #6aff6a, #40ff40);
+}
+
+.pinpoint.yellow {
+    background: linear-gradient(135deg, #ffec6a, #ffe640);
+}
+
+/* Animation for a pulsing effect */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.pinpoint.pulsing {
+    animation: pulse 2s infinite;
+}
+
+/* Styling the label */
+.label {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 3px 6px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 12px;
+    white-space: nowrap;
+    transform: translate(-50%, -120%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.pinpoint:hover .label {
+    opacity: 1;
+}
+
+/* Shadow and border effects */
+.pinpoint.shadow {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.pinpoint.border {
+    border: 2px solid black;
+}
