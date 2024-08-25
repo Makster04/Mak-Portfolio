@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Card } from "semantic-ui-react";
 import Timeline from "./Timeline";
 import GlobeComponent from "./GlobeComponent";
+import KeyBoard from "./KeyBoard"; // Import the KeyBoard component
 import travelData from "./TravelData";
 import './Timeline.css'; // Ensure you import the styles
-
 
 const Travel = () => {
   const [width, setWidth] = useState(window.innerWidth);
@@ -19,7 +18,6 @@ const Travel = () => {
 
   return (
     <div className="travels">
-
       <div className="background-image">
         <h1
           style={{
@@ -43,9 +41,12 @@ const Travel = () => {
         </p>
       </div>
       
-      <div className="content-container" style={{ marginTop: "-2rem" }}>
-        <div className="globe-container">
+      <div className="content-container" style={{ marginTop: "-4rem", display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '2rem' }}>
+        <div className="globe-container" style={{ flex: 1, maxWidth: '45%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <GlobeComponent width={width} />
+        </div>
+        <div className="key-board-container" style={{ marginTop: "-4rem", flex: 1, maxWidth: '45%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <KeyBoard />
         </div>
       </div>
 

@@ -1,0 +1,66 @@
+.key-board {
+    background-color: rgba(51, 51, 51, 0.8);
+    padding: 2rem;
+    border-radius: 12px;
+    display: flex;
+    color: #f8f1f1; /* Dark text for contrast */
+    font-family: 'Roboto', sans-serif; /* Modern, clean font */
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ddd; /* Light border for definition */
+    margin: 0 auto; /* Center align */
+    flex-direction: column;
+  }
+  
+  .key-board h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #0083b3; /* Blue color for heading */
+  }
+  
+  .key-board h4 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #c6bebe; /* Dark color for subheadings */
+  }
+  
+  .key-section ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  
+  .key-section ul li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .key-section ul li strong {
+    font-weight: bold;
+    margin-right: 0.5rem;
+    color: #bebabe; /* Highlighted text color */
+  }
+  
+  .key-section ul li span {
+    font-size: 1rem;
+  }
+  
+  .color-box {
+    width: 25px;
+    height: 25px;
+    margin-right: 1rem;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+  }
+  
+  .color-box.white { background-color: white; }
+  .color-box.pink { background-color: pink; }
+  .color-box.red { background-color: red; }
+  .color-box.purple { background-color: purple; }
+  .color-box.black { background-color: black; }
+  
