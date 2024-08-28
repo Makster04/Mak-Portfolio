@@ -88,22 +88,22 @@ const HomeBottomPage = () => {
       <VerticalTimeline>
         <VerticalTimelineElement
             className="vertical-timeline-element--education"
-            date="August 2024 - Present"
+            date="December 2024 - Present"
             iconStyle={{ background: 'blue', color: '#fff' }}
             icon={<Computer />}
             contentStyle={{ background: '#e0f7fa', color: '#00796b', textAlign: 'left' }}
             contentArrowStyle={{ borderRight: '7px solid  #f0f0f0' }}
             dateClassName="custom-date"
           >
-            <h3 className="vertical-timeline-element-title" style={{ color: 'Blue' }}>Coursera (Data Science)</h3>
-            <h4 className="vertical-timeline-element-subtitle" style={{ color: '#00796b' }}>Remote</h4>
+            <h3 className="vertical-timeline-element-title" style={{ color: 'Blue' }}>Flatiron (Data Science)</h3>
+            <h4 className="vertical-timeline-element-subtitle" style={{ color: '#00796b' }}>New York City, NY</h4>
             <p style={{ color: '#555' }}>
-              Began taking remote courses relating to Data Science where I'm on the path to earn another certificate (Learning the tools, significance, and process)
+              Just got enrolled into an In-Person Data Science Bootcamp located in Manhattan, NYC starting December 9th. Therefore, haven't started yet.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
-            date="January 2024 - June 2024"
+            date="January 2024 - July 2024"
             iconStyle={{ background: 'red', color: '#fff' }}
             icon={<FaGraduationCap />}
             contentStyle={{ background: '#e0f7fa', color: '#00796b', textAlign: 'left' }}
@@ -113,7 +113,7 @@ const HomeBottomPage = () => {
             <h3 className="vertical-timeline-element-title" style={{ color: 'Red' }}>Code Fellows (Web Development)</h3>
             <h4 className="vertical-timeline-element-subtitle" style={{ color: '#00796b' }}>Seattle, WA</h4>
             <p style={{ color: '#555' }}>
-              Learned Software Development with a focus on JavaScript & other features. Here are my current certificates:
+              Learned Software Development with a focus on JavaScript & other features in a Bootcamp named Codefellows located in Seattle, WA. Here are my current certificates:
               <ul>
                 <li
                   onMouseEnter={() => handleHoverCertificate(certificate401)}
