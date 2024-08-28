@@ -64,3 +64,21 @@
   .color-box.purple { background-color: purple; }
   .color-box.black { background-color: black; }
   
+  .content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  @media (max-width: 768px) {
+    .content-container {
+      flex-direction: column;
+    }
+    .globe-container, .key-board-container {
+      max-width: 100%;
+      flex: none;
+    }
+  }
+  
