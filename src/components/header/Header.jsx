@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+// Import Statements
+
+import React, { useState, useEffect } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -17,23 +19,32 @@ import FolderSharedRoundedIcon from "@mui/icons-material/FolderSharedRounded";
 import CallRoundedIcon from "@mui/icons-material/CallRounded";
 import { BsGithub } from "react-icons/bs";
 
+// Data
+
 const pages = [
   { text: "Home", href: "/" },
   { text: "About", href: "/about" },
-  { text: "Projects", href: "/projects" },
+  { text: "Software Projects", href: "/project" },
+  { text: "Travel Blog (In the works)", href: "/travel" },
+  { text: "Data Projects (not added yet)", href: "/project" },
   { text: "Contact", href: "/contact" },
-  { text: "Fork Project", href: "https://github.com/Abhinav2011/my-portfolio" },
+  { text: "Fork Project", href: "https://github.com/Makster04/Mak-portfolio" },
 ];
 const pageIcons = [
   HomeRoundedIcon,
   FaceRoundedIcon,
   FolderSharedRoundedIcon,
+  FolderSharedRoundedIcon,
+  FolderSharedRoundedIcon,
   CallRoundedIcon,
   BsGithub,
 ];
 
+// Component Definition
+
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
+  const [bgColor, setBgColor] = useState("#000050");
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -42,8 +53,21 @@ const Header = () => {
     setAnchorElNav(null);
   };
 
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setBgColor("#000033"); // Darker color when scrolled
+    } else {
+      setBgColor("#000050"); // Original color
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <AppBar position="sticky" sx={{ backgroundColor: "#152b61" }}>
+    <AppBar position="sticky" sx={{ backgroundColor: bgColor, transition: "background-color 0.3s" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <BoltIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
@@ -58,13 +82,12 @@ const Header = () => {
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
-              color: "inherit",
+              color: "gold",
               textDecoration: "none",
             }}
           >
-            Abhinav Kumar
+            Mak Trnka
           </Typography>
-
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -164,5 +187,7 @@ const Header = () => {
     </AppBar>
   );
 };
+
+// Export Component
 
 export default Header;

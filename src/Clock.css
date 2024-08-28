@@ -1,0 +1,76 @@
+html, body {
+    height: 100%;
+}
+body {
+    background: #0f3854;
+    background: radial-gradient(ellipse at center, #0a2e38 0%, #000000 70%);
+    background-size: 100%;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+.clock-container {
+    position: absolute;
+    top: 10px; /* Adjusted top position */
+    left: 10px; /* Adjusted left position */
+    width: 150px; /* Reduced width */
+    height: 150px; /* Reduced height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.spinning-circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 6px dashed #63c7ee; /* Reduced border width */
+    box-shadow: 0 0 15px rgba(99, 199, 238, 0.7), 0 0 30px rgba(99, 199, 238, 0.5); /* Adjusted shadow */
+}
+.outer-circle {
+    animation: spin 30s linear infinite;
+}
+.inner-circle {
+    width: 85%;
+    height: 85%;
+    border: 4px dashed #63c7ee; /* Reduced border width */
+    box-shadow: 0 0 10px rgba(99, 199, 238, 0.7), 0 0 20px rgba(99, 199, 238, 0.5); /* Adjusted shadow */
+    animation: spin-reverse 35s linear infinite;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin-reverse {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+#clock {
+    position: relative;
+    z-index: 1;
+    font-family: 'Share Tech Mono', monospace;
+    color: #d4e1e6;
+    text-align: center;
+    text-shadow: 0 0 15px rgb(255, 255, 255), 0 0 15px rgba(6, 201, 65, 0); /* Adjusted text shadow */
+}
+#clock p {
+    letter-spacing: 0.1em;
+    margin: 0;
+    padding: 0;
+}
+#clock .time {
+    font-size: 18px; /* Reduced font size */
+}
+#clock .date, #clock .day {
+    font-size: 12px; /* Reduced font size */
+    margin-bottom: 3px; /* Reduced margin */
+}

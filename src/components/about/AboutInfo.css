@@ -1,0 +1,87 @@
+/* AboutInfo.css */
+.about-container {
+    position: relative;
+    z-index: 1;
+}
+
+.about-section {
+    text-align: center;
+    margin-top: 3rem
+}
+
+.about-title {
+
+    font-family: "Fira Code";
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+
+.about-title-highlight {
+    color: #32CD30;
+    text-shadow: 0 0 10px black;
+    animation: pulse 2s infinite;
+}
+
+.about-introduction {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.about-introduction-text {
+    color: white;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 10);
+}
+
+.about-introduction-highlight {
+    color: yellow;
+    font-weight: bold;
+}
+
+.about-details {
+    margin-bottom: 7rem;
+    display: flex;
+    align-items: center; /* Center content */
+}
+
+.about-text {
+    text-align: justify;
+}
+
+.about-details-list ul {
+    text-align: left;
+    margin: 0 auto;
+}
+
+.icon {
+    display: inline;
+}
+
+.detail-label {
+    color: #32CD30;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.detail-info {
+    color: white;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 10);
+}
+
+.about-image {
+    width: 500px;
+    margin-bottom: 20px; /* Space below the image */
+    margin-top: -100px; /* Move the image up further */
+}
+
+
+.tech-stack-section {
+    margin-top: 7rem;
+    border-radius: 10px;
+}
+
+/* AboutInfo.css */
+
+
+
+

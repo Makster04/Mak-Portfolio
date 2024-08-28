@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+html,
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.anim {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+.custom-date {
+  font-family: 'Arial', sans-serif; /* Change to your desired font */
+  color: #ffffff; /* Change to your desired color */
+  font-weight: bold;
+  font-size: 1.2rem; /* Adjust size as needed */
+}
+.sticky-section {
+  position: sticky;
+  top: 0;
+  z-index: 100; /* Ensure it appears above other content */
+}
+

@@ -1,37 +1,45 @@
 import React from "react";
 import TypeAnimation from "./TypeAnimation";
 import HomeBottomPage from "./HomeBottomPage";
-import developer from "../../assets/developer.svg";
+import Clock from "../../Clock"; // Ensure the path is correct
+// import ThreeDObject from "./ThreeDObject"; // Import the new component
 
 const HomePage = () => {
   return (
-    <div className="home">
+    <div className="home" style={{ position: 'relative', zIndex: 1 }}>
+      <Clock /> {/* Add the Clock component here */}
+      {/* <ThreeDObject /> Add the 3D object component here */}
       <div className="home-parent">
         <div className="home-content">
           <div className="heading-text">
             <h1
               style={{
                 fontFamily: "Fira Code",
-                fontSize: "2.5rem",
-                position: "static",
+                fontSize: "3rem",
+                position: "relative",
+                zIndex: 2,
               }}
             >
-              HI
+              <span style={{ textShadow: "0 0 10px black"}}>Greetings, it's</span>
             </h1>
             <h1
               style={{
-                color: "#0E2BBA",
+                color: "white",
                 fontFamily: "Fira Code",
-                fontSize: "2.5rem",
-                position: "static",
+                fontSize: "4rem",
+                position: "relative",
+                zIndex: 2,
               }}
             >
-              I'M{" "}
               <span
                 style={{
-                  color: "#0E2BBA",
-                  position: "static",
-                  textDecoration: "",
+                  color: "black",
+                  fontFamily: "monospace",
+                  position: "relative",
+                  fontSize: "7rem",
+                  textShadow: "0 0 10px white",
+                  animation: "pulse 2s infinite",
+                  zIndex: 2,
                 }}
               >
                 MAK TRNKA
@@ -42,11 +50,6 @@ const HomePage = () => {
             <TypeAnimation />
           </div>
         </div>
-        <img
-          className="rounded w-36 h-36 homepage-avatar"
-          src={developer}
-          alt="Extra large avatar"
-        ></img>
       </div>
       <HomeBottomPage />
     </div>
