@@ -41,7 +41,7 @@ const Travel = () => {
         </p>
       </div>
       
-      <div className="content-container" style={{ marginTop: "-4rem", display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '2rem' }}>
+      <div className="content-container" style={{ marginTop: "-4rem", display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10rem' }}>
         <div className="globe-container" style={{ flex: 1, maxWidth: '45%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <GlobeComponent width={width} />
         </div>
@@ -80,3 +80,4 @@ const Travel = () => {
 };
 
 export default Travel;
+
