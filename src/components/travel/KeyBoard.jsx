@@ -6,6 +6,12 @@ const KeyBoard = () => {
     <div className="key-board">
       <h3>Pinpoint Key</h3>
       <div className="key-section">
+        <h4>Total Places:</h4>
+        <ul>
+          <li><strong>Countries Visited:</strong> <span>25</span></li>
+        </ul>
+      </div>
+      <div className="key-section">
         <h4>Pinpoint Color:</h4>
         <ul>
           <li><span className="color-box white"></span> <strong>WHITE:</strong> <span>Visited 1x</span></li>
@@ -18,10 +24,12 @@ const KeyBoard = () => {
       <div className="key-section">
         <h4>Pinpoint Size:</h4>
         <ul>
-          <li><strong>1:</strong> <span>Do Remember the Experience</span></li>
+          <li><strong>2.0:</strong> <span>Remember the Experience (Have Photos)</span></li>
+          <li><strong>1.0:</strong> <span>Remember the Experience (No Photos)</span></li>
           <li><strong>0.5:</strong> <span>Don't Remember the Experience</span></li>
         </ul>
       </div>
+      
     </div>
   );
 };
