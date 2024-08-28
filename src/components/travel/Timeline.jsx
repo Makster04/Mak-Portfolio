@@ -23,8 +23,5 @@ const Timeline = ({ data }) => {
 };
 
 export default Timeline;
-<<<<<<< HEAD
 
 
-=======
->>>>>>> f8379fd6ec3ef598138155250548e3b184ea6dc7
