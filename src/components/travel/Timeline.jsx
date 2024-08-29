@@ -23,5 +23,3 @@ const Timeline = ({ data }) => {
 };
 
 export default Timeline;
-
-
