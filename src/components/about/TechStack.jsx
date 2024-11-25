@@ -44,7 +44,7 @@ const TechStack = () => {
           }}
         >
           <span style={{ textShadow: "0 0 10px black", color: "white" }}>My</span>{" "}
-          <span style={{ textShadow: "0 0 10px black", animation: "pulse 2s infinite" }}>SOFTWARE SKILLS</span>
+          <span style={{ textShadow: "0 0 10px black", animation: "pulse 2s infinite" }}>TECH SKILLS</span>
         </span>
       </h1>
 

@@ -44,12 +44,12 @@ const AboutInfo = () => {
                   <li>
                     <BsFillArrowRightSquareFill style={{ display: "inline" }} />{" "}
                     <span style={{ color: '#32CD30', boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)" }}>HOME:</span> 
-                    <span style={{ color: "white", textShadow: "0 4px 8px rgba(0, 0, 0, 10)" }}> Seattle, WA, USA</span>
+                    <span style={{ color: "white", textShadow: "0 4px 8px rgba(0, 0, 0, 10)" }}> Seattle, WA, USA (1998-2024), New York City, New York, USA (2024-Present)</span>
                   </li>
                   <li>
                     <BsFillArrowRightSquareFill style={{ display: "inline" }} />{" "}
                     <span style={{ color: '#32CD30', boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)" }}>EDUCATION:</span> 
-                    <span style={{ color: "white", textShadow: "0 4px 8px rgba(0, 0, 0, 10)" }}> Bellevue College (2016-19), University of Washington (2019-22), Code Fellows (2024)</span>
+                    <span style={{ color: "white", textShadow: "0 4px 8px rgba(0, 0, 0, 10)" }}> Bellevue College (2016-19), University of Washington (2019-22), Code Fellows (2024), Flatiron (2025)</span>
                   </li>
                   <li>
                     <BsFillArrowRightSquareFill style={{ display: "inline" }} />{" "}
@@ -69,7 +69,7 @@ const AboutInfo = () => {
                   <li>
                     <BsFillArrowRightSquareFill style={{ display: "inline" }} />{" "}
                     <span style={{ color: '#32CD30', boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)" }}>DREAMS:</span> 
-                    <span style={{ color: "white", textShadow: "0 4px 8px rgba(0, 0, 0, 10)" }}> Start a Podcast, Create a Business (I already have a Tech Business Plan laid out), Start a YouTube Channel, Become an Actor</span>
+                    <span style={{ color: "white", textShadow: "0 4px 8px rgba(0, 0, 0, 10)" }}> Start a Podcast, Create a Business (I already have a Tech Business Plan laid out), Start a YouTube Channel, Become an Actor, etc.</span>
                   </li>
                   <li>
                     <BsFillArrowRightSquareFill style={{ display: "inline" }} />{" "}

@@ -7,7 +7,7 @@ import {
 } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { FaGraduationCap, FaBriefcase } from 'react-icons/fa';
-import { Computer } from "@mui/icons-material";
+import { Computer, ShoppingBag, ShoppingCart } from "@mui/icons-material";
 
 // Import your certificate images
 import certificate201 from "../../assets/certificate201.png";
@@ -92,7 +92,7 @@ const HomeBottomPage = () => {
       <VerticalTimeline>
         <VerticalTimelineElement
             className="vertical-timeline-element--education"
-            date="December 2024 - Present"
+            date="January 2025 - Present"
             iconStyle={{ background: 'blue', color: '#fff' }}
             icon={<Computer />}
             contentStyle={{ background: '#e0f7fa', color: '#00796b', textAlign: 'left' }}
@@ -264,7 +264,26 @@ const HomeBottomPage = () => {
               <li><span style={{ fontWeight: "bold" }}>Habitat for Humanity:</span> Volunteered as a worker collecting and moving furniture for other customers.</li>
             </p>
           </VerticalTimelineElement>
+
+          <VerticalTimelineElement
+            className="vertical-timeline-element--education"
+            date="January 2017 - Jan 2018"
+            iconStyle={{ background: 'red', color: '#fff' }}
+            icon={<ShoppingCart />}
+            contentStyle={{ background: '#e0f7fa', color: '#00796b', textAlign: 'left' }}
+            contentArrowStyle={{ borderRight: '30px solid  #e0f7fa' }}
+            dateClassName="custom-date"
+          >
+            <h3 className="vertical-timeline-element-title" style={{ color: 'red' }}>Safeway (Courtesy Clerk)</h3>
+            <h4 className="vertical-timeline-element-subtitle" style={{ color: '#00796b' }}>Bellevue, WA</h4>
+            <p style={{ color: '#004d40' }}>
+            <p style={{ color: '#555' }}>
+              First Job I was every employed to. Was employed for a year, working as a courtesy clerk in a Grocery Store, helping customers, cleaned, and set up the store daily. 
+            </p>
+            </p>
+          </VerticalTimelineElement>
         </VerticalTimeline>
+        
       </div>
 
       {hoveredCertificate && (
