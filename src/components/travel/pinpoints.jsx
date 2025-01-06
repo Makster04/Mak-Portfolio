@@ -115,7 +115,7 @@ const pinpoints = [
     { lat: 47.6101, lng: -122.2015, size: 1, color: 'black', label: 'Bellevue, WA' },
     { lat: 44.0582, lng: -121.3153, size: 0.5, color: 'white', label: 'Bend, OR' },
     { lat: 19.6012, lng: -155.4969, size: 1, color: 'white', label: 'Big Island, HW' },
-    { lat: 42.3601, lng: -71.0589, size: 1, color: 'white', label: 'Boston, MA' },
+    { lat: 42.3601, lng: -71.0589, size: 2, color: 'pink', label: 'Boston, MA' },
     { lat: 37.5930, lng: -112.1871, size: 1, color: 'white', label: 'Bryce Canyon City, UT' },
     { lat: 35.9132, lng: -79.0558, size: 0.5, color: 'white', label: 'Chapel Hill, NC' },
     { lat: 41.8781, lng: -87.6298, size: 1, color: 'black', label: 'Chicago, IL' },

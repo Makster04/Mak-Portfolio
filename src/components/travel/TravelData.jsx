@@ -1,6 +1,16 @@
 const travelData = [
   {
     id: 1,
+    name: "Boston, MA (USA)",
+    place: "USA #5",
+    date: "DEC 22 - 30, 2024",
+    imageurl: 'src/assets/TravelUSA5.png', // USA flag
+    description: 'Where Amerian history meets innovation, and every cobblestone tells a story.',
+    photoAlbumLink: 'https://photos.google.com/album/AF1QipOFh42C3p4To_LbxBaaOGXgnW-ndOy_rKeEWdu8', // Replace with actual album link
+  },
+
+  {
+    id: 1,
     name: "Maui, HW (USA)",
     place: "USA #4",
     date: "AUG 7 - 17, 2024",
