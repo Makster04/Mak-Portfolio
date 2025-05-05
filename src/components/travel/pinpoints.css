@@ -1,0 +1,143 @@
+/* Map pin styling for the globe pinpoints */
+.point-wrapper {
+    position: relative;
+    pointer-events: all;
+  }
+  
+  /* The actual pinpoint for the globe */
+  .map-pin {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    transform-origin: center bottom;
+    transform: translate(-50%, -100%);
+  }
+  
+  /* Pin head - circular top like in the image */
+  .map-pin::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: currentColor;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Pin needle - tapered metallic stem */
+  .map-pin::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 12px;
+    bottom: -11px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(to bottom, #bbbbbb, #777777);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Small white circle on top of pin head (hole) */
+  .map-pin .pin-hole {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+  }
+  
+  /* Color styles for pins based on visit frequency */
+  .map-pin.white {
+    color: #e0e0e0;
+  }
+  
+  .map-pin.pink {
+    color: #ff69b4;
+  }
+  
+  .map-pin.red {
+    color: #ff0000;
+  }
+  
+  .map-pin.purple {
+    color: #9e40ff;
+  }
+  
+  .map-pin.black {
+    color: #1a1a1a;
+  }
+  
+  /* Default to red if no color class is applied */
+  .map-pin:not(.white):not(.pink):not(.red):not(.purple):not(.black) {
+    color: #ff0000;
+  }
+  
+  /* Size variations based on memory quality */
+  .map-pin.size-0-5 {
+    transform: translate(-50%, -100%) scale(0.6);
+  }
+  
+  .map-pin.size-1-0 {
+    transform: translate(-50%, -100%) scale(0.8);
+  }
+  
+  .map-pin.size-2-0 {
+    transform: translate(-50%, -100%) scale(1);
+  }
+  
+  /* Tooltip for when users hover over pins */
+  .pin-tooltip {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 1000;
+  }
+  
+  .map-pin:hover .pin-tooltip {
+    opacity: 1;
+  }
+  
+  /* Shadow under the pin */
+  .pin-shadow {
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    width: 6px;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    filter: blur(1px);
+  }
+  
+  /* 3D effect on pin head */
+  .map-pin::before {
+    background: radial-gradient(circle at 35% 35%, 
+                color-mix(in srgb, currentColor 85%, white) 0%, 
+                currentColor 60%, 
+                color-mix(in srgb, currentColor 85%, black) 100%);
+  }
+  
+  /* Make red pins look more like the reference image */
+  .map-pin.red::before {
+    background: radial-gradient(circle at 35% 35%, 
+                #ff5a5a 0%, 
+                #ff0000 60%, 
+                #cc0000 100%);
+  }

@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Set a background color */
+  body {
+    background-color: #474e5d;
+    font-family: Helvetica, sans-serif;
+    color: black; /* Set default text color to black */
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+  
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    margin-bottom: 30px; /* Add spacing between items */
+  }
+  
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -12.5px; /* Adjusted for better alignment */
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the left */
+  .left {
+    left: 0;
+  }
+  
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: '';
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: '';
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -12.5px; /* Adjusted for better alignment */
+  }
+  
+  /* The actual content */
+  .content {
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: black; /* Set text color to black */
+    transition: transform 0.3s ease; /* Smooth transition for transform property */
+    flex-direction: column-reverse;
+    padding-bottom: 10px; /* Additional space at the bottom */
+    padding-top: 10px; /* Additional space at the bottom */
+  
+  }
+  
+  
+  .content:hover {
+    transform: translateY(-10px); /* Move content up by 10px on hover */
+  }
+  
+  .content img {
+      border: 5px solid transparent; /* Base border */
+      border-image: linear-gradient(45deg, #FF9F55, #FF6B6B, #FF9F55); /* Gradient border */
+      border-image-slice: 1; /* Ensures the gradient covers the entire border */
+      border-radius: 8px; /* Rounded corners */
+      padding: 5px; /* Space between the border and the image */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+      display: block; /* Ensures the image is displayed as a block-level element */
+      max-width: 400px; /* Sets a max-width for the image */
+      height: auto; /* Maintains aspect ratio */
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and shadow */
+      margin-bottom: 30px; /* Space between image and text */
+    }
+  
+  .content img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+  }
+  
+  /* Content text area */
+  .content .text {
+    flex: 1;
+    padding: 20px;
+   
+  }
+  
+  .content h2 {
+    font-family: 'Helvetica', sans-serif; /* Consistent font with body */
+    font-weight: bold; /* Make the text bold */
+    color: #FF9F55; /* Highlight color matching the border */
+    border-bottom: 2px solid #FF9F55; /* Underline with highlight color */
+    padding-bottom: 5px; /* Space between text and underline */
+    margin-bottom: 10px; /* Space below the title */
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 5px; /* Padding around the text */
+    border-radius: 4px; /* Rounded corners */
+  }
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+    /* Place the timeline to the left */
+    .timeline::after {
+      left: 31px;
+    }
+  
+    /* Full-width containers */
+    .container {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+      margin-bottom: 20px; /* Adjust spacing for smaller screens */
+    }
+  
+    /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+      left: 60px;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+  
+    /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+      left: 15px;
+    }
+  
+    /* Make all right containers behave like the left ones */
+    .right {
+      left: 0;
+    }
+  }
