@@ -25,7 +25,7 @@ const Project2 = () => {
         </p>
       </div>
       
-      <div className="project-cards-grid">
+      <div className="project-cards-grid2">
         {ProjectData2.map((project, index) => (
           <SingleProjectCard2 key={index} projectDetails={project} />
         ))}

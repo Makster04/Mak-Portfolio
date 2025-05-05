@@ -1,7 +1,3 @@
-import transferMusic from "../../assets/transferMusic.svg";
-import group from "../../assets/group.svg";
-import phishing from "../../assets/phishing.svg";
-
 const ProjectData2 = [
   {
     title: "Economic Regime Radar",
@@ -23,7 +19,6 @@ const ProjectData2 = [
     presentationLink: "https://github.com/Makster04/FINAL_CAPSTONE_PROJECT/blob/main/Final_Capstone_Project_Presentation.pdf",
     category: "Economics",
     color: "#3b82f6", // Blue
-    image: transferMusic
   },
   {
     title: "NBA Trade Analyzer",
@@ -45,7 +40,6 @@ const ProjectData2 = [
     presentationLink: "https://github.com/Makster04/Phase_4_Project/blob/main/PowerPoint_Phase4Project.pdf",
     category: "Sports Analytics",
     color: "#10b981", // Green
-    image: group
   }
 ];
 

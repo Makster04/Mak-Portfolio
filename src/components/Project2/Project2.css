@@ -41,7 +41,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center; /* Center cards inside the row */
-  gap: 2rem;
+  gap: 4rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -49,13 +49,17 @@
 
 
 .project-card2 {
-  flex: 0 1 500px; /* Shrinks if needed, but never grows too large */
-  max-width: 500px;
-  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-self: stretch;
+  margin: 1rem auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: #0f2e9c;
+  line-height: 1.4;
+  font-family: sans-serif;
+  border-radius: 8px;
+  overflow: hidden;
+  transform: perspective(1000px) rotateY(0deg);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 
