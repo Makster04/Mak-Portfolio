@@ -15,8 +15,9 @@ import certificate301 from "../../assets/certificate301.png";
 import certificate401 from "../../assets/certificate401.png";
 import certificate102 from "../../assets/certificate102.png";
 import certificateVisualizeData from "../../assets/certificateVisualizeData.png";
+import DataScienceCertificate from "../../assets/DataScienceCertificate.png";
 
-const resumeURL = "https://docs.google.com/document/d/1OSOmxwTUWjMi2UnEW5FbrT1sjR5b9W6oIp3RXEr4Xws/edit#heading=h.biu39wkykbpm";
+const resumeURL = "https://docs.google.com/document/d/1zGZE_JgCY5-dvttPWEx9Y05vyBPhV6_8VsdTzdvqBMo/edit?tab=t.0";
 
 const HomeBottomPage = () => {
   const [hoveredCertificate, setHoveredCertificate] = useState(null);
@@ -92,7 +93,7 @@ const HomeBottomPage = () => {
       <VerticalTimeline>
         <VerticalTimelineElement
             className="vertical-timeline-element--education"
-            date="January 2025 - Present"
+            date="January 2025 - April 2025"
             iconStyle={{ background: 'blue', color: '#fff' }}
             icon={<Computer />}
             contentStyle={{ background: '#e0f7fa', color: '#00796b', textAlign: 'left' }}
@@ -102,9 +103,24 @@ const HomeBottomPage = () => {
             <h3 className="vertical-timeline-element-title" style={{ color: 'Blue' }}>Flatiron (Data Science)</h3>
             <h4 className="vertical-timeline-element-subtitle" style={{ color: '#00796b' }}>New York City, NY</h4>
             <p style={{ color: '#555' }}>
-              Just got enrolled into an In-Person Data Science Bootcamp located in Manhattan, NYC starting December 9th. Therefore, haven't started yet.
+              Learned Data Science with a focus on Python & other features in a Bootcamp named Flatiron School located in New York, NY. Here is my certificate of completion:
+              <ul>
+                <li
+                  onMouseEnter={() => handleHoverCertificate(DataScienceCertificate)}
+                  onMouseLeave={handleLeaveCertificate}
+                  style={{ cursor: 'pointer', alignItems: 'center' }}
+                >
+                  <span style={{ color: "#bfb313", fontWeight: "bold", marginRight: '10px' }}>- Certificate of Completion in Data Science:</span>Python and other tools
+                  {hoveredCertificate === DataScienceCertificate && (
+                    <img src={DataScienceCertificate} alt="Certificate" className="certificate-image" />
+                  )}
+                </li>
+              </ul>
             </p>
+         
           </VerticalTimelineElement>
+      
+
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
             date="January 2024 - July 2024"
