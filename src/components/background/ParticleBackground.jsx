@@ -16,9 +16,9 @@ const ParticlesComponent = () => {
       options={{
         background: {
           color: {
-            value: "#808080", // Gray color
+            value: "#0a0a0a", // Very dark background
           },
-          image: "linear-gradient(135deg, blue 20%, black 100%)",
+          image: "linear-gradient(135deg, #001a00 20%, #000000 100%)", // Dark green to black gradient
           position: "absolute",
           repeat: "no-repeat",
           size: "cover",
@@ -56,13 +56,13 @@ const ParticlesComponent = () => {
         },
         particles: {
           color: {
-            value: ["#1CE5E5"],
+            value: ["#00ff00", "#39ff14", "#32cd32", "#00ff41"], // Bright green variations
           },
           links: {
-            color: "#000000", // Color of the links
+            color: "#00ff00", // Bright green links
             distance: 150, // Distance for linking particles
             enable: true,
-            opacity: 0.5, // Opacity of the links
+            opacity: 0.4, // Slightly reduced opacity for green glow effect
             width: 1.5,
           },
           collisions: {
