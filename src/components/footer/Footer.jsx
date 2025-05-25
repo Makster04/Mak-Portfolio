@@ -6,17 +6,18 @@ import { SiLeetcode } from "react-icons/si";
 
 const Footer = () => {
   return (
-<footer className="p-4 bg-blue-900 rounded-lg shadow md:flex md:items-center md:justify-between md:p-8 dark:bg-gray-800 footer">
-      
-
-
-      <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400 footer-left-text">
+    <footer 
+      className="p-4 rounded-lg shadow md:flex md:items-center md:justify-between md:p-8 footer"
+      style={{
+        background: "linear-gradient(135deg, #0f3328 0%, #061a12 100%)",
+        boxShadow: "0 -4px 20px rgba(0, 0, 0, 0.3)"
+      }}
+    >
+      <span className="text-sm text-gray-300 sm:text-center footer-left-text">
         Developed by Mak Trnka
       </span>
       
-
-
-      <ul className="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0 footer-contact">
+      <ul className="flex flex-wrap items-center mt-3 text-sm text-gray-300 sm:mt-0 footer-contact">
         <li>
           <a href="https://github.com/Makster04" className="mr-4 hover:underline md:mr-6">
             <BsGithub style={{ color: '#87CEEB', width: "200%", height: "auto" }} />
@@ -45,4 +46,3 @@ const Footer = () => {
 // Export Component
 
 export default Footer;
-

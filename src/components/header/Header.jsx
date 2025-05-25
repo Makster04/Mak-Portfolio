@@ -44,7 +44,7 @@ const pageIcons = [
 
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
-  const [bgColor, setBgColor] = useState("#000050");
+  const [bgGradient, setBgGradient] = useState("linear-gradient(135deg, #0f3328 0%, #061a12 100%)");
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -55,9 +55,9 @@ const Header = () => {
 
   const handleScroll = () => {
     if (window.scrollY > 50) {
-      setBgColor("#000033"); // Darker color when scrolled
+      setBgGradient("linear-gradient(135deg, #0a261c 0%, #03120a 100%)"); // Darker gradient when scrolled
     } else {
-      setBgColor("#000050"); // Original color
+      setBgGradient("linear-gradient(135deg, #0f3328 0%, #061a12 100%)"); // Original gradient
     }
   };
 
@@ -67,7 +67,14 @@ const Header = () => {
   }, []);
 
   return (
-    <AppBar position="sticky" sx={{ backgroundColor: bgColor, transition: "background-color 0.3s" }}>
+    <AppBar 
+      position="sticky" 
+      sx={{ 
+        background: bgGradient,
+        transition: "background 0.3s ease",
+        boxShadow: "0 4px 20px rgba(0, 0, 0, 0.3)"
+      }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <BoltIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
@@ -153,6 +160,7 @@ const Header = () => {
               const Icon = pageIcons[index];
               return (
                 <div
+                  key={page.text}
                   style={{
                     display: "flex",
                     alignItems: "center",
@@ -161,7 +169,6 @@ const Header = () => {
                 >
                   <Button
                     className="header-buttons"
-                    key={page}
                     onClick={handleCloseNavMenu}
                     sx={{
                       my: 2,
@@ -171,6 +178,11 @@ const Header = () => {
                       fontSize: 16,
                       alignItems: "center",
                       marginRight: "1.5rem",
+                      "&:hover": {
+                        backgroundColor: "rgba(255, 255, 255, 0.1)",
+                        transform: "translateY(-1px)",
+                      },
+                      transition: "all 0.2s ease",
                     }}
                   >
                     <Icon style={{ marginRight: "0.8rem" }} />
