@@ -1,6 +1,33 @@
 const travelData = [
   {
     id: 1,
+    name: "Mljet, Loviste, Korcula, Hvar (HRV)",
+    place: "HRV #3",
+    date: "AUG 30 - SEP 5, 2025",
+    imageurl: 'src/assets/TravelHRV2.jpg', // USA flag
+    description: 'A journey of turquoise bays, sunlit islands, and history woven into every stone path.',
+    photoAlbumLink: 'https://photos.google.com/album/AF1QipPk7lhbt526c41eqYvY7o-DOOAVQodMRnFEl0d1', // Replace with actual album link
+  },
+  {
+    id: 1,
+    name: "Sarajevo, Konjica, Trebinje (HRV)",
+    place: "BIH #3",
+    date: "AUG 26 - 30, 2025",
+    imageurl: 'src/assets/TravelBiH6.jpg', // 
+    description: 'Bridging East and West with mountains, rivers, and timeless stories of resilience.',
+    photoAlbumLink: 'https://photos.google.com/album/AF1QipO_4FUUozHy98czEwWRPPxIPYiUDHWKtsz-3n6r', // Replace with actual album link
+  },
+    {
+    id: 1,
+    name: "Boston, Province Island (USA)",
+    place: "USA #6",
+    date: "AUG 1 - 8, 2025",
+    imageurl: 'src/assets/TravelUSA6.jpg', // USA flag
+    description: 'A city of revolution and learning, where harbors, history, and culture meet daily.',
+    photoAlbumLink: 'https://photos.google.com/album/AF1QipPGCWhhNw6VoBLO2eDU-rxufyY30hR7dPitGPlT', // Replace with actual album link
+  },
+  {
+    id: 1,
     name: "Boston, MA (USA)",
     place: "USA #5",
     date: "DEC 22 - 30, 2024",
