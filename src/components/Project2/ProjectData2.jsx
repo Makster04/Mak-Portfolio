@@ -40,7 +40,29 @@ const ProjectData2 = [
     presentationLink: "https://github.com/Makster04/Phase_4_Project/blob/main/PowerPoint_Phase4Project.pdf",
     category: "Sports Analytics",
     color: "#10b981", // Green
-  }
+  },
+  {
+  title: "NBA Trade Market Dashboard",
+  subtitle: "Executive Trade Health Index",
+  about: "Interactive Tableau dashboard that benchmarks team trade positioning across player talent, contract efficiency, and cap flexibility.",
+  businessProblem: "NBA front offices must constantly balance roster strength with financial efficiency, yet lack a clear, comparative view of which teams are positioned for bold trades versus those constrained by risk.",
+  objective: "Standardize team metrics (0–100 Z-scores) to create a Trade Health Index (THI) and reveal how roster value, contract efficiency, and financial flexibility drive trade opportunities.",
+  stakeholders: "NBA executives, analysts, media, fans, fantasy players.",
+  modelsUsed: "Z-scoring (0–100), composite index construction, Tableau calculations (LOD, parameters, dual-axis charts).",
+  evaluationMetrics: [
+    { label: "Comparability", value: "0–100 standardized scale" },
+    { label: "Trade Health Index", value: "Composite benchmark" },
+    { label: "Above/Below Avg", value: "Blue+ vs. Orange+ shading" }
+  ],
+  recommendations: "Use the dashboard to identify trade-ready franchises, evaluate roster efficiency, and analyze financial flexibility before negotiations.",
+  languages: "Tableau, SQL (for joins/cleaning), Excel/CSV data prep, Python (supporting analysis).",
+  nextSteps: "Add player-level drill-downs, simulate multi-team trade chains, and integrate historical trends to forecast future trade positioning.",
+  projectLink: "https://public.tableau.com/app/profile/mak.trnka/viz/NBATradeMarkets/NBATradeMarkets", 
+  presentationLink: "https://public.tableau.com/app/profile/mak.trnka/viz/NBATradeMarkets/NBATradeMarkets (Same Link)",
+  category: "Sports Analytics",
+  color: "#2563eb" // Blue
+}
+
 ];
 
 export default ProjectData2;
