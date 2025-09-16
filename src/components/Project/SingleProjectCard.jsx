@@ -22,7 +22,7 @@ const SingleProjectCard = ({ projectDetails }) => {
         <a href={projectLink}>
           <Button className="single-card-button">
             <div className="github-button">
-              <BsGithub style={{ marginRight: "1rem" }} /> Github Link
+              <BsGithub style={{ marginRight: "1rem" }} /> Link
             </div>
           </Button>
         </a>

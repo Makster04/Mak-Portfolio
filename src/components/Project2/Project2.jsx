@@ -12,27 +12,27 @@ const Project2 = () => {
   }, []);
 
   return (
-    <div className="projects">
-      <h1 className="projects-title">
-        <span className="title-main">My Recent</span> <span className="title-highlight">PROJECTS</span>
+    <div className="projects2">
+      <h1 className="projects-title2">
+        <span className="title-main2">My Recent</span> <span className="title-highlight">PROJECTS</span>
       </h1>
-      <p className="projects-description">
+      <p className="projects-description2">
         These are projects I did in my Data Science Bootcamp, Flatiron, and also alone
       </p>
-      <div className="project-cards">
+      <div className="project-cards2">
         {projectData.map((data, index) => (
-          <div className="project-card" key={index}>
-            <div className="card-meta">
-              <div className="card-photo" style={{ backgroundImage: `url(${data.image})` }}></div>
-              <ul className="card-details">
-                <li className="role"><strong>ROLE:</strong> {data.role}</li>
-                <li className="languages"><strong>LANGUAGES:</strong> {data.languages}</li>
+          <div className="project-card2" key={index}>
+            <div className="card-meta2">
+              <div className="card-photo2" style={{ backgroundImage: `url(${data.image})` }}></div>
+              <ul className="card-details2">
+                <li className="role2"><strong>ROLE:</strong> {data.role}</li>
+                <li className="languages2"><strong>LANGUAGES:</strong> {data.languages}</li>
               </ul>
             </div>
-            <div className="card-description">
+            <div className="card-description2">
               <h1>{data.title}</h1>
               <p>{data.about}</p>
-              <p className="read-more">
+              <p className="read-more2">
                 <a href={data.projectLink} target="_blank" rel="noopener noreferrer">Link</a>
               </p>
             </div>
