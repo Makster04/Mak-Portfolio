@@ -33,7 +33,7 @@ const Project2 = () => {
               <h1>{data.title}</h1>
               <p>{data.about}</p>
               <p className="read-more">
-                <a href={data.projectLink} target="_blank" rel="noopener noreferrer">Github Link</a>
+                <a href={data.projectLink} target="_blank" rel="noopener noreferrer">Link</a>
               </p>
             </div>
           </div>
