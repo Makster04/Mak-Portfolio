@@ -17,7 +17,7 @@ const Project2 = () => {
         <span className="title-main">My Recent</span> <span className="title-highlight">PROJECTS</span>
       </h1>
       <p className="projects-description">
-        These are Group Projects I worked on in my Software Bootcamp, Code Fellows, both as a Backend and Frontend Engineer (NOTE: Deployments are still in the works for a few)
+        These are projects I did in my Data Science Bootcamp, Flatiron, and also alone
       </p>
       <div className="project-cards">
         {projectData.map((data, index) => (
