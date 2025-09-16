@@ -1,6 +1,6 @@
 import { Button, Card, Image } from "semantic-ui-react";
 import { BsGithub } from "react-icons/bs";
-import "./Project2.css";
+import "./Project.css";
 
 const SingleProjectCard = ({ projectDetails }) => {
   const { title, about, role, languages, image, projectLink } = projectDetails;
