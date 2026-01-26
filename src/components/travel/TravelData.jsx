@@ -202,7 +202,7 @@ const travelData = [
   {
     id: 23,
     name: "Sarajevo, Mostar (BIH)",
-    place: "BOSNIA & HERZEGOVIA #1",
+    place: "BOSNIA & HERZEGOVINA #1",
     date: "May 22 - 27, 2023",
     imageurl: '/photos/TravelBosnia1.png',
     description: "A blend of Ottoman and European cultures set against breathtaking vistas.",
