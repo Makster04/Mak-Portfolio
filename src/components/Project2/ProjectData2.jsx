@@ -1,4 +1,4 @@
-import EconomicEvaluation from "../../assets/evaluation_2008_recession";
+import EconomicEvaluation from "../../assets/evaluation_2008_recession.png";
 import NBAClustering from "../../assets/NBA_Clustering.png";
 import NBAGraph from "../../assets/NBA_Graph.png";
 
