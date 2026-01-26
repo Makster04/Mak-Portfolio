@@ -1,8 +1,9 @@
+// src/components/travel/Travel.jsx 
 import React, { useState, useEffect } from "react";
 import Timeline from "./Timeline";
 import GlobeWithMapSwitcher from "./GlobeWithMapSwitcher"; // Changed from GlobeComponent
 import KeyBoard from "./KeyBoard";
-import travelData from "./TravelData";
+import travelData from "./TravelData.jsx";
 import './Timeline.css';
 
 const Travel = () => {
