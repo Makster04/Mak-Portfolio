@@ -8,7 +8,7 @@ const KeyBoard = () => {
       <div className="key-section">
         <h4>Total Places:</h4>
         <ul>
-          <li><strong>Countries Visited:</strong> <span>25</span></li>
+          <li><strong>Countries Visited:</strong> <span>26</span></li>
         </ul>
       </div>
       <div className="key-section">
