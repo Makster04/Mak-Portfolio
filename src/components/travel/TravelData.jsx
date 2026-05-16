@@ -3,6 +3,15 @@
 const travelData = [
   {
     id: 1,
+    name: "District of Columbia, Alexandria (USA)",
+    place: "USA #7",
+    date: "MAR 23 - MAR 28, 2026",
+    imageurl: '/photos/DC.png',
+    description: "A clash of marble monuments, power-worn streets, and two centuries of democracy carved into every column and corridor.",
+    photoAlbumLink: "https://photos.google.com/album/AF1QipOAo-v02ad_4445WAs67YGHcCQUGpUhKmD2AaRu",
+  },
+  {
+    id: 2,
     name: "Barcelona (ESP)",
     place: "SPAIN",
     date: "DEC 28 - JAN 4, 2026",
@@ -11,7 +20,7 @@ const travelData = [
     photoAlbumLink: "https://photos.google.com/album/AF1QipOZJSGOQcgXeRAtJ2n_jUh1m7xItHCSrIeTiJOa",
   },
   {
-    id: 2,
+    id: 3,
     name: "Heathrow, Oxford, London (UK)",
     place: "UK #2",
     date: "DEC 15 - DEC 28, 2025",
@@ -20,7 +29,7 @@ const travelData = [
     photoAlbumLink: "https://photos.google.com/album/AF1QipPzdkrjC8cbK8J2C8ZG99FOMHBhUCiMZ4tsiu0f",
   },
   {
-    id: 3,
+    id: 4,
     name: "Sarajevo (BiH)",
     place: "BIH #4",
     date: "DEC 17 - DEC 23, 2025",
@@ -29,7 +38,7 @@ const travelData = [
     photoAlbumLink: "https://photos.google.com/album/AF1QipPWu3hX55s4KBg71rYfGKrGMKx4uZTctgzSgvro",
   },
   {
-    id: 4,
+    id: 5,
     name: "Mljet, Loviste, Korcula, Hvar (HRV)",
     place: "HRV #3",
     date: "AUG 30 - SEP 5, 2025",
@@ -38,7 +47,7 @@ const travelData = [
     photoAlbumLink: "https://photos.google.com/album/AF1QipPk7lhbt526c41eqYvY7o-DOOAVQodMRnFEl0d1",
   },
   {
-    id: 5,
+    id: 6,
     name: "Sarajevo, Konjica, Trebinje (BiH)",
     place: "BIH #3",
     date: "AUG 26 - 30, 2025",
@@ -47,7 +56,7 @@ const travelData = [
     photoAlbumLink: "https://photos.google.com/album/AF1QipO_4FUUozHy98czEwWRPPxIPYiUDHWKtsz-3n6r",
   },
   {
-    id: 6,
+    id: 7,
     name: "Boston, Province Island (USA)",
     place: "USA #6",
     date: "AUG 1 - 8, 2025",
@@ -56,7 +65,7 @@ const travelData = [
     photoAlbumLink: "https://photos.google.com/album/AF1QipPGCWhhNw6VoBLO2eDU-rxufyY30hR7dPitGPlT",
   },
   {
-    id: 7,
+    id: 8,
     name: "Boston, MA (USA)",
     place: "USA #5",
     date: "DEC 22 - 30, 2024",
@@ -65,7 +74,7 @@ const travelData = [
     photoAlbumLink: "https://photos.google.com/album/AF1QipOFh42C3p4To_LbxBaaOGXgnW-ndOy_rKeEWdu8",
   },
   {
-    id: 8,
+    id: 9,
     name: "Maui, HW (USA)",
     place: "USA #4",
     date: "AUG 7 - 17, 2024",
@@ -74,7 +83,7 @@ const travelData = [
     photoAlbumLink: "https://photos.google.com/album/AF1QipMJ-169Z6Opuxg3dpGq2NMFRriEs2ftRFfFaewS",
   },
   {
-    id: 9,
+    id: 10,
     name: "Palm Springs, CA (USA)",
     place: "USA #3",
     date: "May 20 - 30, 2024",
@@ -83,7 +92,7 @@ const travelData = [
     photoAlbumLink: "https://photos.google.com/album/AF1QipMc2_Xrhwyb1634OE5za3lIrlAWivqdheMF23EI",
   },
   {
-    id: 10,
+    id: 11,
     name: "NYC, DC, Baltimore (USA)",
     place: "USA #2",
     date: "Dec 20, 2023 - Jan 4, 2024",
@@ -92,7 +101,7 @@ const travelData = [
     photoAlbumLink: "https://photos.google.com/album/AF1QipNPtFeWV4z6qEm2LVV48mV3j1-9qjy1LgHM042p",
   },
   {
-    id: 11,
+    id: 12,
     name: "Loviste, Orebic, Korcula (HRV)",
     place: "CROATIA #2",
     date: "Sep 5 - 17, 2023",
@@ -101,7 +110,7 @@ const travelData = [
     photoAlbumLink: "https://photos.google.com/share/AF1QipPLjQy8pSjcfQzrzVV9F-tX1AXTZu9sSho01Wdoo_J4bwKs5S9fdpjUkBj_h7UzNQ",
   },
   {
-    id: 12,
+    id: 13,
     name: "Tbilisi, Shida Kartli (GEO)",
     place: "GEORGIA",
     date: "Aug 27 - Sep 3, 2023",
@@ -110,7 +119,7 @@ const travelData = [
     photoAlbumLink: "https://photos.google.com/share/AF1QipNcQc4Zx1sRVB8lirT3FX8yyqnChGgmOJYx7gAHyKksM-0PtFI-l1cnAxMtdkyjew",
   },
   {
-    id: 13,
+    id: 14,
     name: "Yerevan, Lusarat, Yeghegnadzor (ARM)",
     place: "ARMENIA",
     date: "Aug 22 - 27, 2023",
@@ -119,7 +128,7 @@ const travelData = [
     photoAlbumLink: "https://photos.google.com/share/AF1QipOckJc-hCFFogNIGlSWzi3GOD-FEoyrw-OWesQAZ9YXsv7rTbDqS5jn0J5P7u8x6g",
   },
   {
-    id: 14,
+    id: 15,
     name: "Belgrade (SRB)",
     place: "SERBIA",
     date: "Aug 19 - 22, 2023",
@@ -128,7 +137,7 @@ const travelData = [
     photoAlbumLink: "https://photos.google.com/share/AF1QipMRn0ijg6z5ZY1kbyTdAZ5DT15QBdmVwURO1gLphukQ82aJ7-lLtc8GtOV3AMfXtw",
   },
   {
-    id: 15,
+    id: 16,
     name: "Kotor, Budva (MNE)",
     place: "MONTENEGRO",
     date: "Aug 1 - 10, 2023",
@@ -137,7 +146,7 @@ const travelData = [
     photoAlbumLink: "https://photos.google.com/share/AF1QipPAp9zJ9iIwS9WFxm90YLjK4KQaee_SRR3-U3P0UB3UqDSC3nWhIqbrso1HIrGkFg",
   },
   {
-    id: 16,
+    id: 17,
     name: "Dubrovnik (HRV)",
     place: "CROATIA #1",
     date: "Jul 27 - Aug 1, 2023",
@@ -146,7 +155,7 @@ const travelData = [
     photoAlbumLink: "https://photos.google.com/album/AF1QipOaaZ8gKNeAhkSyz4-x0GAP0Qd7ES-qTWW4l62U",
   },
   {
-    id: 17,
+    id: 18,
     name: "Sarajevo, Travnik, Jajice, Konjic, Donje Vakuv, etc. (BIH)",
     place: "BOSNIA & HERZEGOVINA #2",
     date: "Jun 29 - Sep 18, 2023",
@@ -155,7 +164,7 @@ const travelData = [
     photoAlbumLink: "https://photos.google.com/share/AF1QipNC5jjf1Etq5cFMwmiCXg_e1Jqhl0vzCL1KNLm5LmSRH4dtRwZirc1xscAkNw39QQ",
   },
   {
-    id: 18,
+    id: 19,
     name: "Casablanca, Rabat, Tangier, Chefchaoen, Marrakesh, etc. (MAR)",
     place: "MOROCCO",
     date: "Feb 20 - 28, 2023",
@@ -164,7 +173,7 @@ const travelData = [
     photoAlbumLink: "https://photos.google.com/share/AF1QipOPj9VSNKtCFQjd-Pd1Ag9VNG-tRLdUpKFCRiFSXYMuy32s1XnedJ27CJAiuLkYQA?key=UTZ6bGhZRU9xY2JHQnNybXhmY3F2R2g4UnNocmlR",
   },
   {
-    id: 19,
+    id: 20,
     name: "New York City, NY (USA)",
     place: "USA #1",
     date: "Sep 29 - Dec 31, 2022",
@@ -173,7 +182,7 @@ const travelData = [
     photoAlbumLink: "https://photos.google.com/share/AF1QipP6RvIbnXVHO_9r9gjlGp0tc_mr2t69XOX7ZmvGkw_16g0DwP5Qs75SmExLANVEPA",
   },
   {
-    id: 20,
+    id: 21,
     name: "Oxford, London (UK)",
     place: "UNITED KINGDOM",
     date: "Apr 11 - May 19, 2022",
@@ -182,7 +191,7 @@ const travelData = [
     photoAlbumLink: "https://photos.google.com/share/AF1QipNWWOl1idiyX65Ev25tdF0GxPnxNPkVR-nBcuTGILjKySUP0eQwO5yLJMyaS2cR4A",
   },
   {
-    id: 21,
+    id: 22,
     name: "Paris (FRA)",
     place: "FRANCE",
     date: "May 12 - 15, 2022",
@@ -191,7 +200,7 @@ const travelData = [
     photoAlbumLink: "https://photos.google.com/share/AF1QipNxqUUtz56E1iJTy15gYD8sLEnogBAO7m6ZrgIoyfp4tU34SF1kyXKeh71exPPByw",
   },
   {
-    id: 22,
+    id: 23,
     name: "Zurich, Bern (CHE)",
     place: "SWITZERLAND",
     date: "May 10 - 12, 2022",
@@ -200,7 +209,7 @@ const travelData = [
     photoAlbumLink: "https://photos.google.com/share/AF1QipN5UJZ_9kjQLieDkW7AQDdHVdMiT4OkG6yIVNu2TIlfW6EuCZP6O8Qpdq9OSPyUew",
   },
   {
-    id: 23,
+    id: 24,
     name: "Venice (ITA)",
     place: "ITALY",
     date: "May 8 - 11, 2022",
@@ -209,7 +218,7 @@ const travelData = [
     photoAlbumLink: "https://photos.google.com/share/AF1QipOvEKOUYXenvrCvYd4-QixRL-Zexaois_cpmB_Ckt2uAYTiEtnb6CSJka5kXiJWyA",
   },
   {
-    id: 24,
+    id: 25,
     name: "Sarajevo, Mostar (BIH)",
     place: "BOSNIA & HERZEGOVINA #1",
     date: "May 22 - 27, 2023",
@@ -218,7 +227,7 @@ const travelData = [
     photoAlbumLink: "https://photos.google.com/share/AF1QipP-PWvYG2vUuCMnDXwcPzxEQh8luLGp-96q8lro4N_ewnKeaPA2lRe2O6-VAzKjUg",
   },
   {
-    id: 25,
+    id: 26,
     name: "Istanbul (TUR)",
     place: "TURKEY",
     date: "Apr 27 - May 1, 2022",
@@ -227,7 +236,7 @@ const travelData = [
     photoAlbumLink: "https://photos.google.com/share/AF1QipPs9olQh7chVy_lRxoG4TIEmPyLBBx5axrFA47Z69AT0O6-LdF9Pnhn11bsC8ZCsA",
   },
   {
-    id: 26,
+    id: 27,
     name: "Budapest (HUN)",
     place: "HUNGARY",
     date: "Apr 24 - 27, 2022",
@@ -236,7 +245,7 @@ const travelData = [
     photoAlbumLink: "https://photos.google.com/share/AF1QipN3Yrk69z30jCjXBo8HMGCwANdpcvaZlqaS1UddlQkQiXHVQ5yH8wnNfTujVV7Z8g",
   },
   {
-    id: 27,
+    id: 28,
     name: "Prague (CZE)",
     place: "CZECH REPUBLIC",
     date: "Apr 21 - 23, 2022",
@@ -245,7 +254,7 @@ const travelData = [
     photoAlbumLink: "https://photos.google.com/share/AF1QipPOLxLWYp35Wfljoa3OflDlzEWoR2r8jc0VdrfQ-WMh4YGz_R71wPIWcbe7a8k61w",
   },
   {
-    id: 28,
+    id: 29,
     name: "Berlin (DEU)",
     place: "GERMANY",
     date: "Apr 18 - 20, 2022",
@@ -254,7 +263,7 @@ const travelData = [
     photoAlbumLink: "https://photos.google.com/share/AF1QipPPV2BHilYB_jHHbHDLrrXeAvA2sfx88nky1DA8pQgGTCzpv1cbI9gl-GqyTrETXg",
   },
   {
-    id: 29,
+    id: 30,
     name: "Amsterdam, Rotterdam (NLD)",
     place: "NETHERLANDS",
     date: "Apr 14 - 18, 2023",
@@ -263,7 +272,7 @@ const travelData = [
     photoAlbumLink: "https://photos.google.com/share/AF1QipOid9NwaXNCbuVsecsT_EXQ29ADKL6WacwdlYDrJYnKy379oSPIUydrP2dx59hmLw",
   },
   {
-    id: 30,
+    id: 31,
     name: "Brussels (BEL)",
     place: "BELGIUM",
     date: "Apr 13 - 14, 2022",
@@ -272,7 +281,7 @@ const travelData = [
     photoAlbumLink: "https://photos.google.com/share/AF1QipNTvZpKhY8mSG801B9pRSIegY67H638MMaBc2LI563pyWYUMvswmoPNhHhNhjvoEw",
   },
   {
-    id: 31,
+    id: 32,
     name: "Lisbon, Porto, Braga, Cascais, Sintra (PRT)",
     place: "PORTUGAL",
     date: "Dec 15 - 28, 2018",
