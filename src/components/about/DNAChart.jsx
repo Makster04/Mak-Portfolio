@@ -10,22 +10,22 @@ const GEO_URL = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json"
 // ─── Each country ISO (zero-padded) → the exact region label it belongs to ───
 // If that label doesn't exist in the active tab, the country stays blank
 const COUNTRY_TO_REGION = {
-  "070": "Bosnian, Croatian, Montenegrin & Serbian", // Bosnia
-  "191": "Bosnian, Croatian, Montenegrin & Serbian", // Croatia
-  "499": "Bosnian, Croatian, Montenegrin & Serbian", // Montenegro
-  "688": "Bosnian, Croatian, Montenegrin & Serbian", // Serbia
-  "008": "Albanian & Macedonian",                    // Albania
-  "807": "Albanian & Macedonian",                    // North Macedonia
-  "300": "Broadly Greek & Balkan",                   // Greece
-  "203": "Czech, Hungarian, Slovak & Southern Polish", // Czech Republic
-  "348": "Czech, Hungarian, Slovak & Southern Polish", // Hungary
-  "703": "Czech, Hungarian, Slovak & Southern Polish", // Slovakia
-  "616": "Czech, Hungarian, Slovak & Southern Polish", // Poland
-  "705": "Slovenian",                                // Slovenia
-  "040": "Austrian & Southern German",               // Austria
-  "276": "Austrian & Southern German",               // Germany
-  "428": "Latvian",                                  // Latvia
-  "792": "Anatolian",                                // Turkey
+  "070": "🇧🇦🇭🇷🇲🇪🇷🇸 Bosnian, Croatian, Montenegrin & Serbian",
+  "191": "🇧🇦🇭🇷🇲🇪🇷🇸 Bosnian, Croatian, Montenegrin & Serbian",
+  "499": "🇧🇦🇭🇷🇲🇪🇷🇸 Bosnian, Croatian, Montenegrin & Serbian",
+  "688": "🇧🇦🇭🇷🇲🇪🇷🇸 Bosnian, Croatian, Montenegrin & Serbian",
+  "008": "🇦🇱🇲🇰 Albanian & Macedonian",
+  "807": "🇦🇱🇲🇰 Albanian & Macedonian",
+  "300": "🇬🇷 Broadly Greek & Balkan",
+  "203": "🇨🇿🇭🇺🇸🇰🇵🇱 Czech, Hungarian, Slovak & Southern Polish",
+  "348": "🇨🇿🇭🇺🇸🇰🇵🇱 Czech, Hungarian, Slovak & Southern Polish",
+  "703": "🇨🇿🇭🇺🇸🇰🇵🇱 Czech, Hungarian, Slovak & Southern Polish",
+  "616": "🇨🇿🇭🇺🇸🇰🇵🇱 Czech, Hungarian, Slovak & Southern Polish",
+  "705": "🇸🇮 Slovenian",
+  "040": "🇦🇹🇩🇪 Austrian & Southern German",
+  "276": "🇦🇹🇩🇪 Austrian & Southern German",
+  "428": "🇱🇻 Latvian",
+  "792": "🇹🇷 Anatolian",
 };
 // ─── Confidence level data ────────────────────────────────────────────────────
 // 100
@@ -37,42 +37,42 @@ const COUNTRY_TO_REGION = {
 // ─── Confidence level data ────────────────────────────────────────────────────
 const CONFIDENCE_LEVELS = {
   ci50: {
-    label: "50%", subtitle: "50% CONFIDENCE INTERVAL — BEST ESTIMATE", maxDomain: 85,
+    label: "50%", subtitle: "50% CONFIDENCE INTERVAL — MOST SPECIFIC, MANY (MIS)ASSUMPTIONS", maxDomain: 85,
     data: [
-      { region: "Bosnian, Croatian, Montenegrin & Serbian", percent: 80.4, color: "#15803d" },
-      { region: "Czech, Hungarian, Slovak & Southern Polish", percent: 14.0, color: "#facc15" },
-      { region: "Slovenian",                  percent: 1.7, color: "#fdba74" },
-      { region: "Austrian & Southern German", percent: 1.7, color: "#fdba74" },
-      { region: "Latvian",                    percent: 1.1, color: "#fcd4a8" },
-      { region: "Anatolian",                  percent: 0.7, color: "#fde8d8" },
-      { region: "Albanian & Macedonian",      percent: 0.4, color: "#fef4ec" },
+      { region: "🇧🇦🇭🇷🇲🇪🇷🇸 Bosnian, Croatian, Montenegrin & Serbian", percent: 80.4, color: "#f5a623" },
+      { region: "🇨🇿🇭🇺🇸🇰🇵🇱 Czech, Hungarian, Slovak & Southern Polish", percent: 14.0, color: "#c0392b" },
+      { region: "🇸🇮 Slovenian",                  percent: 1.7, color: "#9b2335" },
+      { region: "🇦🇹🇩🇪 Austrian & Southern German", percent: 1.7, color: "#9b2335" },
+      { region: "🇱🇻 Latvian",                    percent: 1.1, color: "#7b1fa2" },
+      { region: "🇹🇷 Anatolian",                  percent: 0.7, color: "#6a1b9a" },
+      { region: "🇦🇱🇲🇰 Albanian & Macedonian",   percent: 0.4, color: "#4a148c" },
     ],
   },
   ci70: {
-    label: "70%", subtitle: "70% CONFIDENCE INTERVAL", maxDomain: 75,
+    label: "70%", subtitle: "70% CONFIDENCE INTERVAL — MOST BALANCED", maxDomain: 85,
     data: [
-      { region: "Bosnian, Croatian, Montenegrin & Serbian", percent: 66.7, color: "#22c55e" },
-      { region: "Broadly European",           percent: 22.3, color: "#a3e635" },
-      { region: "Broadly Central & Eastern European", percent: 5.3, color: "#f59e0b" },
-      { region: "Czech, Hungarian, Slovak & Southern Polish", percent: 2.3, color: "#fb923c" },
-      { region: "Broadly Greek & Balkan",     percent: 1.3, color: "#fdba74" },
-      { region: "Slovenian",                  percent: 0.9, color: "#fcd4a8" },
-      { region: "Anatolian",                  percent: 0.6, color: "#fde8d8" },
-      { region: "Austrian & Southern German", percent: 0.5, color: "#fef4ec" },
-      { region: "Unassigned",                 percent: 0.1, color: "#646262" },
+      { region: "🇧🇦🇭🇷🇲🇪🇷🇸 Bosnian, Croatian, Montenegrin & Serbian", percent: 66.7, color: "#f5a623" },
+      { region: "Broadly European",           percent: 22.3, color: "#f0822a" },
+      { region: "Broadly Central & Eastern European", percent: 5.3, color: "#e03e3e" },
+      { region: "🇨🇿🇭🇺🇸🇰🇵🇱 Czech, Hungarian, Slovak & Southern Polish", percent: 2.3, color: "#c0392b" },
+      { region: "🇬🇷 Broadly Greek & Balkan",   percent: 1.3, color: "#9b2335" },
+      { region: "🇸🇮 Slovenian",                percent: 0.9, color: "#7b1fa2" },
+      { region: "🇹🇷 Anatolian",                percent: 0.6, color: "#6a1b9a" },
+      { region: "🇦🇹🇩🇪 Austrian & Southern German", percent: 0.5, color: "#4a148c" },
+      { region: "Unassigned",                  percent: 0.1, color: "#646262" },
     ],
   },
   ci90: {
-    label: "90%", subtitle: "90% CONFIDENCE INTERVAL — MOST CONSERVATIVE", maxDomain: 55,
+    label: "90%", subtitle: "90% CONFIDENCE INTERVAL — MOST BROAD, ONLY WHAT'S CERTAIN", maxDomain: 85,
     data: [
-      { region: "Bosnian, Croatian, Montenegrin & Serbian", percent: 51.4, color: "#22c55e" },
-      { region: "Broadly European",           percent: 43.8, color: "#4ade80" },
-      { region: "Broadly Central & Eastern European", percent: 1.4, color: "#fdba74" },
+      { region: "🇧🇦🇭🇷🇲🇪🇷🇸 Bosnian, Croatian, Montenegrin & Serbian", percent: 51.4, color: "#f5a623" },
+      { region: "Broadly European",           percent: 43.8, color: "#f0822a" },
+      { region: "Broadly Central & Eastern European", percent: 1.4, color: "#9b2335" },
       { region: "Unassigned",                 percent: 1.1, color: "#646262" },
-      { region: "Broadly Greek & Balkan",     percent: 0.9, color: "#fcd4a8" },
-      { region: "Czech, Hungarian, Slovak & Southern Polish", percent: 0.8, color: "#fcd4a8" },
-      { region: "Anatolian",                  percent: 0.5, color: "#fde8d8" },
-      { region: "Slovenian",                  percent: 0.1, color: "#fef4ec" },
+      { region: "🇬🇷 Broadly Greek & Balkan",  percent: 0.9, color: "#7b1fa2" },
+      { region: "🇨🇿🇭🇺🇸🇰🇵🇱 Czech, Hungarian, Slovak & Southern Polish", percent: 0.8, color: "#7b1fa2" },
+      { region: "🇹🇷 Anatolian",               percent: 0.5, color: "#6a1b9a" },
+      { region: "🇸🇮 Slovenian",               percent: 0.1, color: "#4a148c" },
     ],
   },
 };
@@ -147,17 +147,17 @@ const AncestryMap = ({ tabData }) => {
 
   return (
     <div>
-      <div style={{ color: "#888", fontSize: 10, letterSpacing: 2, textAlign: "center", marginBottom: 8 }}>
+      <div style={{ color: "#888888", fontSize: 10, letterSpacing: 2, textAlign: "center", marginBottom: 8 }}>
         GEOGRAPHIC ORIGINS
       </div>
       <div style={{
-        background: "#0a0a0a", borderRadius: 8, border: "1px solid #1e1e1e",
+        background: "#696a6d", borderRadius: 8, border: "1px solid #1e1e1e",
         overflow: "hidden", position: "relative",
       }}>
         <ComposableMap
           projection="geoAzimuthalEqualArea"
           projectionConfig={{ rotate: [-20, -52, 0], scale: 680 }}
-          width={500} height={300}
+          width={620} height={400}
           style={{ width: "100%", height: "auto", display: "block" }}
         >
           <Geographies geography={GEO_URL}>
@@ -325,13 +325,13 @@ export default function DNAChart() {
                 onMouseEnter={() => setActiveIndex(i)}
                 onMouseLeave={() => setActiveIndex(null)}
                 style={{
-                  display: "flex", alignItems: "center", gap: 8, cursor: "pointer",
+                  display: "flex", alignItems: "center", gap: 5, cursor: "pointer",
                   opacity: activeIndex === null || activeIndex === i ? 1 : 0.3,
                   transition: "opacity 0.2s",
                 }}
               >
                 <div style={{ width: 10, height: 10, borderRadius: 2, background: d.color, flexShrink: 0 }} />
-                <span style={{ color: "#bbb", fontSize: 10 }}>{d.region}</span>
+                <span style={{ color: "#bbb", fontSize: 11 }}>{d.region}</span>
                 <span style={{ color: d.color, marginLeft: "auto", fontWeight: 700, fontSize: 11 }}>
                   {d.percent}%
                 </span>
@@ -353,7 +353,7 @@ export default function DNAChart() {
             <div style={{ color: "#888", fontSize: 10, letterSpacing: 2, textAlign: "center", marginBottom: 10 }}>
               RANKED BREAKDOWN
             </div>
-            <ResponsiveContainer width="100%" height={260}>
+            <ResponsiveContainer width="100%" height={320}>
               <BarChart
                 data={[...DNA_DATA].sort((a, b) => b.percent - a.percent)}
                 layout="vertical" margin={{ top: 0, right: 24, left: 0, bottom: 0 }}
@@ -364,7 +364,7 @@ export default function DNAChart() {
                   axisLine={{ stroke: "#1e1e1e" }} tickLine={false}
                   tickFormatter={(v) => `${v}%`}
                 />
-                <YAxis type="category" dataKey="region" width={145}
+                <YAxis type="category" dataKey="region" width={200}
                   tick={{ fill: "#999", fontSize: 9, fontFamily: "'Space Mono', monospace" }}
                   axisLine={false} tickLine={false}
                 />
