@@ -3,7 +3,7 @@
 const travelData = [
   {
     id: 1,
-    name: "District of Columbia, Alexandria (USA)",
+    name: "District of Columbia, Alexandria, VA (USA)",
     place: "USA #7",
     date: "MAR 23 - MAR 28, 2026",
     imageurl: '/photos/DC.png',
