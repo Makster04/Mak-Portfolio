@@ -91,6 +91,48 @@ const HomeBottomPage = () => {
       </h2>
         
       <VerticalTimeline>
+
+        <VerticalTimelineElement
+            className="vertical-timeline-element--education"
+            date="August 2026 - Present"
+            iconStyle={{ background: '#4173a9', color: '#fff' }}
+            icon={<FaGraduationCap />}
+            contentStyle={{ background: '#e0f7fa', color: '#00796b', textAlign: 'left' }}
+            contentArrowStyle={{ borderRight: '30px solid  #e0f7fa' }}
+            dateClassName="custom-date"
+          >
+            <h3 className="vertical-timeline-element-title" style={{ color: '#4173a9' }}>George Washington University (Masters)</h3>
+            <h4 className="vertical-timeline-element-subtitle" style={{ color: '#00796b' }}>Washington, D.C.</h4>
+            <p style={{ color: '#004d40' }}>
+              <ul>
+                <li><span style={{ color: "BLACK", fontWeight: "bold" }}>Masters Degree:</span> </li>
+              </ul>
+              <li><span style={{ fontWeight: "bold" }}>Data Science (STEM)</span> (Major)</li>
+              <ul>
+                <li><span style={{ color: "BLACK", fontWeight: "bold" }}>Activities:</span> </li>
+              </ul>
+              <li><span style={{ fontWeight: "bold" }}>N/A:</span> To be decided.</li>
+            </p>
+          </VerticalTimelineElement>
+
+           <VerticalTimelineElement
+            className="vertical-timeline-element--education"
+            date="Febuary 2026 - Present"
+            iconStyle={{ background: 'orange', color: '#fff' }}
+            icon={<ShoppingCart />}
+            contentStyle={{ background: '#e0f7fa', color: '#00796b', textAlign: 'left' }}
+            contentArrowStyle={{ borderRight: '30px solid  #e0f7fa' }}
+            dateClassName="custom-date"
+          >
+            <h3 className="vertical-timeline-element-title" style={{ color: 'orange' }}>Home Depot (Sales Associate)</h3>
+            <h4 className="vertical-timeline-element-subtitle" style={{ color: '#00796b' }}>Bellevue, WA</h4>
+            <p style={{ color: '#004d40' }}>
+            <p style={{ color: '#555' }}>
+              Worked as a Garden Department Sales Associate at The Home Depot, assisting customers with plant selection, landscaping supplies, and seasonal products while maintaining department organization and inventory.
+            </p>
+            </p>
+          </VerticalTimelineElement>
+
         <VerticalTimelineElement
             className="vertical-timeline-element--education"
             date="January 2025 - April 2025"
@@ -100,7 +142,7 @@ const HomeBottomPage = () => {
             contentArrowStyle={{ borderRight: '7px solid  #f0f0f0' }}
             dateClassName="custom-date"
           >
-            <h3 className="vertical-timeline-element-title" style={{ color: 'Blue' }}>Flatiron (Data Science)</h3>
+            <h3 className="vertical-timeline-element-title" style={{ color: 'Blue' }}>Flatiron Bootcamp (Data Science)</h3>
             <h4 className="vertical-timeline-element-subtitle" style={{ color: '#00796b' }}>New York City, NY</h4>
             <p style={{ color: '#555' }}>
               Learned Data Science with a focus on Python & other features in a Bootcamp named Flatiron School located in New York, NY. Here is my certificate of completion:
@@ -130,7 +172,7 @@ const HomeBottomPage = () => {
             contentArrowStyle={{ borderRight: '7px solid  #f0f0f0' }}
             dateClassName="custom-date"
           >
-            <h3 className="vertical-timeline-element-title" style={{ color: 'Red' }}>Code Fellows (Web Development)</h3>
+            <h3 className="vertical-timeline-element-title" style={{ color: 'Red' }}>Code Fellows Bootcamp (Web Development)</h3>
             <h4 className="vertical-timeline-element-subtitle" style={{ color: '#00796b' }}>Seattle, WA</h4>
             <p style={{ color: '#555' }}>
               Learned Software Development with a focus on JavaScript & other features in a Bootcamp named Codefellows located in Seattle, WA. Here are my current certificates:

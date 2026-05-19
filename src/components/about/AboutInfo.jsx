@@ -2,9 +2,10 @@
 import React from "react";
 import TechStack from "./TechStack";
 import GitHubGraph from "./GitHubGraph";
+import DNAChart from "./DNAChart";
 import { BsFillArrowRightSquareFill } from "react-icons/bs";
 import codeImage from "../../assets/bosnianparrot.gif";
-import './AboutInfo.css'; // Import the CSS file
+import './AboutInfo.css';
 
 const AboutInfo = () => {
   return (
@@ -44,17 +45,17 @@ const AboutInfo = () => {
                 <li className="list-item">
                   <BsFillArrowRightSquareFill className="arrow-icon" />{" "}
                   <span className="item-label">LOCATION:</span> 
-                  <span className="item-value">Seattle, WA (1998-2024) → NYC (2024-Present)</span>
+                  <span className="item-value">Bellevue, WA (1998-2024) → NYC, NY (2024-2025) → NYC (2024-Present) → Bellevue, WA (2025-2026) → Washington, D.C. (2026)</span>
                 </li>
                 <li className="list-item">
                   <BsFillArrowRightSquareFill className="arrow-icon" />{" "}
                   <span className="item-label">EDUCATION:</span> 
-                  <span className="item-value">Bellevue College (2016-19) → University of Washington (2019-22) → Code Fellows (2024) →  Flatiron (2025)</span>
+                  <span className="item-value">Bellevue College (2016-19) → University of Washington (2019-22) → Code Fellows (2024) →  Flatiron (2025) → George Washington University (2026)</span>
                 </li>
                 <li className="list-item">
                   <BsFillArrowRightSquareFill className="arrow-icon" />{" "}
                   <span className="item-label">CREDENTIALS:</span> 
-                  <span className="item-value">Associates (Sociology) → Bachelors (Poli Sci & International Studies) → Ceritificate (Web Design) → Certificate (Data Science)</span>
+                  <span className="item-value">Associates (Sociology) → Bachelors (Poli Sci & International Studies) → Ceritificate (Web Design) → Certificate (Data Science) → Ceritificate (Web Design) → Masters (Data Science)</span>
                 </li>
                 <li className="list-item">
                   <BsFillArrowRightSquareFill className="arrow-icon" />{" "}
@@ -64,12 +65,12 @@ const AboutInfo = () => {
                 <li className="list-item">
                   <BsFillArrowRightSquareFill className="arrow-icon" />{" "}
                   <span className="item-label">PASSIONS:</span> 
-                  <span className="item-value">Deep conversations, gym rat, globe-trotter, tech enthusiast, basketball enthusiast, gaming competitor, cinephile, data wizard</span>
+                  <span className="item-value">Deep conversations, gym rat, globe-trotter, political nerd, tech enthusiast, basketball enthusiast, gaming competitor, cinephile, data wizard</span>
                 </li>
                 <li className="list-item">
                   <BsFillArrowRightSquareFill className="arrow-icon" />{" "}
                   <span className="item-label">FUTURE VISIONS:</span> 
-                  <span className="item-value">Podcast empire, tech startup founder, YouTube sensation, Hollywood breakthrough, etc.</span>
+                  <span className="item-value">ML/AI Engineer, Data Scientist, Data Analyst, Podcast empire, tech startup founder, YouTube sensation, Hollywood breakthrough, etc.</span>
                 </li>
                 <li className="list-item">
                   <BsFillArrowRightSquareFill className="arrow-icon" />{" "}
@@ -85,6 +86,10 @@ const AboutInfo = () => {
             alt="Mak Trnka - Bosnian American Coder"
           />
         </div>
+
+        {/* ── DNA Ancestry Chart ── */}
+        <DNAChart />
+
       </div>
       <div className="tech-stack-section">
         <TechStack />
@@ -95,4 +100,3 @@ const AboutInfo = () => {
 };
 
 export default AboutInfo;
-
