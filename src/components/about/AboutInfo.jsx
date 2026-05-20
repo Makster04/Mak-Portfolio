@@ -3,97 +3,187 @@ import React from "react";
 import TechStack from "./TechStack";
 import GitHubGraph from "./GitHubGraph";
 import DNAChart from "./DNAChart";
-import { BsFillArrowRightSquareFill } from "react-icons/bs";
 import codeImage from "../../assets/bosnianparrot.gif";
 import './AboutInfo.css';
+
+const locationSteps = [
+  { period: "1998–2024", place: "Bellevue, WA" },
+  { period: "2024–2025", place: "NYC, NY" },
+  { period: "2025–2026", place: "Bellevue, WA" },
+  { period: "2026–Present", place: "Washington, D.C." },
+];
+
+const eduSteps = [
+  { period: "2016–19", school: "Bellevue College", cred: "A.S. Sociology" },
+  { period: "2019–22", school: "Univ. of Washington", cred: "B.A. Poli Sci & Int'l Studies" },
+  { period: "2024", school: "Code Fellows", cred: "Certificate · Web Design" },
+  { period: "2025", school: "Flatiron School", cred: "Certificate · Data Science" },
+  { period: "2026", school: "George Washington Univ.", cred: "M.S. Data Science" },
+];
+
+const passions = [
+  "Deep Conversations", "Gym Rat", "Globe-Trotter",
+  "Political Nerd", "Tech Enthusiast", "Basketball",
+  "Gaming Competitor", "Cinephile", "Data Wizard",
+];
+
+const traits = [
+  "Infectious Energy", "Easygoing", "Goofy",
+  "Boundless Creativity", "Genuine Compassion",
+  "Unstoppable Curiosity", "Natural Entertainer",
+];
+
+const visions = [
+  { num: "01", label: "ML / AI Engineer" },
+  { num: "02", label: "Data Scientist" },
+  { num: "03", label: "Podcast Empire" },
+  { num: "04", label: "Tech Startup Founder" },
+  { num: "05", label: "YouTube Sensation" },
+  { num: "06", label: "Hollywood Breakthrough" },
+];
 
 const AboutInfo = () => {
   return (
     <div className="about-container">
-      <div className="about-section">
-        <h1 className="about-title">
-          <span className="about-title-highlight">DISCOVER</span> MY WORLD
-        </h1>
-        
-        <p className="about-introduction">
-          <span className="about-introduction-text">
-            Zdravo World! I'm{" "}
-            <span className="about-introduction-highlight">Mak Trnka</span> — Bosnian heritage, American roots, and coding in my DNA. If I can handle <span className="about-accent">RAKIJA & ĆEVAPI</span>, I can conquer <span className="about-accent">ANY CODE CHALLENGE</span>.
-          </span>
-        </p>
 
-        <div className="about-details">
-          <div className="about-text">
-            <div className="about-details-list">
-              <h3 className="life-story-header">MY ORIGIN STORY</h3>
-              <ul className="vibrant-list">
-                <li className="list-item">
-                  <BsFillArrowRightSquareFill className="arrow-icon" />{" "}
-                  <span className="item-label">BORN:</span> 
-                  <span className="item-value">April 12, 1998 | Richmond, VA</span>
-                </li>
-                <li className="list-item">
-                  <BsFillArrowRightSquareFill className="arrow-icon" />{" "}
-                  <span className="item-label">HERITAGE:</span> 
-                  <span className="item-value">Bosnia & Herzegovina</span>
-                </li>
-                <li className="list-item">
-                  <BsFillArrowRightSquareFill className="arrow-icon" />{" "}
-                  <span className="item-label">ASTROLOGICAL SIGN:</span> 
-                  <span className="item-value">Aries ♈</span>
-                </li>
-                <li className="list-item">
-                  <BsFillArrowRightSquareFill className="arrow-icon" />{" "}
-                  <span className="item-label">LOCATION:</span> 
-                  <span className="item-value">Bellevue, WA (1998-2024) → NYC, NY (2024-2025) → NYC (2024-Present) → Bellevue, WA (2025-2026) → Washington, D.C. (2026)</span>
-                </li>
-                <li className="list-item">
-                  <BsFillArrowRightSquareFill className="arrow-icon" />{" "}
-                  <span className="item-label">EDUCATION:</span> 
-                  <span className="item-value">Bellevue College (2016-19) → University of Washington (2019-22) → Code Fellows (2024) →  Flatiron (2025) → George Washington University (2026)</span>
-                </li>
-                <li className="list-item">
-                  <BsFillArrowRightSquareFill className="arrow-icon" />{" "}
-                  <span className="item-label">CREDENTIALS:</span> 
-                  <span className="item-value">Associates (Sociology) → Bachelors (Poli Sci & International Studies) → Ceritificate (Web Design) → Certificate (Data Science) → Ceritificate (Web Design) → Masters (Data Science)</span>
-                </li>
-                <li className="list-item">
-                  <BsFillArrowRightSquareFill className="arrow-icon" />{" "}
-                  <span className="item-label">LANGUAGES:</span> 
-                  <span className="item-value">English + Bosnian/Serbian/Croatian/Montenegrin</span>
-                </li>
-                <li className="list-item">
-                  <BsFillArrowRightSquareFill className="arrow-icon" />{" "}
-                  <span className="item-label">PASSIONS:</span> 
-                  <span className="item-value">Deep conversations, gym rat, globe-trotter, political nerd, tech enthusiast, basketball enthusiast, gaming competitor, cinephile, data wizard</span>
-                </li>
-                <li className="list-item">
-                  <BsFillArrowRightSquareFill className="arrow-icon" />{" "}
-                  <span className="item-label">FUTURE VISIONS:</span> 
-                  <span className="item-value">ML/AI Engineer, Data Scientist, Data Analyst, Podcast empire, tech startup founder, YouTube sensation, Hollywood breakthrough, etc.</span>
-                </li>
-                <li className="list-item">
-                  <BsFillArrowRightSquareFill className="arrow-icon" />{" "}
-                  <span className="item-label">TRAITS:</span> 
-                  <span className="item-value">Infectious energy, easygoing, goofy, boundless creativity, genuine compassion, unstoppable curiosity, natural entertainer</span>
-                </li>
-              </ul>
-            </div>
+      {/* ── HERO ── */}
+      <header className="about-hero">
+        <div className="hero-scan-line" />
+        <h1 className="about-title">
+          <span className="glitch" data-text="DISCOVER">DISCOVER</span>
+          <span className="title-plain"> MY WORLD</span>
+        </h1>
+        <p className="about-tagline">
+          Zdravo World! I'm{" "}
+          <span className="hl-name">Mak Trnka</span>{" "}
+          — Bosnian heritage, American roots, and coding in my DNA.
+          If I can handle{" "}
+          <span className="hl-accent">RAKIJA &amp; ĆEVAPI</span>,
+          I can conquer{" "}
+          <span className="hl-accent">ANY CODE CHALLENGE</span>.
+        </p>
+      </header>
+
+      {/* ── BENTO GRID ── */}
+      <div className="bento-grid">
+
+        {/* Image */}
+        <div className="bento-card card-image">
+          <div className="img-frame">
+            <img src={codeImage} alt="Mak Trnka" className="about-image" />
+            <div className="img-corner tl" /><div className="img-corner tr" />
+            <div className="img-corner bl" /><div className="img-corner br" />
           </div>
-          <img
-            className="about-image"
-            src={codeImage}
-            alt="Mak Trnka - Bosnian American Coder"
-          />
         </div>
 
-        {/* ── DNA Ancestry Chart ── */}
-        <DNAChart />
+        {/* Quick-stat cards */}
+        <div className="bento-card card-stat">
+          <span className="stat-label">BORN</span>
+          <span className="stat-main">APR 12, 1998</span>
+          <span className="stat-sub">Richmond, VA</span>
+        </div>
 
+        <div className="bento-card card-stat">
+          <span className="stat-label">HERITAGE</span>
+          <span className="stat-main flag">🇧🇦</span>
+          <span className="stat-sub">Bosnia &amp; Herzegovina</span>
+        </div>
+
+        <div className="bento-card card-stat">
+          <span className="stat-label">SIGN</span>
+          <span className="stat-main aries-sign">♈</span>
+          <span className="stat-sub">Aries</span>
+        </div>
+
+        <div className="bento-card card-stat card-languages">
+          <span className="stat-label">LANGUAGES</span>
+          <div className="lang-pills">
+            <span className="lang-pill">EN</span>
+            <span className="lang-pill">BS</span>
+            <span className="lang-pill">SR</span>
+            <span className="lang-pill">HR</span>
+          </div>
+        </div>
+
+        {/* Location timeline */}
+        <div className="bento-card card-timeline">
+          <h3 className="card-heading"><span className="heading-icon">📍</span> LOCATION JOURNEY</h3>
+          <div className="timeline">
+            {locationSteps.map((s, i) => (
+              <div className="tl-row" key={i}>
+                <span className="tl-period">{s.period}</span>
+                <div className="tl-line-wrap">
+                  <div className="tl-dot" />
+                  {i < locationSteps.length - 1 && <div className="tl-connector" />}
+                </div>
+                <span className="tl-place">{s.place}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Education timeline */}
+        <div className="bento-card card-timeline card-edu">
+          <h3 className="card-heading"><span className="heading-icon">🎓</span> EDUCATION PATH</h3>
+          <div className="timeline">
+            {eduSteps.map((s, i) => (
+              <div className="tl-row" key={i}>
+                <span className="tl-period">{s.period}</span>
+                <div className="tl-line-wrap">
+                  <div className="tl-dot" />
+                  {i < eduSteps.length - 1 && <div className="tl-connector" />}
+                </div>
+                <div className="tl-edu-info">
+                  <span className="tl-place">{s.school}</span>
+                  <span className="tl-cred">{s.cred}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>{/* /bento-grid */}
+
+      {/* ── PASSIONS + TRAITS ── */}
+      <div className="tags-row">
+        <div className="tag-block">
+          <h3 className="section-header">PASSIONS</h3>
+          <div className="tag-cloud">
+            {passions.map((p, i) => (
+              <span className="tag tag-passion" key={i}>{p}</span>
+            ))}
+          </div>
+        </div>
+        <div className="tag-block">
+          <h3 className="section-header">TRAITS</h3>
+          <div className="tag-cloud">
+            {traits.map((t, i) => (
+              <span className="tag tag-trait" key={i}>{t}</span>
+            ))}
+          </div>
+        </div>
       </div>
+
+      {/* ── FUTURE VISIONS ── */}
+      <div className="visions-section">
+        <h3 className="section-header">FUTURE VISIONS</h3>
+        <div className="visions-grid">
+          {visions.map((v) => (
+            <div className="vision-card" key={v.num}>
+              <span className="vision-num">{v.num}</span>
+              <span className="vision-label">{v.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* ── SUB-COMPONENTS ── */}
+      <DNAChart />
+
       <div className="tech-stack-section">
         <TechStack />
       </div>
+
       <GitHubGraph />
     </div>
   );

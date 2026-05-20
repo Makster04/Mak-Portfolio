@@ -44,7 +44,7 @@ const pageIcons = [
 
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
-  const [bgGradient, setBgGradient] = useState("linear-gradient(135deg, #0f3328 0%, #061a12 100%)");
+  const [bgGradient, setBgGradient] = useState("linear-gradient(135deg, #010a85 0%, #c6bc03 100%)");
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);

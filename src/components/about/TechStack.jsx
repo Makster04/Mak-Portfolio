@@ -101,7 +101,7 @@ const TechStack = () => {
       <h1>
         <span
           style={{
-            color: "#32CD30",
+            color: "#cdc830",
             marginTop: "3rem",
             fontFamily: "Fira Code",
             fontWeight: "bold",
