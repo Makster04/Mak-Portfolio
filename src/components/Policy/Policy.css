@@ -33,6 +33,23 @@
   text-align: center;
 }
 
+/* Groups of cards */
+.policy-group {
+  margin-bottom: 2.5rem;
+}
+
+.policy-group-title {
+  margin: 0 0 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #fbc531;
+  font-family: "Fira Code", monospace;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: left;
+  text-shadow: 0 0 5px #000;
+}
+
 /* Card grid */
 .policy-cards {
   display: grid;
@@ -95,7 +112,7 @@
   color: #1c1c1c;
 }
 
-.policy-card-body h2 {
+.policy-card-body h3 {
   font-family: "Poppins", sans-serif;
   font-size: 1.4rem;
   margin: 0 0 0.5rem;
