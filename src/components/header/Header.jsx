@@ -16,6 +16,7 @@ import { Link } from "react-router-dom";
 import FaceRoundedIcon from "@mui/icons-material/FaceRounded";
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import FolderSharedRoundedIcon from "@mui/icons-material/FolderSharedRounded";
+import AccountBalanceRoundedIcon from "@mui/icons-material/AccountBalanceRounded";
 import CallRoundedIcon from "@mui/icons-material/CallRounded";
 import { BsGithub } from "react-icons/bs";
 
@@ -27,6 +28,7 @@ const pages = [
   { text: "Software Projects", href: "/project" },
   { text: "Travel Blog (In the works)", href: "/travel" },
   { text: "Data Science Projects", href: "/Project2" },
+  { text: "Policy Research", href: "/policy" },
   { text: "Contact", href: "/contact" },
   { text: "Fork Project", href: "https://github.com/Makster04/Mak-portfolio" },
 ];
@@ -36,6 +38,7 @@ const pageIcons = [
   FolderSharedRoundedIcon,
   FolderSharedRoundedIcon,
   FolderSharedRoundedIcon,
+  AccountBalanceRoundedIcon,
   CallRoundedIcon,
   BsGithub,
 ];
@@ -77,7 +80,7 @@ const Header = () => {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <BoltIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          <BoltIcon sx={{ display: { xs: "none", lg: "flex" }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
@@ -85,7 +88,8 @@ const Header = () => {
             href="/"
             sx={{
               mr: 2,
-              display: { xs: "none", md: "flex" },
+              flexShrink: 0,
+              display: { xs: "none", lg: "flex" },
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
@@ -95,7 +99,7 @@ const Header = () => {
           >
             Mak Trnka
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "flex", lg: "none" } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -121,7 +125,7 @@ const Header = () => {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: "block", md: "none" },
+                display: { xs: "block", lg: "none" },
               }}
             >
               {pages.map((page) => (
@@ -133,7 +137,7 @@ const Header = () => {
               ))}
             </Menu>
           </Box>
-          <BoltIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+          <BoltIcon sx={{ display: { xs: "flex", lg: "none" }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -141,7 +145,7 @@ const Header = () => {
             href=""
             sx={{
               mr: 2,
-              display: { xs: "flex", md: "none" },
+              display: { xs: "flex", lg: "none" },
               flexGrow: 1,
               fontFamily: "monospace",
               fontWeight: 700,
@@ -154,7 +158,7 @@ const Header = () => {
           </Typography>
           <Box
             justifyContent="flex-end"
-            sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
+            sx={{ flexGrow: 1, display: { xs: "none", lg: "flex" } }}
           >
             {pages.map((page, index) => {
               const Icon = pageIcons[index];
@@ -177,7 +181,7 @@ const Header = () => {
                       fontFamily: "poppins",
                       fontSize: 16,
                       alignItems: "center",
-                      marginRight: "1.5rem",
+                      marginRight: "1rem",
                       "&:hover": {
                         backgroundColor: "rgba(255, 255, 255, 0.1)",
                         transform: "translateY(-1px)",

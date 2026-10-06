@@ -1,0 +1,75 @@
+const policyData = [
+  {
+    title: "Croatia Summit Position Paper",
+    forum: "Model EU",
+    context: "Summit position paper",
+    date: null,
+    about: "Lays out Croatia's position across five EU policy areas: the financial market, defense, agriculture, the environment, and the 2021–2027 EU budget.",
+    highlights: [
+      "Defense: argues PESCO projects should require EU approval so member states can't design projects that threaten allies or cost too much.",
+      "Agriculture: supports keeping the CAP at 30% of the budget, as long as it shifts toward environmental goals and small and medium-sized farms.",
+      "Environment: backs the 8th Environment Action Programme but says circular economy and biodiversity (about 10% each) deserve more funding.",
+      "Budget: proposes 30% for Single Market, Innovation and Digital and 25% for Migration and Border Management.",
+    ],
+    tags: ["Financial Markets", "Defense", "CAP", "Environment", "EU Budget"],
+    paperLink: "/papers/Croatia_Summit_Paper.pdf",
+  },
+  {
+    title: "Croatia Agriculture",
+    forum: "Model EU",
+    context: "Policy memo · JSIS B 431",
+    date: "Nov 15, 2021",
+    about: "Examines how fragmented landownership, small farms, and weak agribusiness competitiveness hold back Croatia's agricultural sector and weighs three policy options.",
+    highlights: [
+      "Problem: about 64% of registered farms are under 5 hectares, and an outdated land registry slows land transfers.",
+      "Options: €10 billion in CAP funding, stronger anti-corruption measures, or an agriculture-focused free trade agreement.",
+      "Recommendation: a free trade agreement with select EU members to cut subsidies and trade restrictions and attract foreign investment.",
+    ],
+    tags: ["Agriculture", "Rural Development", "Free Trade", "Land Administration"],
+    paperLink: "/papers/MODEL_EU_CroatiaAgriculture.pdf",
+  },
+  {
+    title: "Croatia Immigration/Emigration",
+    forum: "Model EU",
+    context: "Policy memo · JSIS B 431",
+    date: "Nov 7, 2021",
+    about: "Addresses two pressures on Croatia at once: handling migrants and asylum-seekers at its border, and an emigration rate among the highest in the EU.",
+    highlights: [
+      "Border: an independent human rights monitoring mechanism and a larger, more efficient asylum system.",
+      "Emigration: ties people leaving to socioeconomic factors, citing a survey where 65% pointed to poor development and 53% to corruption.",
+      "Recommendation: ask the EU's AMIF to double Croatia's funding (about €108M to €216M) and raise its ESF+ funding from €110M to €200M.",
+    ],
+    tags: ["Migration", "Asylum Policy", "Border Management", "EU Funding"],
+    paperLink: "/papers/MODEL_EU_CroatiaImmigration.pdf",
+  },
+  {
+    title: "Croatia Defense Policy",
+    forum: "Model EU",
+    context: "Policy memo · JSIS B 431",
+    date: "Oct 25, 2021",
+    about: "Looks at how Croatia can modernize its outdated armed and air forces despite tight budgets, shrinking personnel, and NATO expectations.",
+    highlights: [
+      "Context: personnel fell from 22,000 in 2008 to about 18,525 in 2018, and Croatia aims to reach NATO's 2% of GDP target by 2024.",
+      "Options: source equipment from more EU and NATO members, sign a defense-industry agreement, or press the EU defense fund to double Croatia's forces.",
+      "Recommendation: a defense-industry agreement with other NATO members to share technology and tap the European Defence Fund.",
+    ],
+    tags: ["Defense", "NATO", "Military Modernization", "European Defence Fund"],
+    paperLink: "/papers/MODEL_EU_CroatiaDefense.pdf",
+  },
+  {
+    title: "Burkina Faso at the UN Commission on Crime Prevention and Criminal Justice",
+    forum: "Model UN",
+    context: "Position paper · University of Washington delegation",
+    date: "2019",
+    about: "Burkina Faso's position on advancing crime prevention and the rule of law toward the 2030 Agenda, and on strengthening responses to violence against women.",
+    highlights: [
+      "Crime and the rule of law: links crime to poverty, urbanization, and trafficking, and focuses on money laundering and terrorism in the Sahel.",
+      "Calls for UNODC and UNOCT to coordinate with UNCAC to strengthen Burkina Faso's criminal justice system.",
+      "Violence against women: cites a 183rd of 189 ranking on the 2018 Human Development Report and urges UNFPA, OHCHR, and UNODC to work together.",
+    ],
+    tags: ["Crime Prevention", "Criminal Justice", "Counter-Terrorism", "Violence Against Women"],
+    paperLink: "/papers/ModelUN_BurkinaFaso_2019.pdf",
+  },
+];
+
+export default policyData;

@@ -7,6 +7,7 @@ import HomePage from './components/home/HomePage';
 import Contact from './components/contact/Contact';
 import Project from './components/Project/Project';
 import Project2 from './components/Project2/Project2';
+import Policy from './components/Policy/Policy';
 
 import About from './components/about/AboutInfo';
 import Footer from './components/footer/Footer';
@@ -26,6 +27,7 @@ const App = () => {
             <Route exact path="/" element={<HomePage />}></Route>
             <Route exact path="/Project" element={<Project />}></Route>
             <Route exact path="/Project2" element={<Project2 />}></Route>
+            <Route exact path="/Policy" element={<Policy />}></Route>
 
             <Route exact path="/contact" element={<Contact />}></Route>
             <Route exact path="/About" element={<About />}></Route>
