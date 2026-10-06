@@ -1,0 +1,167 @@
+/* General policy container */
+.policy {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Title styles */
+.policy-title {
+  font-family: "Fira Code", monospace;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.policy-title-main {
+  text-shadow: 0 0 5px #000;
+}
+
+.policy-title-highlight {
+  color: #fbc531;
+  text-shadow: 0 0 10px #fff;
+  animation: policy-pulse 2s infinite;
+}
+
+/* Description styles */
+.policy-description {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 1rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Card grid */
+.policy-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+/* Card styles */
+.policy-card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: #0f2e9c;
+  line-height: 1.4;
+  font-family: sans-serif;
+  text-align: left;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.policy-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.policy-card-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+.policy-forum {
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background: #fbc531;
+  color: #111467;
+  font-weight: bold;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.policy-context {
+  opacity: 0.9;
+}
+
+.policy-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1rem;
+  background: #f9f9f9;
+  color: #1c1c1c;
+}
+
+.policy-card-body h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+  margin: 0 0 0.5rem;
+}
+
+.policy-about {
+  font-size: 1rem;
+}
+
+.policy-highlights {
+  margin: 0 0 1rem;
+  padding-left: 1.2rem;
+  font-size: 0.95rem;
+}
+
+.policy-highlights li {
+  margin-bottom: 0.5rem;
+}
+
+/* Topic tags */
+.policy-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.policy-tags li {
+  padding: 0.15rem 0.6rem;
+  border-radius: 4px;
+  background: #e3e6fa;
+  color: #111467;
+  font-size: 0.8rem;
+}
+
+/* Highlight for read paper link, pinned to the bottom of the card */
+.policy-read-more {
+  margin: auto 0 0;
+}
+
+.policy-read-more a {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #111467;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  border: 2px solid #3a40b8;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.policy-read-more a:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+@keyframes policy-pulse {
+  0% {
+    text-shadow: 0 0 5px #fff;
+  }
+  50% {
+    text-shadow: 0 0 15px #fff;
+  }
+  100% {
+    text-shadow: 0 0 5px #fff;
+  }
+}
