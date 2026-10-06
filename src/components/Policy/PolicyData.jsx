@@ -1,6 +1,7 @@
 const policyData = [
   {
     title: "Croatia Summit Position Paper",
+    group: "Model EU & Model UN",
     forum: "Model EU",
     context: "Summit position paper",
     date: null,
@@ -16,6 +17,7 @@ const policyData = [
   },
   {
     title: "Croatia Agriculture",
+    group: "Model EU & Model UN",
     forum: "Model EU",
     context: "Policy memo · JSIS B 431",
     date: "Nov 15, 2021",
@@ -30,6 +32,7 @@ const policyData = [
   },
   {
     title: "Croatia Immigration/Emigration",
+    group: "Model EU & Model UN",
     forum: "Model EU",
     context: "Policy memo · JSIS B 431",
     date: "Nov 7, 2021",
@@ -44,6 +47,7 @@ const policyData = [
   },
   {
     title: "Croatia Defense Policy",
+    group: "Model EU & Model UN",
     forum: "Model EU",
     context: "Policy memo · JSIS B 431",
     date: "Oct 25, 2021",
@@ -58,6 +62,7 @@ const policyData = [
   },
   {
     title: "Burkina Faso at the UN Commission on Crime Prevention and Criminal Justice",
+    group: "Model EU & Model UN",
     forum: "Model UN",
     context: "Position paper · University of Washington delegation",
     date: "2019",
