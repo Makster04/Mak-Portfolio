@@ -22,7 +22,7 @@ const Policy = () => {
                 <header className="policy-card-header">
                   <span className="policy-forum">{data.forum}</span>
                   <span className="policy-context">
-                    {[data.context, data.date].filter(Boolean).join(" · ")}
+                    {[data.context, data.date && data.date.replace(/ /g, " ")].filter(Boolean).join(" · ")}
                   </span>
                 </header>
                 <div className="policy-card-body">
