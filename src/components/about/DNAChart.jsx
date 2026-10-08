@@ -147,7 +147,7 @@ const AncestryMap = ({ tabData }) => {
 
   return (
     <div>
-      <div style={{ color: "#888888", fontSize: 10, letterSpacing: 2, textAlign: "center", marginBottom: 8 }}>
+      <div style={{ color: "#d6dcf7", fontSize: 12, fontWeight: 700, letterSpacing: 2, textAlign: "center", marginBottom: 8 }}>
         GEOGRAPHIC ORIGINS
       </div>
       <div style={{
@@ -192,7 +192,7 @@ const AncestryMap = ({ tabData }) => {
             position: "absolute", bottom: 8, left: "50%", transform: "translateX(-50%)",
             background: "#0d0d0d", border: "1px solid #333", borderRadius: 6,
             padding: "3px 10px", fontFamily: "'Space Mono', monospace",
-            fontSize: 10, color: "#ccc", pointerEvents: "none", whiteSpace: "nowrap",
+            fontSize: 12, color: "#fff", pointerEvents: "none", whiteSpace: "nowrap",
           }}>
             {tooltip}
           </div>
@@ -204,7 +204,7 @@ const AncestryMap = ({ tabData }) => {
         {visibleRegions.map(({ region, color }) => (
           <div key={region} style={{ display: "flex", alignItems: "center", gap: 5 }}>
             <div style={{ width: 8, height: 8, borderRadius: 2, background: color, flexShrink: 0 }} />
-            <span style={{ color: "#555", fontSize: 9, fontFamily: "'Space Mono', monospace" }}>
+            <span style={{ color: "#d6dcf7", fontSize: 11, fontFamily: "'Space Mono', monospace" }}>
               {region}
             </span>
           </div>
@@ -238,14 +238,13 @@ export default function DNAChart() {
   };
 
   return (
-    <div ref={ref} style={{
+    <div ref={ref} className="dna-panel" style={{
       opacity: visible ? 1 : 0,
       transform: visible ? "translateY(0)" : "translateY(40px)",
-      transition: "opacity 0.7s ease, transform 0.7s ease",
+      transition: "opacity 0.7s ease, transform 0.7s ease, border-color 0.25s ease, box-shadow 0.25s ease",
       margin: "48px 0", padding: "36px 24px",
       background: "linear-gradient(135deg, #0d0d0d 0%, #111318 100%)",
-      border: "1px solid #222", borderRadius: 16,
-      boxShadow: "0 8px 40px rgba(230,57,70,0.12)",
+      borderRadius: 16,
       fontFamily: "'Space Mono', monospace",
     }}>
 
@@ -262,7 +261,7 @@ export default function DNAChart() {
           }}>
             🧬 DNA ANCESTRY — 23andMe
           </div>
-          <div style={{ color: "#555", fontSize: 10, marginTop: 4, letterSpacing: 2 }}>
+          <div style={{ color: "#c3cbee", fontSize: 12, marginTop: 6, letterSpacing: 1.5, lineHeight: 1.5 }}>
             {subtitle}
           </div>
         </div>
@@ -275,10 +274,10 @@ export default function DNAChart() {
             return (
               <button key={tab.key} onClick={() => handleTabChange(tab.key)} style={{
                 padding: "6px 14px", borderRadius: 999, border: "none", cursor: "pointer",
-                fontFamily: "'Space Mono', monospace", fontSize: 11, fontWeight: 700,
+                fontFamily: "'Space Mono', monospace", fontSize: 13, fontWeight: 700,
                 letterSpacing: 1, transition: "all 0.22s ease",
                 background: isActive ? "linear-gradient(90deg, #e63946, #f4a261)" : "transparent",
-                color: isActive ? "#fff" : "#555",
+                color: isActive ? "#fff" : "#c3cbee",
                 boxShadow: isActive ? "0 0 12px rgba(230,57,70,0.35)" : "none",
               }}>
                 {tab.label}
@@ -296,7 +295,7 @@ export default function DNAChart() {
 
         {/* LEFT: Pie + legend */}
         <div style={{ flex: "1 1 300px", minWidth: 280, maxWidth: 380 }}>
-          <div style={{ color: "#888", fontSize: 10, letterSpacing: 2, textAlign: "center", marginBottom: 10 }}>
+          <div style={{ color: "#d6dcf7", fontSize: 12, fontWeight: 700, letterSpacing: 2, textAlign: "center", marginBottom: 10 }}>
             COMPOSITION
           </div>
           <ResponsiveContainer width="100%" height={270}>
@@ -331,8 +330,8 @@ export default function DNAChart() {
                 }}
               >
                 <div style={{ width: 10, height: 10, borderRadius: 2, background: d.color, flexShrink: 0 }} />
-                <span style={{ color: "#bbb", fontSize: 11 }}>{d.region}</span>
-                <span style={{ color: d.color, marginLeft: "auto", fontWeight: 700, fontSize: 11 }}>
+                <span style={{ color: "#eef1ff", fontSize: 13 }}>{d.region}</span>
+                <span style={{ color: d.color, marginLeft: "auto", fontWeight: 700, fontSize: 13 }}>
                   {d.percent}%
                 </span>
               </div>
@@ -350,7 +349,7 @@ export default function DNAChart() {
         {/* RIGHT: Bar + Map stacked */}
         <div style={{ flex: "1 1 300px", minWidth: 280, maxWidth: 440, display: "flex", flexDirection: "column", gap: 24 }}>
           <div>
-            <div style={{ color: "#888", fontSize: 10, letterSpacing: 2, textAlign: "center", marginBottom: 10 }}>
+            <div style={{ color: "#d6dcf7", fontSize: 12, fontWeight: 700, letterSpacing: 2, textAlign: "center", marginBottom: 10 }}>
               RANKED BREAKDOWN
             </div>
             <ResponsiveContainer width="100%" height={320}>
@@ -360,12 +359,12 @@ export default function DNAChart() {
                 barCategoryGap="18%"
               >
                 <XAxis type="number" domain={[0, maxDomain]}
-                  tick={{ fill: "#555", fontSize: 10, fontFamily: "'Space Mono', monospace" }}
-                  axisLine={{ stroke: "#1e1e1e" }} tickLine={false}
+                  tick={{ fill: "#c3cbee", fontSize: 12, fontFamily: "'Space Mono', monospace" }}
+                  axisLine={{ stroke: "#3a3f5c" }} tickLine={false}
                   tickFormatter={(v) => `${v}%`}
                 />
                 <YAxis type="category" dataKey="region" width={200}
-                  tick={{ fill: "#999", fontSize: 9, fontFamily: "'Space Mono', monospace" }}
+                  tick={{ fill: "#eef1ff", fontSize: 11, fontFamily: "'Space Mono', monospace" }}
                   axisLine={false} tickLine={false}
                 />
                 <Tooltip content={<CustomBarTooltip />} cursor={{ fill: "rgba(255,255,255,0.02)" }} />
@@ -385,8 +384,8 @@ export default function DNAChart() {
 
       {/* Footer */}
       <div style={{
-        textAlign: "center", marginTop: 24, color: "#333", fontSize: 10,
-        letterSpacing: 1.5, borderTop: "1px solid #161616", paddingTop: 16,
+        textAlign: "center", marginTop: 24, color: "#aab4de", fontSize: 11,
+        letterSpacing: 1.5, lineHeight: 1.6, borderTop: "1px solid #2a2f4d", paddingTop: 16,
       }}>
         SOURCE: 23andMe GENETIC TESTING · RESULTS MAY UPDATE AS REFERENCE PANELS EVOLVE
       </div>

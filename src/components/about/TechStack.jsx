@@ -27,10 +27,8 @@ const TechStack = () => {
   }, []);
 
   const introText = (
-    <p style={{ textAlign: "center", marginBottom: "3rem" }}>
-      <span style={{ color: "white", textShadow: "0 4px 8px rgba(0, 0, 0, 10)" }}>
-        A list of the software languages, libraries, and tools I’ve gained knowledge and experience in.{" "}
-      </span>
+    <p className="skills-intro">
+      A list of the software languages, libraries, and tools I’ve gained knowledge and experience in.
     </p>
   );
 
@@ -51,7 +49,7 @@ const TechStack = () => {
     { icon: <SiCss3 />, color: "#264de4", label: "CSS3" },
     { icon: <SiReact />, color: "#61DBFB", label: "React" },
     { icon: <SiNodedotjs />, color: "#3c873a", label: "Node.js" },
-    { icon: <SiExpress />, color: "#000000", label: "Express.js" },
+    { icon: <SiExpress />, color: "#ffffff", label: "Express.js" },
     { icon: <SiMongodb />, color: "#4DB33D", label: "MongoDB" },
   ];
   
@@ -59,8 +57,7 @@ const TechStack = () => {
   const renderCards = (skills) =>
     skills.map((item, index) => (
       <Card
-        raised
-        className="item"
+        className="skill-card"
         key={index}
         style={{
           display: 'flex',
@@ -72,21 +69,18 @@ const TechStack = () => {
           margin: '10px',
           padding: '1rem',
           textAlign: 'center',
-          backgroundColor: 'rgba(0, 0, 10, 0.4)', // transparent dark background
-          borderRadius: '10px',
-          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2)',
         }}
       >
-        {React.cloneElement(item.icon, {
-          style: { width: "60px", height: "60px", color: item.color, marginBottom: "0.5rem" }
-        })}
-        <div style={{ color: 'white', fontSize: '1rem', fontWeight: '300' }}>
-          {item.label}
-        </div>
+        <span className="skill-icon">
+          {React.cloneElement(item.icon, {
+            style: { width: "52px", height: "52px", color: item.color, display: "block" }
+          })}
+        </span>
+        <div className="skill-label">{item.label}</div>
       </Card>
     ));
-  
-  
+
+
   return (
     <div
       className="techstack"
@@ -98,19 +92,9 @@ const TechStack = () => {
         minHeight: '50vh',
       }}
     >
-      <h1>
-        <span
-          style={{
-            color: "#cdc830",
-            marginTop: "3rem",
-            fontFamily: "Fira Code",
-            fontWeight: "bold",
-            fontSize: "3rem",
-          }}
-        >
-          <span style={{ textShadow: "0 0 10px black", color: "white" }}>My</span>{" "}
-          <span style={{ textShadow: "0 0 10px black", animation: "pulse 2s infinite" }}>TECH SKILLS</span>
-        </span>
+      <h1 className="skills-title">
+        <span className="skills-title-plain">My</span>{" "}
+        <span className="skills-title-accent">TECH SKILLS</span>
       </h1>
 
       {introText}
@@ -126,7 +110,7 @@ const TechStack = () => {
       >
         {/* Software Engineering Column */}
         <div style={{ textAlign: 'center' }}>
-          <h2 style={{ color: 'white', marginBottom: '1rem' }}>Data Science</h2>
+          <h2 className="skills-heading">Data Science</h2>
           <Card.Group itemsPerRow={width > 768 ? 2 : 1} style={{ justifyContent: 'center' }}>
             {renderCards(dataScienceSkills)}
           </Card.Group>
@@ -134,7 +118,7 @@ const TechStack = () => {
 
         {/* Data Science Column */}
         <div style={{ textAlign: 'center' }}>
-          <h2 style={{ color: 'white', marginBottom: '1rem' }}>Software Engineering</h2>
+          <h2 className="skills-heading">Software Engineering</h2>
           <Card.Group itemsPerRow={width > 768 ? 2 : 1} style={{ justifyContent: 'center' }}>
             {renderCards(softwareEngineeringSkills)}
           </Card.Group>

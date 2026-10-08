@@ -70,7 +70,7 @@ const AboutInfo = () => {
         {/* Image */}
         <div className="bento-card card-image">
           <div className="img-frame">
-            <img src={codeImage} alt="Mak Trnka" className="about-image" />
+            <img src={codeImage} alt="Mak Trnka" className="about-avatar" />
             <div className="img-corner tl" /><div className="img-corner tr" />
             <div className="img-corner bl" /><div className="img-corner br" />
           </div>
@@ -108,7 +108,7 @@ const AboutInfo = () => {
         {/* Location timeline */}
         <div className="bento-card card-timeline">
           <h3 className="card-heading"><span className="heading-icon">📍</span> LOCATION JOURNEY</h3>
-          <div className="timeline">
+          <div className="about-timeline">
             {locationSteps.map((s, i) => (
               <div className="tl-row" key={i}>
                 <span className="tl-period">{s.period}</span>
@@ -125,7 +125,7 @@ const AboutInfo = () => {
         {/* Education timeline */}
         <div className="bento-card card-timeline card-edu">
           <h3 className="card-heading"><span className="heading-icon">🎓</span> EDUCATION PATH</h3>
-          <div className="timeline">
+          <div className="about-timeline">
             {eduSteps.map((s, i) => (
               <div className="tl-row" key={i}>
                 <span className="tl-period">{s.period}</span>
