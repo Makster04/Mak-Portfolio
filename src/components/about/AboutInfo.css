@@ -1,5 +1,6 @@
 /* ============================================================
-   AboutInfo.css  —  Blue boxes, gold text, gold on hover
+   AboutInfo.css  —  Page-blue see-through boxes, gold text, thin
+   yellow outlines, gold fill on hover.
    Every "box" defines four custom properties (--box-bg, --box-fg,
    --box-soft, --box-accent). Hover swaps them, so each child
    flips from gold-on-blue to navy-on-gold with no per-element rules.
@@ -8,14 +9,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&family=Space+Mono:wght@400;700&display=swap');
 
 :root {
-  --blue: #1b3dc4;           /* resting box colour */
-  --blue-deep: #0b1a78;      /* chips / dark accents on blue */
+  --page-blue: #0d0b6d;      /* middle of the page's background gradient (#12086c -> #020f70) */
+  --blue: rgba(13, 11, 109, 0.72);   /* resting box fill: page blue, a bit see-through */
   --navy: #070f4d;           /* text on gold */
   --gold: #ffd23f;           /* primary text on blue */
-  --gold-hover: #ffc61a;     /* hovered box fill */
+  --gold-hover: #ffc61a;     /* hovered box border / glow */
+  --gold-fill: rgba(255, 198, 26, 0.92);  /* hovered box fill: gold, a bit see-through */
   --cream: #fff3c4;          /* readable body copy on blue */
-  --border: rgba(255, 210, 63, 0.35);
-  --border-strong: rgba(255, 210, 63, 0.9);
+  --line: rgba(255, 210, 63, 0.9);        /* thin yellow outline around every box */
+  --blur: blur(3px);         /* softens the particles behind a see-through box */
   --font-display: 'Rajdhani', 'Inter', sans-serif;
   --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-mono: 'Space Mono', monospace;
@@ -60,7 +62,9 @@
   --box-accent: var(--gold);
   background: var(--box-bg);
   color: var(--box-soft);
-  border: 1px solid var(--border);
+  border: 1px solid var(--line);
+  -webkit-backdrop-filter: var(--blur);
+  backdrop-filter: var(--blur);
   box-shadow: 0 6px 18px rgba(0, 0, 40, 0.35);
   transition: background-color 0.25s ease, border-color 0.25s ease,
               color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
@@ -69,7 +73,7 @@
 .bento-card:hover,
 .vision-card:hover,
 .tag:hover {
-  --box-bg: var(--gold-hover);
+  --box-bg: var(--gold-fill);
   --box-fg: var(--navy);
   --box-soft: var(--navy);
   --box-accent: var(--navy);
@@ -378,9 +382,11 @@
 }
 .tag-block {
   background: var(--blue);
-  border: 1px solid var(--border);
+  border: 1px solid var(--line);
   border-radius: 14px;
   padding: 1.5rem;
+  -webkit-backdrop-filter: var(--blur);
+  backdrop-filter: var(--blur);
   box-shadow: 0 6px 18px rgba(0, 0, 40, 0.35);
 }
 .section-header {
@@ -398,9 +404,11 @@
   flex-wrap: wrap;
   gap: 10px;
 }
-/* chips sit on a blue box, so they are the deeper blue and flip to gold */
+/* chips sit inside a blue box: same blue (stacking makes them read slightly deeper),
+   their own yellow outline, and they flip to gold on hover. No blur: the parent already blurs. */
 .tag {
-  --box-bg: var(--blue-deep);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
   font-size: 1rem;
   font-weight: 600;
   padding: 7px 15px;
@@ -448,7 +456,9 @@
 
 /* ── DNA PANEL — dark so the chart colours stay legible; gold edge lights up on hover ── */
 .dna-panel {
-  border: 1px solid var(--border);
+  border: 1px solid var(--line);
+  -webkit-backdrop-filter: var(--blur);
+  backdrop-filter: var(--blur);
   box-shadow: 0 8px 40px rgba(0, 0, 40, 0.45);
 }
 .dna-panel:hover {
@@ -492,7 +502,9 @@
   --box-fg: var(--gold);
   --box-soft: var(--cream);
   background: var(--box-bg);
-  border: 1px solid var(--border);
+  border: 1px solid var(--line);
+  -webkit-backdrop-filter: var(--blur);
+  backdrop-filter: var(--blur);
   border-radius: 14px;
   box-shadow: 0 6px 18px rgba(0, 0, 40, 0.35);
   gap: 10px;
@@ -500,7 +512,7 @@
               transform 0.25s ease, box-shadow 0.25s ease;
 }
 .techstack .ui.cards > .card.skill-card:hover {
-  --box-bg: var(--gold-hover);
+  --box-bg: var(--gold-fill);
   --box-fg: var(--navy);
   --box-soft: var(--navy);
   border-color: var(--gold-hover);

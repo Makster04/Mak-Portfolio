@@ -243,7 +243,7 @@ export default function DNAChart() {
       transform: visible ? "translateY(0)" : "translateY(40px)",
       transition: "opacity 0.7s ease, transform 0.7s ease, border-color 0.25s ease, box-shadow 0.25s ease",
       margin: "48px 0", padding: "36px 24px",
-      background: "linear-gradient(135deg, #0d0d0d 0%, #111318 100%)",
+      background: "linear-gradient(135deg, rgba(13,13,13,0.84) 0%, rgba(17,19,24,0.84) 100%)",
       borderRadius: 16,
       fontFamily: "'Space Mono', monospace",
     }}>
