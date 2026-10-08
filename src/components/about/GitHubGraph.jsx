@@ -1,29 +1,26 @@
 // GitHubGraph.jsx
 import React from 'react';
-import GitHubCalendar from 'react-github-calendar';
+import GitHubCalendar, { createCalendarTheme } from 'react-github-calendar';
+
+// Gold squares on a translucent-white empty cell, so the graph reads on the blue page.
+const goldTheme = createCalendarTheme('#ffd23f', '#3a54c9');
 
 const GitHubGraph = () => {
   return (
     <div className="github-section">
-      <h1
-        style={{
-          marginTop: "5rem",
-          fontFamily: "Fira Code",
-          fontWeight: "bold",
-          fontSize: "3rem",
-        }}
-      >
-        <span style={{ textShadow: "0 4px 8px rgba(0, 0, 0, 0.5)" }}>My <span style={{ color: "#32CD30", animation: "pulse 2s infinite" }}>GITHUB</span> Contribution Graph</span> 
+      <h1 className="github-title">
+        <span className="github-title-plain">My</span>{" "}
+        <span className="github-title-accent">GITHUB</span>{" "}
+        <span className="github-title-plain">Contribution Graph</span>
       </h1>
-      <br />
       <div className="github-graph">
         <GitHubCalendar
-          style={{ marginBottom: "90px" }}
+          style={{ marginBottom: "90px", color: "#fff3c4" }}
           username="Makster04"
           blockMargin={6}
           blockSize={15}
           fontSize={16}
-          color={"#32CD30"}
+          theme={goldTheme}
         />
       </div>
     </div>
