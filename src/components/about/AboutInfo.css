@@ -14,10 +14,10 @@
   --navy: #070f4d;           /* text on gold */
   --gold: #ffd23f;           /* primary text on blue */
   --gold-hover: #ffc61a;     /* hovered box border / glow */
-  --gold-fill: rgba(255, 198, 26, 0.92);  /* hovered box fill: gold, a bit see-through */
+  --gold-fill: rgba(255, 205, 38, 0.95);  /* hovered box fill: gold, a bit see-through */
   --cream: #fff3c4;          /* readable body copy on blue */
   --line: rgba(255, 210, 63, 0.9);        /* thin yellow outline around every box */
-  --blur: blur(3px);         /* softens the particles behind a see-through box */
+  --halo: 0 0 6px rgba(13, 11, 109, 0.95), 0 0 14px rgba(13, 11, 109, 0.8); /* keeps unboxed text clear of particles */
   --font-display: 'Rajdhani', 'Inter', sans-serif;
   --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-mono: 'Space Mono', monospace;
@@ -63,11 +63,9 @@
   background: var(--box-bg);
   color: var(--box-soft);
   border: 1px solid var(--line);
-  -webkit-backdrop-filter: var(--blur);
-  backdrop-filter: var(--blur);
   box-shadow: 0 6px 18px rgba(0, 0, 40, 0.35);
-  transition: background-color 0.25s ease, border-color 0.25s ease,
-              color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  /* fill and text flip together instantly; fading only the fill left text invisible mid-hover */
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 .about-tagline:hover,
 .bento-card:hover,
@@ -117,6 +115,12 @@
 }
 
 .title-plain { color: #fff; }
+.about-title,
+.visions-section > .section-header,
+.techstack .skills-title,
+.techstack .skills-heading,
+.techstack .skills-intro,
+.github-section .github-title { text-shadow: var(--halo); }
 
 .glitch {
   color: var(--gold);
@@ -169,8 +173,7 @@
   max-width: 880px;
   margin: 0 auto;
   padding: 1.5rem 1.75rem;
-  border-left: 5px solid var(--box-accent);
-  border-radius: 0 12px 12px 0;
+  border-radius: 12px;
   text-align: left;
 }
 .hl-name {
@@ -224,7 +227,7 @@
   box-shadow: 0 0 28px rgba(0, 0, 40, 0.45);
   display: block;
   object-fit: cover;
-  transition: transform 0.3s ease, border-color 0.25s ease;
+  transition: transform 0.3s ease;
 }
 .card-image:hover .about-avatar { transform: scale(1.05); }
 
@@ -234,7 +237,6 @@
   height: 22px;
   border-color: var(--box-accent);
   border-style: solid;
-  transition: border-color 0.25s ease;
 }
 .img-corner.tl { top: -10px;  left: -10px;  border-width: 3px 0 0 3px; }
 .img-corner.tr { top: -10px;  right: -10px; border-width: 3px 3px 0 0; }
@@ -294,7 +296,6 @@
   /* inverted chip: gold on blue card, navy on gold card */
   background: var(--box-fg);
   color: var(--box-bg);
-  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 /* Timeline cards */
@@ -385,8 +386,6 @@
   border: 1px solid var(--line);
   border-radius: 14px;
   padding: 1.5rem;
-  -webkit-backdrop-filter: var(--blur);
-  backdrop-filter: var(--blur);
   box-shadow: 0 6px 18px rgba(0, 0, 40, 0.35);
 }
 .section-header {
@@ -405,10 +404,9 @@
   gap: 10px;
 }
 /* chips sit inside a blue box: same blue (stacking makes them read slightly deeper),
-   their own yellow outline, and they flip to gold on hover. No blur: the parent already blurs. */
+   a softer yellow outline at rest, and they flip to gold on hover. */
 .tag {
-  -webkit-backdrop-filter: none;
-  backdrop-filter: none;
+  border-color: rgba(255, 210, 63, 0.6);
   font-size: 1rem;
   font-weight: 600;
   padding: 7px 15px;
@@ -457,8 +455,6 @@
 /* ── DNA PANEL — dark so the chart colours stay legible; gold edge lights up on hover ── */
 .dna-panel {
   border: 1px solid var(--line);
-  -webkit-backdrop-filter: var(--blur);
-  backdrop-filter: var(--blur);
   box-shadow: 0 8px 40px rgba(0, 0, 40, 0.45);
 }
 .dna-panel:hover {
@@ -486,6 +482,7 @@
   color: var(--cream);
   max-width: 720px;
   margin: 0 auto 2.5rem;
+  text-wrap: balance;
 }
 .techstack .skills-heading {
   font-family: var(--font-display);
@@ -503,13 +500,10 @@
   --box-soft: var(--cream);
   background: var(--box-bg);
   border: 1px solid var(--line);
-  -webkit-backdrop-filter: var(--blur);
-  backdrop-filter: var(--blur);
   border-radius: 14px;
   box-shadow: 0 6px 18px rgba(0, 0, 40, 0.35);
   gap: 10px;
-  transition: background-color 0.25s ease, border-color 0.25s ease,
-              transform 0.25s ease, box-shadow 0.25s ease;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 .techstack .ui.cards > .card.skill-card:hover {
   --box-bg: var(--gold-fill);
@@ -519,14 +513,15 @@
   box-shadow: 0 10px 26px rgba(255, 198, 26, 0.35);
   transform: translateY(-4px);
 }
-/* brand-coloured icons sit on a navy tile so they stay visible on blue AND gold */
+/* brand-coloured icons sit on a page-blue tile: it blends into the card at rest and
+   becomes a blue window on the gold hover, so brand colours stay visible on both */
 .skill-icon {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
   border-radius: 14px;
-  background: #0a1250;
+  background: var(--page-blue);
 }
 .skill-label {
   font-family: var(--font-body);
@@ -534,7 +529,6 @@
   font-weight: 600;
   line-height: 1.2;
   color: var(--box-fg);
-  transition: color 0.25s ease;
 }
 
 /* ── GITHUB GRAPH ── */
@@ -545,9 +539,9 @@
   font-weight: 700;
   letter-spacing: 3px;
   line-height: 1.1;
-  margin: 5rem 0 2rem;
   text-transform: uppercase;
 }
+.github-section .github-title { margin: 5rem 0 2rem; }
 .github-title-plain  { color: #fff; }
 .github-title-accent { color: var(--gold); }
 
@@ -562,7 +556,6 @@
     grid-row: auto;
     min-height: 240px;
   }
-  .card-languages { grid-column: span 2; }
   .card-timeline  { grid-column: span 2; }
   .visions-grid   { grid-template-columns: repeat(2, 1fr); }
   .tags-row       { grid-template-columns: 1fr; }

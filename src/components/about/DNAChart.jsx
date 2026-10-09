@@ -41,11 +41,11 @@ const CONFIDENCE_LEVELS = {
     data: [
       { region: "🇧🇦🇭🇷🇲🇪🇷🇸 Bosnian, Croatian, Montenegrin & Serbian", percent: 80.4, color: "#f5a623" },
       { region: "🇨🇿🇭🇺🇸🇰🇵🇱 Czech, Hungarian, Slovak & Southern Polish", percent: 14.0, color: "#c0392b" },
-      { region: "🇸🇮 Slovenian",                  percent: 1.7, color: "#9b2335" },
-      { region: "🇦🇹🇩🇪 Austrian & Southern German", percent: 1.7, color: "#9b2335" },
-      { region: "🇱🇻 Latvian",                    percent: 1.1, color: "#7b1fa2" },
-      { region: "🇹🇷 Anatolian",                  percent: 0.7, color: "#6a1b9a" },
-      { region: "🇦🇱🇲🇰 Albanian & Macedonian",   percent: 0.4, color: "#4a148c" },
+      { region: "🇸🇮 Slovenian",                  percent: 1.7, color: "#e05a6d" },
+      { region: "🇦🇹🇩🇪 Austrian & Southern German", percent: 1.7, color: "#e05a6d" },
+      { region: "🇱🇻 Latvian",                    percent: 1.1, color: "#c85fe0" },
+      { region: "🇹🇷 Anatolian",                  percent: 0.7, color: "#a46bff" },
+      { region: "🇦🇱🇲🇰 Albanian & Macedonian",   percent: 0.4, color: "#8e4fd8" },
     ],
   },
   ci70: {
@@ -55,11 +55,11 @@ const CONFIDENCE_LEVELS = {
       { region: "Broadly European",           percent: 22.3, color: "#f0822a" },
       { region: "Broadly Central & Eastern European", percent: 5.3, color: "#e03e3e" },
       { region: "🇨🇿🇭🇺🇸🇰🇵🇱 Czech, Hungarian, Slovak & Southern Polish", percent: 2.3, color: "#c0392b" },
-      { region: "🇬🇷 Broadly Greek & Balkan",   percent: 1.3, color: "#9b2335" },
-      { region: "🇸🇮 Slovenian",                percent: 0.9, color: "#7b1fa2" },
-      { region: "🇹🇷 Anatolian",                percent: 0.6, color: "#6a1b9a" },
-      { region: "🇦🇹🇩🇪 Austrian & Southern German", percent: 0.5, color: "#4a148c" },
-      { region: "Unassigned",                  percent: 0.1, color: "#646262" },
+      { region: "🇬🇷 Broadly Greek & Balkan",   percent: 1.3, color: "#e05a6d" },
+      { region: "🇸🇮 Slovenian",                percent: 0.9, color: "#c85fe0" },
+      { region: "🇹🇷 Anatolian",                percent: 0.6, color: "#a46bff" },
+      { region: "🇦🇹🇩🇪 Austrian & Southern German", percent: 0.5, color: "#8e4fd8" },
+      { region: "Unassigned",                  percent: 0.1, color: "#9a9a9a" },
     ],
   },
   ci90: {
@@ -67,12 +67,12 @@ const CONFIDENCE_LEVELS = {
     data: [
       { region: "🇧🇦🇭🇷🇲🇪🇷🇸 Bosnian, Croatian, Montenegrin & Serbian", percent: 51.4, color: "#f5a623" },
       { region: "Broadly European",           percent: 43.8, color: "#f0822a" },
-      { region: "Broadly Central & Eastern European", percent: 1.4, color: "#9b2335" },
-      { region: "Unassigned",                 percent: 1.1, color: "#646262" },
-      { region: "🇬🇷 Broadly Greek & Balkan",  percent: 0.9, color: "#7b1fa2" },
-      { region: "🇨🇿🇭🇺🇸🇰🇵🇱 Czech, Hungarian, Slovak & Southern Polish", percent: 0.8, color: "#7b1fa2" },
-      { region: "🇹🇷 Anatolian",               percent: 0.5, color: "#6a1b9a" },
-      { region: "🇸🇮 Slovenian",               percent: 0.1, color: "#4a148c" },
+      { region: "Broadly Central & Eastern European", percent: 1.4, color: "#e05a6d" },
+      { region: "Unassigned",                 percent: 1.1, color: "#9a9a9a" },
+      { region: "🇬🇷 Broadly Greek & Balkan",  percent: 0.9, color: "#c85fe0" },
+      { region: "🇨🇿🇭🇺🇸🇰🇵🇱 Czech, Hungarian, Slovak & Southern Polish", percent: 0.8, color: "#c85fe0" },
+      { region: "🇹🇷 Anatolian",               percent: 0.5, color: "#a46bff" },
+      { region: "🇸🇮 Slovenian",               percent: 0.1, color: "#8e4fd8" },
     ],
   },
 };
@@ -113,6 +113,16 @@ const CustomBarTooltip = ({ active, payload, label }) => {
 };
 
 // ─── Pie label ────────────────────────────────────────────────────────────────
+// Light slices (amber, orange) need dark text; darker slices keep white.
+const luminance = (hex) => {
+  const [r, g, b] = [1, 3, 5].map((i) => {
+    const c = parseInt(hex.slice(i, i + 2), 16) / 255;
+    return c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
+  });
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+};
+const labelColor = (hex) => (luminance(hex) > 0.25 ? "#0d0d0d" : "#fff");
+
 const renderCustomLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, payload }) => {
   if (payload.percent < 2) return null;
   const RADIAN = Math.PI / 180;
@@ -120,7 +130,7 @@ const renderCustomLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, payload
   const x = cx + radius * Math.cos(-midAngle * RADIAN);
   const y = cy + radius * Math.sin(-midAngle * RADIAN);
   return (
-    <text x={x} y={y} fill="#fff" textAnchor="middle" dominantBaseline="central"
+    <text x={x} y={y} fill={labelColor(payload.color)} textAnchor="middle" dominantBaseline="central"
       style={{ fontFamily: "'Space Mono', monospace", fontSize: 11, fontWeight: 700 }}>
       {payload.percent.toFixed(1)}%
     </text>
@@ -151,7 +161,7 @@ const AncestryMap = ({ tabData }) => {
         GEOGRAPHIC ORIGINS
       </div>
       <div style={{
-        background: "#696a6d", borderRadius: 8, border: "1px solid #1e1e1e",
+        background: "rgba(13, 11, 109, 0.72)", borderRadius: 8, border: "1px solid rgba(255,210,63,0.9)",
         overflow: "hidden", position: "relative",
       }}>
         <ComposableMap
@@ -243,7 +253,7 @@ export default function DNAChart() {
       transform: visible ? "translateY(0)" : "translateY(40px)",
       transition: "opacity 0.7s ease, transform 0.7s ease, border-color 0.25s ease, box-shadow 0.25s ease",
       margin: "48px 0", padding: "36px 24px",
-      background: "linear-gradient(135deg, rgba(13,13,13,0.84) 0%, rgba(17,19,24,0.84) 100%)",
+      background: "rgba(13, 11, 109, 0.72)",
       borderRadius: 16,
       fontFamily: "'Space Mono', monospace",
     }}>
@@ -266,7 +276,7 @@ export default function DNAChart() {
           </div>
         </div>
         <div style={{
-          display: "flex", background: "#0a0a0a", border: "1px solid #2a2a2a",
+          display: "flex", background: "rgba(13, 11, 109, 0.72)", border: "1px solid rgba(255,210,63,0.9)",
           borderRadius: 999, padding: 3, gap: 2,
         }}>
           {TABS.map((tab) => {
@@ -277,7 +287,7 @@ export default function DNAChart() {
                 fontFamily: "'Space Mono', monospace", fontSize: 13, fontWeight: 700,
                 letterSpacing: 1, transition: "all 0.22s ease",
                 background: isActive ? "linear-gradient(90deg, #e63946, #f4a261)" : "transparent",
-                color: isActive ? "#fff" : "#c3cbee",
+                color: isActive ? "#1a0a0a" : "#c3cbee",
                 boxShadow: isActive ? "0 0 12px rgba(230,57,70,0.35)" : "none",
               }}>
                 {tab.label}
@@ -331,7 +341,7 @@ export default function DNAChart() {
               >
                 <div style={{ width: 10, height: 10, borderRadius: 2, background: d.color, flexShrink: 0 }} />
                 <span style={{ color: "#eef1ff", fontSize: 13 }}>{d.region}</span>
-                <span style={{ color: d.color, marginLeft: "auto", fontWeight: 700, fontSize: 13 }}>
+                <span style={{ color: "#eef1ff", marginLeft: "auto", fontWeight: 700, fontSize: 13 }}>
                   {d.percent}%
                 </span>
               </div>

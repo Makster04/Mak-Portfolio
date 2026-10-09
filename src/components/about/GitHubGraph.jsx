@@ -2,8 +2,8 @@
 import React from 'react';
 import GitHubCalendar, { createCalendarTheme } from 'react-github-calendar';
 
-// Gold squares on a translucent-white empty cell, so the graph reads on the blue page.
-const goldTheme = createCalendarTheme('#ffd23f', '#3a54c9');
+// Gold squares on a faint translucent-white empty cell, so the graph sits on the page blue.
+const goldTheme = createCalendarTheme('#ffd23f', 'rgba(255, 255, 255, 0.14)');
 
 const GitHubGraph = () => {
   return (
